@@ -1,0 +1,11 @@
+.sidebarContainer{
+    width: 20%;
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+
+  
