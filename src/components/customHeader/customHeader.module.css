@@ -1,0 +1,108 @@
+@media screen and (min-width: 1200px) {
+  .logoContainer {
+    width: fit-content;
+    height: 100%;
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: bolder;
+    overflow: hidden;
+  }
+  .brandLabel {
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 4vw;
+    width: fit-content;
+    cursor: default;
+  }
+  .menuContainer {
+    width: fit-content;
+    height: 100%;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 700;
+    margin-left: 5rem;
+  }
+  .loginContainer {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+  .modalContainer {
+    background-color: transparent;
+    margin: 0 0;
+    padding: 0 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .logoContainer {
+    width: 100%;
+    height: 100%;
+    justify-content: start;
+    align-content: center;
+    display: flex;
+    font-weight: bolder;
+    flex-wrap: wrap;
+  }
+  .brandLabel {
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 4vw;
+  }
+  .menuContainer {
+    width: fit-content;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    visibility: hidden;
+  }
+  .loginContainer {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    visibility: hidden;
+  }
+  .drawerButtonContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  .drawerButton {
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 1rem;
+    background-color: transparent;
+    border-style: none;
+  }
+  .buttonContainer {
+    width: -webkit-fill-available;
+    float: right;
+    display: flex;
+    justify-content: end;
+}
+}
+
+@media screen and (max-width: 800px) {
+    .buttonContainer{
+        display: none;
+        visibility: hidden;
+    }
+    .brandLabel {
+      font-size: 10vw;
+    }
+}

@@ -16,7 +16,7 @@ import { FaList } from "react-icons/fa";
 import { QueryClient, QueryClientProvider } from "react-query";
 import "react-toastify/dist/ReactToastify.css";
 import { UserProfile } from "@/libs/UserProfile";
-import ChatBox from "@/components/chatBox/ChatBox";
+// import ChatBox from "@/components/chatBox/ChatBox";
 import clsx from "clsx";
 import ButtonComponent from "@/components/buttonComponent/buttonComponent";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
@@ -184,7 +184,7 @@ export default function RootLayout({
               />
             </div>
             <div id={"mainContent"}>
-              <ChatBox />
+              {/* <ChatBox /> */}
               {children}
             </div>
           </div>

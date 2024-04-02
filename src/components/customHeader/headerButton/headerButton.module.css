@@ -1,0 +1,64 @@
+
+.buttonContainer {
+    width: fit-content;
+    padding: 0.5rem 2rem;
+    font-size: 28px;
+    cursor: pointer;
+    transition-property: font-size;
+    transition-duration: 0.3s;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.headerButton {
+    font-size: inherit;
+    text-align: center;
+    height: fit-content;
+    color: inherit;
+    text-decoration: none;
+    background-image: linear-gradient(black,black);
+    background-repeat: no-repeat;
+    background-position: 0;
+    transition-property: background-size;
+    background-position: 0 var(--qode-underline-vertical-position,90%);
+    background-size:  0% 2px;
+    transition-duration: 1s;
+    font-weight: 600;
+
+}
+
+.buttonContainer:hover {
+    font-size: 32px;
+}
+
+.buttonContainer:hover .headerButton{
+    background-size: 100% 2px;
+
+}
+.hideIconButtonContainer {
+    width: fit-content;
+    padding: 0.5rem 2rem;
+    border-radius: 2rem;
+    font-size: 28px;
+    cursor: pointer;
+    transition-property: font-size;
+    transition-duration: 1s;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.hideIconButtonContainer:hover {
+    font-size: 32px;
+}
+
+.hideIconButtonContainer:hover .headerButton{
+    background-size: 100% 2px;
+}
+
+.hideIconButtonContainer>svg{
+    visibility: none;
+}

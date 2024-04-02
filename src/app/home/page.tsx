@@ -574,15 +574,7 @@ export default function Home() {
             );
         })}
       </Carousel>
-      <Row>
-        {saleList.map((value, index) => (
-          <Col key={index} style={{ textAlign: "center", fontSize: "1vw" }}>
-            {value.icon}
-            <h1>{value.title}</h1>
-            <p>{value.description}</p>
-          </Col>
-        ))}
-      </Row>
+
       <Row style={{ width: "100%", alignContent: "center" }}>
         <Col>
           <table>
@@ -628,9 +620,9 @@ export default function Home() {
               </tr>
             </tbody>
           </table>
-          <Col style={{marginTop: "1vw"}}>
-            <Button style={{marginRight: "1vw"}} href="https://zalo.me/0325395352" target="_blank">Zalo</Button>
-            
+          <Col style={{ marginTop: "1vw", justifyContent: "center", display: "flex" }}>
+            <Button style={{ marginRight: "1vw" }} href="https://zalo.me/0325395352" target="_blank">Zalo</Button>
+
             <Button href="https://www.facebook.com/profile.php?id=100011497204419" target="_blank">Facebook</Button>
           </Col>
         </Col>

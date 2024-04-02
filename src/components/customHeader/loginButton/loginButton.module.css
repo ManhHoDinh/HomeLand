@@ -1,0 +1,27 @@
+@keyframes color {
+    0%   { color: #33CCCC; }
+    20%  { color: #33CC36; }
+    40%  { color: #B8CC33; }
+    60%  { color: #FCCA00; }
+    80%  { color: #33CC36; }
+    100% { color: #33CCCC; }
+  }
+  
+.buttonContainer{
+    width: fit-content;
+    height: fit-content;
+    padding: 0.13rem 0.7rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    border-width: 0.15rem;
+    background-color: transparent;
+    font-size: 24px;
+    font-weight: 850;
+    animation: font-size ;
+    border-style: solid;
+    transition-duration: 0.3s;
+}
+
+.buttonContainer:hover{
+    font-size: 1.9rem;
+}
