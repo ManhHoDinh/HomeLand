@@ -1,0 +1,164 @@
+.sidebar {
+    width: 23%;
+    background-color: #d7e2ff;
+    padding-top: 1rem;
+    height: fit-content;
+}
+
+.sidebarButtonMenu {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.sidebarButtonMenu button {
+    text-align: left;
+    color: black;
+}
+
+.sidebarButtonMenu button.active {
+    color: var(--white);
+    background-color: #5980e2;
+   
+}
+
+@media screen and (max-width: 1200px) {
+    .sidebar {
+        visibility: hidden;
+        display: none;
+    }
+
+}
+@media screen and (max-width: 2000px) {
+    .sidebar {
+     
+        width: 23%;
+        height: 200%;
+    }
+
+}
+
+.sidebarBody {
+    margin-top: 3rem;
+
+}
+.hide {
+    display: none !important;
+}
+.hideScrollbar::-webkit-scrollbar{
+    display: none;
+}
+button.sidebarButton{
+    position: relative;
+    height: fit-content;
+    padding: 10px 8px;
+    width: 100%;
+    border-radius: 0 2rem 2rem 0;
+    transition: all ease .5s;
+    background-color: transparent;
+    color: black;
+    border-color: transparent;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 1.5rem;
+    font-weight: 400;
+}
+
+button.sidebarButton svg {
+    margin-right: 10px;
+}
+
+button.sidebarButton img {
+    margin-right: 10px;
+}
+button.sidebarButton span {
+    flex: 1;
+    text-align: left;
+}
+button.sidebarButton svg path {
+    fill: black;
+}
+
+button.sidebarButton:hover {
+    /* width: 110%; */
+    color: white !important;
+    background-color: #2864FF;
+    padding-left: 2.5rem;
+    font-weight: bold;
+}
+
+button.sidebarButton:hover svg path {
+    fill: white;
+}
+
+button.current {
+    color: white;
+    background-color: #2864FF;
+    padding-left: 2.5rem;
+    font-weight: bold;
+}
+
+button.current svg path {
+    fill: white;
+}
+
+a.currentItemMenu {
+    text-decoration: underline;
+    color: blue;
+}
+
+.drawer {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    font-size: 4rem;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 1.2rem;
+}
+button.drawerButton {
+    height: fit-content;
+    display: none;
+    flex-wrap: wrap;
+    background-color: transparent;
+    border-style: hidden;
+    visibility: hidden;
+    margin-left: 2rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .header {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    button.drawerButton{
+        visibility: visible;
+        display: flex;
+    }
+}
+@media screen and (max-width: 400px) {
+    .sidebarButtonMenu{
+        padding: 0 3rem
+    }
+}
+.subMenu {
+    padding: 12px 10% 12px 30%;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+}
+.subMenu:hover {
+    background-color: var(--white);
+    color: var(--primary);
+    transition: 0.2s linear background-color;
+}
