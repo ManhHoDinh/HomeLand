@@ -1,0 +1,13 @@
+.chart {
+    width: 50%;
+}
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 2rem 0;
+    margin: 0;
+    background-color: white;
+  }
+.maginTop {
+    margin-top: 2rem;
+}

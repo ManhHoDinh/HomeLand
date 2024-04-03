@@ -31,7 +31,7 @@ export const sidebarInfo = [
       </svg>
     ),
     menu: [],
-    roles: ["admin", "technician"],
+    roles: ["admin", "technician","resident","manager"],
   },
   {
     title: "Properties",
@@ -68,12 +68,12 @@ export const sidebarInfo = [
       {
         title: "Apartment",
         href: "/home/properties/apartments",
-        roles: ["admin", "manager"],
+        roles: ["admin", "manager","resident"],
       },
       {
         title: "Vehicle",
         href: "/home/properties/vehicles",
-        roles: ["admin", "manager","resident"],
+        roles: ["admin", "manager", "resident"],
       },
       {
         title: "Equipment",
@@ -81,7 +81,7 @@ export const sidebarInfo = [
         roles: ["admin", "manager"],
       },
     ],
-    roles: ["admin", "manager","resident"],
+    roles: ["admin", "manager", "resident"],
   },
   {
     title: "Services",
@@ -107,44 +107,44 @@ export const sidebarInfo = [
     title: "Employee",
     path: "employee",
     svg: <GrUserWorker />,
-    roles: ["admin", "manager"],
+    roles: ["admin", "manager","resident"],
   },
   {
     title: "Contracts",
     path: "contracts",
     svg: <FaFileContract />,
-    roles: ["admin", "manager"],
+    roles: ["admin", "manager","resident"],
   },
   {
     title: "Residents",
     path: "residents",
     svg: <FaUserGroup />,
-    roles: ["admin", "manager"],
+    roles: ["admin", "manager","resident"],
   },
   {
     title: "Managers",
     path: "managers",
     svg: <GrUserManager />,
-    roles: ["admin"],
+    roles: ["admin","resident"],
   },
   {
     title: "Technicians",
     path: "technicians",
     svg: <TechnicianIcon width={30} height={30} />,
-    roles: ["admin"],
+    roles: ["admin","resident"],
   },
   {
     title: "Buildings",
     path: "buildings",
     svg: <FaBuilding />,
-    roles: ["admin"],
+    roles: ["admin","resident"],
   },
   {
     title: "Complain & repair requests",
     path: "complain",
     svg: <GiAutoRepair />,
     menu: [],
-    roles: ["admin", "manager"],
+    roles: ["admin", "manager","resident"],
   },
   {
     title: "Send Complain & repair requests",
@@ -211,7 +211,7 @@ export const sidebarInfo = [
     path: "floor",
     svg: <PiElevatorBold />,
     menu: [],
-    roles: ["admin", "manager"],
+    roles: ["admin", "manager","resident"],
   },
   {
     title: "Overview",

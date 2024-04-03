@@ -345,21 +345,21 @@ const FilterButton = ({
 };
 
 const ApartmentCard = (value: Apartment, t: Function): React.ReactNode => {
-  const router = useRouter();
-  const pathName = usePathname();
-  function handleRouting(route: string): void {
-    router.push(pathName + `/${route}`);
-  }
+  // const router = useRouter();
+  // const pathName = usePathname();
+  // function handleRouting(route: string): void {
+  //   router.push(pathName + `/${route}`);
+  // }
   return (
     <Card
-      onClick={() => handleRouting(value.apartment_id + "?auth=true")}
+      // onClick={() => handleRouting(value.apartment_id + "?auth=true")}
       className={`${futuna.className} ${styles.gridItem}`}
       style={{ borderRadius: "10px", overflow: "hidden" }}
     >
       <Suspense
         fallback={<Placeholder as={Card.Img} animation="glow"></Placeholder>}
       >
-        <Card.Img variant="top" src={value.images[0]} />
+        <Card.Img variant="top" src="public/images/sample/aparmentCard.png" />
       </Suspense>
       <Card.Body
         style={{
@@ -369,10 +369,10 @@ const ApartmentCard = (value: Apartment, t: Function): React.ReactNode => {
         }}
       >
         <Card.Title style={{ alignSelf: "start" }}>
-          {value.rent}
+          {/* {value.rent} */} 1000
           <span style={{ color: "grey" }}>{` /${t("month")}`}</span>
         </Card.Title>
-        <Card.Text>{value.name}</Card.Text>
+        <Card.Text>Phong Cao Cap</Card.Text>
       </Card.Body>
     </Card>
   );
