@@ -1,3 +1,4 @@
+
 import { Resident } from "./resident";
 
 export type Vehicle = {
@@ -9,4 +10,3 @@ export type Vehicle = {
     licensePlatePhotoURL:string;
     residentId: string;
 }
-
