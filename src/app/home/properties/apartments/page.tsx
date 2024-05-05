@@ -123,131 +123,131 @@ export default function Apartments() {
     },
   ]);
   const [sortOptionList, setSortOptionList] = useState<number[]>([0, 0, 0]);
-  // const { isLoading, isError, refetch } = useQuery(
-  //   "apartment",
-  //   async () => {
-  //     if (loadingMore.current.page == -1) {
-  //       const temp = { ...loadingMore.current };
-  //       temp.isLoading = false;
-  //       loadingMore.current = temp;
-  //     }
-  //     return await axios
-  //       .get("/api/apartment?page=" + loadingMore.current.page)
-  //       .then((res) => {
-  //         const temp = { ...loadingMore.current };
-  //         if ((res.data as Apartment[]).length == 0) temp.page = -1;
-  //         temp.isLoading = false;
-  //         loadingMore.current = temp;
-  //         let result = [...data, ...(res.data as Apartment[])];
-  //         setData(result);
-  //       });
-  //   },
+  const { isLoading, isError, refetch } = useQuery(
+    "apartment",
+    async () => {
+      if (loadingMore.current.page == -1) {
+        const temp = { ...loadingMore.current };
+        temp.isLoading = false;
+        loadingMore.current = temp;
+      }
+      return await axios
+        .get("/api/apartment?page=" + loadingMore.current.page)
+        .then((res) => {
+          const temp = { ...loadingMore.current };
+          if ((res.data as Apartment[]).length == 0) temp.page = -1;
+          temp.isLoading = false;
+          loadingMore.current = temp;
+          let result = [...data, ...(res.data as Apartment[])];
+          setData(result);
+        });
+    },
 
-  //   {
-  //     refetchOnWindowFocus: false,
-  //   }
-  // );
-  // function handleChange(index: number, value: number): void {
-  //   let temp1 = { ...loadingMore.current };
-  //   temp1.isLoading = false;
-  //   loadingMore.current = temp1;
-  //   let temp = [...sortOptionList];
-  //   temp[index] = value;
-  //   setSortOptionList(temp)
-  // }
-  // useEffect(() => {
-  //   getSortOption({ onChange: handleChange }).then((res) => {
-  //     setApartmentSortOption(res);
-  //   });
-  // }, []);
-  // useEffect(() => {
-  //   if (!data) return;
-  //   let result = [...data];
-  //   if (apartmentSortOption)
-  //     sortOptionList.forEach((value, index) => {
-  //       if (
-  //         apartmentSortOption[index].data[value] &&
-  //         apartmentSortOption[index].data[value] != "all"
-  //       )
-  //         result = search(
-  //           result,
-  //           apartmentSortOption[index].fieldName,
-  //           apartmentSortOption[index].data[value]
-  //         );
-  //       console.log(apartmentSortOption[index].data[value]);
-  //     });
-  //   if (searchParam != "") result = search(result, "name", searchParam);
-  //   console.log(result);
-  //   setApartmentList([...result]);
-  //   if (
-  //     result.length < 30 &&
-  //     loadingMore.current.page != -1 &&
-  //     !loadingMore.current.isLoading
-  //   )
-  //     handleScrollEnd();
-  // }, [sortOptionList, searchParam, data]);
+    {
+      refetchOnWindowFocus: false,
+    }
+  );
+  function handleChange(index: number, value: number): void {
+    let temp1 = { ...loadingMore.current };
+    temp1.isLoading = false;
+    loadingMore.current = temp1;
+    let temp = [...sortOptionList];
+    temp[index] = value;
+    setSortOptionList(temp)
+  }
+  useEffect(() => {
+    getSortOption({ onChange: handleChange }).then((res) => {
+      setApartmentSortOption(res);
+    });
+  }, []);
+  useEffect(() => {
+    if (!data) return;
+    let result = [...data];
+    if (apartmentSortOption)
+      sortOptionList.forEach((value, index) => {
+        if (
+          apartmentSortOption[index].data[value] &&
+          apartmentSortOption[index].data[value] != "all"
+        )
+          result = search(
+            result,
+            apartmentSortOption[index].fieldName,
+            apartmentSortOption[index].data[value]
+          );
+        console.log(apartmentSortOption[index].data[value]);
+      });
+    if (searchParam != "") result = search(result, "name", searchParam);
+    console.log(result);
+    setApartmentList([...result]);
+    if (
+      result.length < 30 &&
+      loadingMore.current.page != -1 &&
+      !loadingMore.current.isLoading
+    )
+      handleScrollEnd();
+  }, [sortOptionList, searchParam, data]);
 
-  // async function handleScrollEnd() {
-  //   if (!loadingMore.current.isLoading) {
-  //     const temp = { ...loadingMore.current };
-  //     temp.isLoading = true;
-  //     temp.page = temp.page + 1;
-  //     loadingMore.current = { ...temp };
-  //     refetch();
-  //   }
-  // }
-  // window.addEventListener("scroll", (e) => {
-  //   const windowHeight =
-  //     "innerHeight" in window
-  //       ? window.innerHeight
-  //       : document.documentElement.offsetHeight;
-  //   const body = document.body;
-  //   const html = document.documentElement;
-  //   const docHeight = Math.max(
-  //     body.scrollHeight,
-  //     body.offsetHeight,
-  //     html.clientHeight,
-  //     html.scrollHeight,
-  //     html.offsetHeight
-  //   );
-  //   const windowBottom = windowHeight + window.pageYOffset;
-  //   if (windowBottom + 50 >= docHeight) {
-  //     handleScrollEnd();
-  //   }
-  // });
-  // if (isLoading)
-  //   return (
-  //     <motion.div
-  //       style={{
-  //         display: "flex",
-  //         width: "100%",
-  //         height: "100%",
-  //         margin: "50px 0px",
-  //         justifyContent: "center",
-  //         alignContent: "center",
-  //         flexWrap: "wrap",
-  //       }}
-  //     >
-  //       <Spinner></Spinner>
-  //     </motion.div>
-  //   );
-  // if (isError)
-  //   return (
-  //     <motion.div
-  //       initial={{ opacity: 0, y: 40 }}
-  //       animate={{ opacity: 1, y: 0 }}
-  //       exit={{ opacity: 0, y: 40 }}
-  //       style={{
-  //         width: "100%",
-  //         height: "100%",
-  //         justifyContent: "center",
-  //         alignContent: "center",
-  //         flexWrap: "wrap",
-  //       }}
-  //     >
-  //       Co loi
-  //     </motion.div>
-  //   );
+  async function handleScrollEnd() {
+    if (!loadingMore.current.isLoading) {
+      const temp = { ...loadingMore.current };
+      temp.isLoading = true;
+      temp.page = temp.page + 1;
+      loadingMore.current = { ...temp };
+      refetch();
+    }
+  }
+  window.addEventListener("scroll", (e) => {
+    const windowHeight =
+      "innerHeight" in window
+        ? window.innerHeight
+        : document.documentElement.offsetHeight;
+    const body = document.body;
+    const html = document.documentElement;
+    const docHeight = Math.max(
+      body.scrollHeight,
+      body.offsetHeight,
+      html.clientHeight,
+      html.scrollHeight,
+      html.offsetHeight
+    );
+    const windowBottom = windowHeight + window.pageYOffset;
+    if (windowBottom + 50 >= docHeight) {
+      handleScrollEnd();
+    }
+  });
+  if (isLoading)
+    return (
+      <motion.div
+        style={{
+          display: "flex",
+          width: "100%",
+          height: "100%",
+          margin: "50px 0px",
+          justifyContent: "center",
+          alignContent: "center",
+          flexWrap: "wrap",
+        }}
+      >
+        <Spinner></Spinner>
+      </motion.div>
+    );
+  if (isError)
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 40 }}
+        style={{
+          width: "100%",
+          height: "100%",
+          justifyContent: "center",
+          alignContent: "center",
+          flexWrap: "wrap",
+        }}
+      >
+        Co loi
+      </motion.div>
+    );
   function handleSearch(params: string): void {
     setSearchParam(params);
   }
@@ -345,21 +345,21 @@ const FilterButton = ({
 };
 
 const ApartmentCard = (value: Apartment, t: Function): React.ReactNode => {
-  // const router = useRouter();
-  // const pathName = usePathname();
-  // function handleRouting(route: string): void {
-  //   router.push(pathName + `/${route}`);
-  // }
+  const router = useRouter();
+  const pathName = usePathname();
+  function handleRouting(route: string): void {
+    router.push(pathName + `/${route}`);
+  }
   return (
     <Card
-      // onClick={() => handleRouting(value.apartment_id + "?auth=true")}
+      onClick={() => handleRouting(value.apartment_id + "?auth=true")}
       className={`${futuna.className} ${styles.gridItem}`}
       style={{ borderRadius: "10px", overflow: "hidden" }}
     >
       <Suspense
         fallback={<Placeholder as={Card.Img} animation="glow"></Placeholder>}
       >
-        <Card.Img variant="top" src="public/images/sample/aparmentCard.png" />
+        <Card.Img variant="top" src={value.images[0]} />
       </Suspense>
       <Card.Body
         style={{
@@ -369,10 +369,10 @@ const ApartmentCard = (value: Apartment, t: Function): React.ReactNode => {
         }}
       >
         <Card.Title style={{ alignSelf: "start" }}>
-          {/* {value.rent} */} 1000
+          {value.rent}
           <span style={{ color: "grey" }}>{` /${t("month")}`}</span>
         </Card.Title>
-        <Card.Text>Phong Cao Cap</Card.Text>
+        <Card.Text>{value.name}</Card.Text>
       </Card.Body>
     </Card>
   );
