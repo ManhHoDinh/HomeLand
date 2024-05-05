@@ -90,10 +90,9 @@
   "quarter": "Quarter",
   "purchaseHistory": "Purchase History",
   "servicePackageName": "Service Package Name",
-  "price": "Price",
-  "detail": "Detail",
   "total": "Total",
   "payTo": "Pay To",
   "invoiceTo": "Invoice To",
-  "accept": "Accept"
+  "accept": "Accept",
+  "service_use":"Service is in use"
 }

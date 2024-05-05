@@ -1,3 +1,4 @@
+
 import { Resident } from "./resident";
 
 export type Vehicle = {

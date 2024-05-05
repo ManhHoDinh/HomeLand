@@ -620,9 +620,9 @@ export default function Home() {
               </tr>
             </tbody>
           </table>
-          <Col style={{marginTop: "1vw", justifyContent: "center", display: "flex"}}>
-            <Button style={{marginRight: "1vw"}} href="https://zalo.me/0325395352" target="_blank">Zalo</Button>
-            
+          <Col style={{ marginTop: "1vw", justifyContent: "center", display: "flex" }}>
+            <Button style={{ marginRight: "1vw" }} href="https://zalo.me/0325395352" target="_blank">Zalo</Button>
+
             <Button href="https://www.facebook.com/profile.php?id=100011497204419" target="_blank">Facebook</Button>
           </Col>
         </Col>
