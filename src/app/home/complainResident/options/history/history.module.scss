@@ -1,0 +1,140 @@
+.wrapper {
+  padding: 20px;
+}
+.header {
+  font-size: 1.4rem;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  color: var(--primary);
+  font-weight: 600;
+}
+.container {
+  margin-top: 60px;
+  width: 100%;
+  overflow-x: auto;
+}
+//status
+.status {
+  font-weight: 600;
+  padding: 8px;
+  font-size: 0.9rem;
+  border-radius: 15px;
+}
+.done {
+  color: var(--green);
+  background-color: #edf9f0;
+}
+.pending {
+  color: var(--yellow);
+  background-color: #fbf1e0;
+}
+.fixing {
+  color: var(--blue);
+  background-color: #dbe2f6;
+}
+.rejected {
+  color: var(--red);
+  background-color: #fbd1d1;
+}
+.received {
+  color: #3edeb2;
+  background-color: #cbebe2;
+}
+
+.billBtn {
+  background-color: var(--primary);
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  &:hover {
+    background-color: #1c4bc4;
+    transition: 0.2s linear background-color;
+  }
+}
+//payment status
+.paymentStatus {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 16px;
+  color: var(--white);
+  width: 80%;
+  span {
+    margin-left: 4px;
+  }
+}
+.paid {
+  background-color: #78bb77;
+}
+.unpaid {
+  background-color: #f8be5f;
+}
+//modal
+.modal {
+  min-width: 50% !important;
+}
+.titleInvoice {
+  width: 100%;
+  background-color: var(--yellow);
+  padding: 10px 20px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  display: flex;
+  span {
+    color: var(--white);
+    font-size: 0.9rem;
+  }
+}
+.invoice {
+  box-shadow: rgba(42, 45, 52, 0.16) 0px 4px 20px;
+  width: 100%;
+}
+.total {
+  clear: right;
+  float: right;
+  background-color: var(--yellow);
+  color: var(--white);
+  font-size: 1rem;
+  width: 70%;
+  padding: 8px 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  border-radius: 12px;
+}
+.line {
+  font-size: 1rem;
+  color : var(--text-color);
+  
+}
+.itemLine {
+  display: flex;
+  width: 100%;
+  padding: 10px 20px;
+  input {
+      border-radius: 16px;
+      outline: none;
+      padding: 4px 10px;
+      font-size: 0.9rem;
+      border: 1px solid var(--primary) !important;
+      color : var(--text-color)
+      
+  }
+}
+.rejectBtn {
+  background-color: var(--red);
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  &:hover {
+    background-color: #f90e0e;
+  }
+}
+.modalBtn {
+  width: 40%;
+}
+
+.footerModal {
+  padding: 10px 30px;
+}
