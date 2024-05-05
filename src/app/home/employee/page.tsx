@@ -1,7 +1,7 @@
 "use client";
-import styles from "../../page.module.css";
+import styles from "../page.module.css";
 import ButtonComponent from "@/components/buttonComponent/buttonComponent";
-import dashboardStyles from "./employee.module.scss";
+import dashboardStyles from "./dashboard.module.scss";
 import Link from "next/link";
 import Form from 'react-bootstrap/Form';
 import classNames from 'classnames';

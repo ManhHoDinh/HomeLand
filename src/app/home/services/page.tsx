@@ -24,92 +24,92 @@ export default function Services() {
   const [searchParam, setSearchParam] = useState("");
   const [t, i18n] = useTranslation();
 
-  const { isLoading, isError, data, refetch } = useQuery(
-    "service",
-    () =>
-      axios.get("/api/service?page=" + loadingMore.current.page).then((res) => {
-        const temp = { ...loadingMore.current };
-        //if ((res.data as Service[]).length == 0) temp.page = -1;
-        temp.isLoading = false;
-        loadingMore.current = temp;
-        let result = [...ServiceList, ...(res.data as Service[])];
-        return result;
-      }),
-    {
-      refetchOnWindowFocus: false,
-    }
-  );
-  async function handleScrollEnd() {
-    if (!loadingMore.current.isLoading) {
-      const temp = { ...loadingMore.current };
-      temp.isLoading = true;
-      temp.page = temp.page + 1;
-      loadingMore.current = { ...temp };
-      refetch();
-    }
-  }
+  // const { isLoading, isError, data, refetch } = useQuery(
+  //   "service",
+  //   () =>
+  //     axios.get("/api/service?page=" + loadingMore.current.page).then((res) => {
+  //       const temp = { ...loadingMore.current };
+  //       //if ((res.data as Service[]).length == 0) temp.page = -1;
+  //       temp.isLoading = false;
+  //       loadingMore.current = temp;
+  //       let result = [...ServiceList, ...(res.data as Service[])];
+  //       return result;
+  //     }),
+  //   {
+  //     refetchOnWindowFocus: false,
+  //   }
+  // );
+  // async function handleScrollEnd() {
+  //   if (!loadingMore.current.isLoading) {
+  //     const temp = { ...loadingMore.current };
+  //     temp.isLoading = true;
+  //     temp.page = temp.page + 1;
+  //     loadingMore.current = { ...temp };
+  //     refetch();
+  //   }
+  // }
  
-  window.addEventListener("scroll", (e) => {
-    const windowHeight =
-      "innerHeight" in window
-        ? window.innerHeight
-        : document.documentElement.offsetHeight;
-    const body = document.body;
-    const html = document.documentElement;
-    const docHeight = Math.max(
-      body.scrollHeight,
-      body.offsetHeight,
-      html.clientHeight,
-      html.scrollHeight,
-      html.offsetHeight
-    );
-    const windowBottom = windowHeight + window.pageYOffset;
-    if (windowBottom + 50 >= docHeight) {
-      handleScrollEnd();
-    }
-  });
-  useEffect(() => {
-    if (!data) return;
-    let result = [...data];
-    console.log(searchParam);
-    if(searchParam != "")
-      result = search(result, "name", searchParam)
-    setServiceList([...result]);
-  }, [data, searchParam]);
-  function handleSearch(params: string): void {
-    setSearchParam(params);
-  }
+  // window.addEventListener("scroll", (e) => {
+  //   const windowHeight =
+  //     "innerHeight" in window
+  //       ? window.innerHeight
+  //       : document.documentElement.offsetHeight;
+  //   const body = document.body;
+  //   const html = document.documentElement;
+  //   const docHeight = Math.max(
+  //     body.scrollHeight,
+  //     body.offsetHeight,
+  //     html.clientHeight,
+  //     html.scrollHeight,
+  //     html.offsetHeight
+  //   );
+  //   const windowBottom = windowHeight + window.pageYOffset;
+  //   if (windowBottom + 50 >= docHeight) {
+  //     handleScrollEnd();
+  //   }
+  // });
+  // useEffect(() => {
+  //   if (!data) return;
+  //   let result = [...data];
+  //   console.log(searchParam);
+  //   if(searchParam != "")
+  //     result = search(result, "name", searchParam)
+  //   setServiceList([...result]);
+  // }, [data, searchParam]);
+  // function handleSearch(params: string): void {
+  //   setSearchParam(params);
+  // }
 
-  if (isLoading)
-    return (
-      <div
-        style={{
-          display: "flex",
-          width: "100%",
-          height: "100%",
-          margin: "50px 0px",
-          justifyContent: "center",
-          alignContent: "center",
-          flexWrap: "wrap",
-        }}
-      >
-        <Spinner></Spinner>
-      </div>
-    );
-  if (isError)
-    return (
-      <div
-        style={{
-          width: "100%",
-          height: "100%",
-          justifyContent: "center",
-          alignContent: "center",
-          flexWrap: "wrap",
-        }}
-      >
-        Co loi
-      </div>
-    );
+  // if (isLoading)
+  //   return (
+  //     <div
+  //       style={{
+  //         display: "flex",
+  //         width: "100%",
+  //         height: "100%",
+  //         margin: "50px 0px",
+  //         justifyContent: "center",
+  //         alignContent: "center",
+  //         flexWrap: "wrap",
+  //       }}
+  //     >
+  //       <Spinner></Spinner>
+  //     </div>
+  //   );
+  // if (isError)
+  //   return (
+  //     <div
+  //       style={{
+  //         width: "100%",
+  //         height: "100%",
+  //         justifyContent: "center",
+  //         alignContent: "center",
+  //         flexWrap: "wrap",
+  //       }}
+  //     >
+  //       Co loi
+  //     </div>
+  //   );
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -125,7 +125,7 @@ export default function Services() {
           <SearchBar
             placeholder={t("search_service")}
             className={styles.searchBar}
-            onChange={handleSearch}
+            // onChange={handleSearch}
             style={{ width: "50%" }}
           ></SearchBar>
         </div>

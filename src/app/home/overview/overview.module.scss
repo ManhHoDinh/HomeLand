@@ -1,0 +1,50 @@
+.wrapper {
+  padding: 40px;
+}
+.label {
+  color: var(--text-color);
+}
+.content {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px 0px;
+  color: var(--primary);
+}
+
+.img {
+  margin: auto;
+}
+.rent {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--green) !important;
+}
+.buy {
+  text-transform: uppercase;
+  color: var(--yellow) !important;
+}
+.contractItems {
+  border: 1px solid #ccc;
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 12px;
+}
+.contractItems + .contractItems {
+    margin-top: 10px;
+}
+.status {
+  font-weight: 600;
+  padding: 8px;
+  font-size: 0.9rem;
+  border-radius: 15px;
+  width: fit-content;
+}
+
+.inactive {
+  color: var(--red);
+  background-color: #fbd1d1;
+}
+.active {
+  color: var(--green);
+  background-color: #edf9f0;
+}
