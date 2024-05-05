@@ -1,0 +1,61 @@
+.wrapper {
+  width: 90%;
+}
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.addBtn {
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: 1rem;
+  text-decoration: none;
+  padding: var(--default-padding-vertical) var(--default-padding-horizontal);
+  border-radius: 8px;
+  &:hover {
+    background-color: #0744e1;
+  }
+}
+//per page
+.perPage {
+  display: flex;
+  font-size: 1rem;
+  align-items: center;
+  span {
+    margin: 0 8px;
+    select {
+      font-size: 1rem;
+      option {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+//table
+.tableResident {
+  text-align: center;
+}
+.cudBtn {
+  color: white;
+  font-size: 1rem;
+  padding: 4px 10px;
+  border-radius: 8px;
+  + .cudBtn {
+    margin-left: 8px;
+  }
+  text-decoration: none;
+}
+.editBtn {
+  background-color: var(--yellow);
+  &:hover {
+    background-color: #edad44;
+  }
+}
+.deleteBtn {
+  background-color: var(--red);
+  &:hover {
+    background-color: #f90e0e;
+  }
+}

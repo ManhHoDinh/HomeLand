@@ -12,8 +12,11 @@ import SearchLayout from "@/components/searchLayout/searchLayout";
 
 import {
   AddResidentIcon,
+  CloseIcon,
   EditIcon,
   GarbageIcon,
+  SortIcon,
+  TrashIcon,
 } from "@/components/icons";
 import { useState, useEffect, ReactNode, createRef } from "react";
 import ModalComponent from "@/components/Modal/Modal";

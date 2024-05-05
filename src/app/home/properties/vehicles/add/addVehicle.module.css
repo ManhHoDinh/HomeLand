@@ -1,0 +1,75 @@
+.container {
+    padding: 30px;
+    display: flex;
+}
+
+.vehicleIdImage {
+    width: 100% !important;
+    height: 20vw !important
+}
+
+.form>div:first-of-type {
+    width: 50%;
+}
+
+.form>* {
+    width: 50%;
+}
+
+.form>*:last-child {
+    margin-left: 5vw;
+}
+
+.uploadIcon:hover {
+    opacity: 0.5;
+}
+
+.label {
+    font-size: 1.25vw;
+}
+
+.modal {
+    min-width: 60vw;
+}
+
+.required {
+    position: relative;
+}
+
+.form {
+    display: flex;
+    width: 100%;
+}
+
+.required::after {
+    content: "*";
+    color: red;
+    font-size: 1.25vw;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.creatBtn {
+    margin: 20px auto;
+    background-color: #8faeff;
+    color: var(--white);
+    font-size: 1.25rem;
+    padding: 8px 60px;
+    border-radius: 10px;
+    transition: 0.1 ease;
+}
+
+.creatBtn:hover {
+    background-color: #4b77e8;
+}
+
+.missing {
+    border-style: solid;
+    border-color: #FF4747 !important;
+}
+
+.missing+svg {
+    border-color: #FF4747 !important;
+}
