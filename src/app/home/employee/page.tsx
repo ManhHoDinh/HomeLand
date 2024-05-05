@@ -1,7 +1,7 @@
 "use client";
 import styles from "../page.module.css";
 import ButtonComponent from "@/components/buttonComponent/buttonComponent";
-import dashboardStyles from "./employee.module.scss";
+import dashboardStyles from "./dashboard.module.scss";
 import Link from "next/link";
 import Form from 'react-bootstrap/Form';
 import classNames from 'classnames';
@@ -28,9 +28,6 @@ import { useRouter } from "next/router";
 import { AddResidentIcon } from "@/components/icons";
 import { useTranslation } from "react-i18next";
 export default function Employee() {
-
-
-
   const [isSearchResult, setIsSearchResult] = useState(false);
   const [t, i18n] = useTranslation();
   const [selectedId, setSelectedId] = useState("");
@@ -121,98 +118,99 @@ export default function Employee() {
     }
   };
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
-
+ 
 
   return (
     <main className={styles.main}>
-      <div className={classNames(dashboardStyles.wrapper, futuna.className)}>
-        <h1 className={classNames(dashboardStyles.headingXl)}>{t("Manage Employee")}</h1>
-        <div className={classNames(dashboardStyles.header)}>
-          <h1 className={classNames(dashboardStyles.headingLg)}>{t("employeelist")}</h1>
-          <ButtonComponent
-            href="/home/employee/addemployee?auth=true"
-            preIcon={<AddResidentIcon width={24} height={24} />}
-            className={classNames(dashboardStyles.addBtn, futuna.className)
-            }>
+        <div className={classNames(dashboardStyles.wrapper, futuna.className)}>
+          <h1 className={classNames(dashboardStyles.headingXl)}>{t("Manage Employee")}</h1>
+          <div className={classNames(dashboardStyles.header)}>
+            <h1 className={classNames(dashboardStyles.headingLg)}>{t("employeelist")}</h1>
+            <ButtonComponent
+              href="/home/employee/addemployee?auth=true"
+              preIcon={<AddResidentIcon width={24} height={24} />}
+              className={classNames(dashboardStyles.addBtn, futuna.className)
+              }>
             {t("create")}
-          </ButtonComponent>
-        </div>
-        <div className="d-flex w-100 mt-3 justify-content-between">
+            </ButtonComponent>
+          </div>
+          <div className="d-flex w-100 mt-3 justify-content-between">
           <div className={classNames(dashboardStyles.perPage)}>
           </div>
-          <SearchLayout
-            onKeydown={handleSearch}
-            iconClick={searchIconClick}
-            placeHolder={t("placefindemployee")}
-            ref={searchRef}
-            xClick={clearSearch}
-          />
+            <SearchLayout
+              onKeydown={handleSearch}
+              iconClick={searchIconClick}
+              placeHolder={t("placefindemployee")}
+              ref={searchRef}
+              xClick={clearSearch}
+            />
+          </div>
+          <div className={classNames(dashboardStyles.carddiv , futuna.className)}>
+            <Row xs={1} md={2} className="g-4">
+              {employee.map((employee, idx): ReactNode => {
+                const dateOfBirth = new Date(employee.profile.date_of_birth);
+                const employeeName = employee.profile.name.toLowerCase();
+                const searchTerm = searchRef.current?.value.toLowerCase();
+                if (searchTerm && employeeName.includes(searchTerm)) {
+                }
+                return (
+                  <Col key={idx} sm={6} md={4} lg={3} className={dashboardStyles.col}>
+                    <Link href={`/home/employee/${employee.id}/?auth=true`} className={dashboardStyles.link}>
+                      <Card style={customCardStyle}
+                        onMouseEnter={() => setHoveredCard(idx)}
+                        onMouseLeave={() => setHoveredCard(null)}
+                        className={idx === hoveredCard ? dashboardStyles.hoveredCard : dashboardStyles.card}
+                        onClick={() => setShowDialog(true)} >
+
+                        <CardImg
+                          alt="..."
+                          onLoad={(e: any) => URL.revokeObjectURL(e.target.src)}
+                          src={
+                            employee.profile.avatarURL
+                          }
+                          variant="top"
+                          height="250"
+                          className="img-fluid"
+                          style={{ objectFit: 'cover', height: '250px', borderRadius: "60%", padding: '20px' }}
+                        ></CardImg>
+                        <CardHeader className="text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+                          <div className="d-flex justify-content-between">
+                          </div>
+                        </CardHeader>
+                        <CardBody className={classNames(dashboardStyles.ch)}>
+                          <Row>
+                            <div className="col">
+                              <div className="card-profile-stats d-flex justify-content-center">
+                                <div className="profile-stat">
+                                  <span className="name no-underline"> {t("name")}: </span>
+                                  <span className="description no-underline" style={{ marginBottom: '10px' }}>{employee.profile.name}</span>
+                                </div>
+                              </div>
+                            </div>
+                          </Row>
+                          <div className="text-center">
+                            <span className="birth">
+                            {t("birthday")}: <span className="ni location_pin mr-2">{dateOfBirth.toLocaleDateString('vi-VN')}</span>
+
+                            </span>
+                            <div className="address">
+
+                            {t("gender")}: <span className="ni location_pin mr-2">{renderGender(employee.profile.gender)}</span>
+                            </div>
+                            <div className="phonenumber">
+                            {t("phone_number")}: <span className="ni location_pin mr-2">{employee.profile.phone_number}</span>
+                            </div>
+
+                          </div>
+                        </CardBody>
+                      </Card>
+                    </Link>
+                  </Col>
+                );
+              })}
+            </Row>
+          </div>
         </div>
-        <div className={classNames(dashboardStyles.carddiv, futuna.className)}>
-          <Row xs={1} md={2} className="g-4">
-            {/* {employee.map((employee, idx): ReactNode => {
-              const dateOfBirth = new Date(employee.profile.date_of_birth);
-              const employeeName = employee.profile.name.toLowerCase();
-              const searchTerm = searchRef.current?.value.toLowerCase();
-              if (searchTerm && employeeName.includes(searchTerm)) {
-              } */}
-            {/* return ( */}
-            {/* // <Col key={idx} sm={6} md={4} lg={3} className={dashboardStyles.col}>
-                //   <Link href={`/home/employee/${employee.id}/?auth=true`} className={dashboardStyles.link}> */}
-            <Card style={customCardStyle}
-            // onMouseEnter={() => setHoveredCard(idx)}
-            // onMouseLeave={() => setHoveredCard(null)}
-            // className={idx === hoveredCard ? dashboardStyles.hoveredCard : dashboardStyles.card}
-            // onClick={() => setShowDialog(true)}
-            >
-
-              <CardImg
-                alt="..."
-                // onLoad={(e: any) => URL.revokeObjectURL(e.target.src)}
-                src="/public/images/icons/uploadAvatar.png"
-                variant="top"
-                height="250"
-                className="img-fluid"
-                style={{ objectFit: 'cover', height: '250px', borderRadius: "60%", padding: '20px' }}
-              ></CardImg>
-              <CardHeader className="text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
-                <div className="d-flex justify-content-between">
-                </div>
-              </CardHeader>
-              <CardBody className={classNames(dashboardStyles.ch)}>
-                <Row>
-                  <div className="col">
-                    <div className="card-profile-stats d-flex justify-content-center">
-                      <div className="profile-stat">
-                        <span className="name no-underline"> {t("name")}: </span>
-                        <span className="description no-underline" style={{ marginBottom: '10px' }}>Dinh Dai Duong</span>
-                      </div>
-                    </div>
-                  </div>
-                </Row>
-                <div className="text-center">
-                  <span className="birth">
-                    {t("birthday")}: <span className="ni location_pin mr-2">3/7/2024</span>
-
-                  </span>
-                  <div className="address">
-
-                    {t("gender")}: <span className="ni location_pin mr-2">Male</span>
-                  </div>
-                  <div className="phonenumber">
-                    {t("phone_number")}: <span className="ni location_pin mr-2">0326465520</span>
-                  </div>
-
-                </div>
-              </CardBody>
-            </Card>
-            {/* //   </Link>
-                // </Col> */}
-            {/* ); */}
-            {/* })} */}
-          </Row>
-        </div>
-      </div>
     </main >
   );
 }
