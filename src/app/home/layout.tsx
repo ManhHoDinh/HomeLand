@@ -25,13 +25,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-
   const ringgift_font = ringift;
   const pathName = usePathname();
   const searchParam = useSearchParams();
   const router = useRouter();
   function handleRouting(route: string): void {
-
     router.push(route);
   }
   const [current, setCurrent] = useState(0);
@@ -78,22 +76,21 @@ export default function RootLayout({
                     value.roles.length == 0 ||
                     value.roles.includes(UserProfile.getRole())
                   ) {
-                    if (value.title === 'Properties') {
-                      
+                    if (value.title === "Properties") {
                       return (
                         <div key={index} style={{ marginBottom: "2rem" }}>
-                          
                           <ButtonComponent
-                            className={clsx(styles.sidebarButton, futuna.className, {
-                              [styles.current]: current === index,
-                            })}
+                            className={clsx(
+                              styles.sidebarButton,
+                              futuna.className,
+                              {
+                                [styles.current]: current === index,
+                              }
+                            )}
                             onClick={() => {
-                              setExpand(prev => !prev);
-                              
-                            }
-                              
-                            }
-                            sufIcon= {expand ?<FaAngleUp/> :<FaAngleDown />}
+                              setExpand((prev) => !prev);
+                            }}
+                            sufIcon={expand ? <FaAngleUp /> : <FaAngleDown />}
                           >
                             {value.svg}
                             <span style={{ margin: "auto 0" }}>
@@ -106,23 +103,29 @@ export default function RootLayout({
                               styles.sidebarButtonMenu,
                               futuna.className,
                               {
-                                [styles.hide]: !expand
+                                [styles.hide]: !expand,
                               }
                             )}
                           >
-                            {value.menu?.map((value, index) => ( value.roles.indexOf(UserProfile.getRole()) > -1 ? 
-                              <button
-                                key={index}
-                                className={clsx(styles.subMenu, {
-                                  [styles.active]: pathName === value.href,
-                                })}
-                                onClick={() => {
-                                setCurrent(index);
-                                handleRouting(value.href)}}
-                              >
-                                {value.title}
-                              </button> : <></>
-                            ))}
+                            {value.menu?.map((value, index) =>
+                              value.roles.indexOf(UserProfile.getRole()) >
+                              -1 ? (
+                                <button
+                                  key={index}
+                                  className={clsx(styles.subMenu, {
+                                    [styles.active]: pathName === value.href,
+                                  })}
+                                  onClick={() => {
+                                    setCurrent(index);
+                                    handleRouting(value.href);
+                                  }}
+                                >
+                                  {value.title}
+                                </button>
+                              ) : (
+                                <></>
+                              )
+                            )}
                           </div>
                         </div>
                       );
@@ -131,14 +134,12 @@ export default function RootLayout({
                       <div key={index} style={{ marginBottom: "2rem" }}>
                         <Button
                           className={clsx(styles.sidebarButton, {
-                            [styles.current]: index === current
+                            [styles.current]: index === current,
                           })}
                           onClick={() => {
                             setCurrent(index);
                             handleRouting("/home/" + value.path + "?auth=true");
-                          }
-                           
-                          }
+                          }}
                           style={futuna.style}
                         >
                           {value.svg}
@@ -159,17 +160,17 @@ export default function RootLayout({
           <div
             style={{
               width: "100%",
-              backgroundColor: "var(--background-color)",
+              background: "#F5F5F5",
             }}
           >
-            <div style={{ display: "flex" }}>
+            <div style={{ display: "flex", background: "#F5F5F5" }}>
               <div
                 style={{
                   height: "130px",
                   display: "flex",
                   alignContent: "center",
                   flexWrap: "wrap",
-                  background: "#E8EAEC",
+                  background: "#F5F5F5",
                 }}
               >
                 <Button
