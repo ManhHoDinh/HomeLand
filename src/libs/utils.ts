@@ -74,9 +74,9 @@ export function searchingContract(list: Contract[], param: any): any[] {
   const t = list.forEach((element) => {
     if (
       (isString(element.resident.profile.name) &&
-        stringToSlug(element.resident.profile.name.toString().toLowerCase()).includes(
-          stringToSlug(param.toString().toLowerCase())
-        )) ||
+        stringToSlug(
+          element.resident.profile.name.toString().toLowerCase()
+        ).includes(stringToSlug(param.toString().toLowerCase()))) ||
       stringToSlug(element.resident.profile.name.toString().toLowerCase()) ==
         stringToSlug(param.toString().toLowerCase())
     )

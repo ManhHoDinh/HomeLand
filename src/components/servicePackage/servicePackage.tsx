@@ -9,7 +9,7 @@ import { ServicePackage } from "../../models/servicePackage";
 import { loadingFiler, removeLoadingFilter } from "../../libs/utils";
 import ServicePackageModal from "../../app/home/services/[id]/addServicePackage";
 import ConfirmBillModal from "./ComfirmBill";
-import { baseUrl, endpoint } from "../../constraints/endpoints";
+import { baseUrl, endpoint } from "../../constants/endpoints";
 import { useRouter } from "next/navigation";
 import { useTranslation } from "react-i18next";
 export interface IServicePackageProps {
@@ -64,7 +64,7 @@ export default function ServicePackageLayout(props: IServicePackageProps) {
     router.push(shortLink);
     console.log(response);
   }
-  
+
   const handleConfirmDelete = async (id: string) => {
     console.log(id);
     setShowDeleteModal(false);
@@ -92,7 +92,7 @@ export default function ServicePackageLayout(props: IServicePackageProps) {
         backgroundColor: "rgba(40, 100, 255, 0.1)",
         marginBottom: "20px",
         borderRadius: "20px",
-        padding: "5px 20px"
+        padding: "5px 20px",
       }}
     >
       <Row className="align-items-center">
@@ -103,7 +103,7 @@ export default function ServicePackageLayout(props: IServicePackageProps) {
           <h4>{t(props.servicePackage.name)}</h4>
           <h4>
             {props.servicePackage.per_unit_price.toLocaleString()} VND /{" "}
-            {props.servicePackage.expired_date} {t('days')}
+            {props.servicePackage.expired_date} {t("days")}
           </h4>
         </Col>
         <Col md="auto">
@@ -115,7 +115,7 @@ export default function ServicePackageLayout(props: IServicePackageProps) {
               variant="info"
               style={{ alignItems: "center" }}
             >
-              {t('buy')}
+              {t("buy")}
             </Button>
           ) : (
             <div className="d-flex">
@@ -130,7 +130,7 @@ export default function ServicePackageLayout(props: IServicePackageProps) {
                 onClick={() => setShowUpdateModal(true)}
                 variant="warning"
               >
-                {t('edit')}
+                {t("edit")}
               </Button>
 
               <Button
@@ -138,7 +138,7 @@ export default function ServicePackageLayout(props: IServicePackageProps) {
                 variant="danger"
                 style={{ marginLeft: "20px" }}
               >
-                {t('delete')}
+                {t("delete")}
               </Button>
             </div>
           )}
