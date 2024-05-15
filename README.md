@@ -13,7 +13,9 @@ Nguyễn Phước Hưng - Student ID: 21520252
 Nguyễn Thị Kim Ngân - Student ID: 20520915
 ## Technologies Used:
 FrontEnd: NextJS
+
 BackEnd: NestJS
+
 Other Technologies: Docker, Bootstrap, PostgreSQL, Supabase, Momo Payway, ChatGBTAPI,...
 ## Functionalities:
 Information Management: Building information, residents, resident vehicles,...
