@@ -38,6 +38,13 @@ const MobileNav = () => {
               {link}
             </Link>
           ))}
+          <Link
+            key={5}
+            href={`login`}
+            className="text-sm font-semibold tracking-wide text-slate-200"
+          >
+            {"login"}
+          </Link>
         </nav>
       </figure>
     </>
