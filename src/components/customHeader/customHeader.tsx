@@ -45,7 +45,38 @@ const CustomHeader = ({ auth }: { auth: boolean }): JSX.Element => {
         </div>
         <div style={{ alignItems: "center" }} className={style.buttonContainer}>
           <Row className="align-items-center">
-            <Col>{!auth ? <></> : <InfoButton></InfoButton>}</Col>
+            <Col>
+              {!auth ? (
+                <div className={style.menuContainer}>
+                  <HeaderButton
+                    title={"Home"}
+                    hideIcon={true}
+                    onClick={() => handleRoute("/home")}
+                  />
+                  <HeaderButton
+                    title={"Apartments"}
+                    onClick={() => handleRoute("apartments")}
+                  />
+                  <HeaderButton
+                    title={"Residents"}
+                    onClick={() => handleRoute("residents")}
+                  />
+                  <HeaderButton
+                    title={"Services"}
+                    onClick={() => handleRoute("services")}
+                  />
+                  <div className={style.loginContainer}>
+                    <LoginButton
+                      onClick={() => {
+                        router.push("/login");
+                      }}
+                    ></LoginButton>
+                  </div>
+                </div>
+              ) : (
+                <InfoButton></InfoButton>
+              )}
+            </Col>
             <Col md="auto">
               <Form.Select
                 defaultValue="vi"
