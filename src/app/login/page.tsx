@@ -34,8 +34,6 @@ export default function Login() {
       .then((res) => {
         UserProfile.setProfile(res.data);
         UserProfile.setRole(res.data.role);
-        if(UserProfile.getRole()==="admin")
-          router.replace("/home/dashboard?auth=true");
         router.replace("/home/dashboard?auth=true");
       })
       .catch((err) => {

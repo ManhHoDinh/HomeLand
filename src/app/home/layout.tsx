@@ -169,7 +169,6 @@ export default function RootLayout({
                   display: "flex",
                   alignContent: "center",
                   flexWrap: "wrap",
-                  background: "#E8EAEC",
                 }}
               >
                 <Button
