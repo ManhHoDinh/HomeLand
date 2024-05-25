@@ -48,7 +48,7 @@ export default function Services() {
       refetch();
     }
   }
- 
+
   window.addEventListener("scroll", (e) => {
     const windowHeight =
       "innerHeight" in window
@@ -72,8 +72,7 @@ export default function Services() {
     if (!data) return;
     let result = [...data];
     console.log(searchParam);
-    if(searchParam != "")
-      result = search(result, "name", searchParam)
+    if (searchParam != "") result = search(result, "name", searchParam);
     setServiceList([...result]);
   }, [data, searchParam]);
   function handleSearch(params: string): void {
@@ -115,30 +114,23 @@ export default function Services() {
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 40 }}
-      className={clsx(futuna.className,styles.main)}
+      className={clsx(futuna.className, styles.main)}
     >
       <div className={styles.container}>
-        <div
-          style={{ width: "85%" }}
-          className={`${styles.itemContainer} ${styles.searchBarContainer}`}
-        >
+        <div className={`${styles.itemContainer} ${styles.searchBarContainer}`}>
           <SearchBar
             placeholder={t("search_service")}
             className={styles.searchBar}
             // onChange={handleSearch}
-            style={{ width: "50%" }}
           ></SearchBar>
         </div>
         {UserProfile.getRole() == "admin" ? (
           <div
-            className={styles.itemContainer}
+            className={clsx(styles.itemContainer, styles.addBtn)}
             style={{
               height: "100%",
-              width: "20%",
-              padding: "0 1rem",
               alignItems: "center",
               alignContent: "center",
-              margin: "auto",
               justifyContent: "center",
               display: "flex",
             }}
@@ -160,8 +152,11 @@ export default function Services() {
           <></>
         )}
       </div>
-      <div className={styles.grid}>
-        {ServiceList.map((value, index) => ServiceCard(value))}
+      <div className={`${styles.grid} container`}>
+        <div className="row">
+        {ServiceList.map((value, index) =><div className="col-sm-6 col-lg-4 mb-3" key={index}> {ServiceCard(value)}</div>)}
+        </div>
+        
       </div>
       {loadingMore.current.isLoading && loadingMore.current.page > 0 && (
         <div

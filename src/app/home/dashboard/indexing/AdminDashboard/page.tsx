@@ -56,7 +56,7 @@ const AdminDashboard = () => {
               },
               title: {
                 display: true,
-                text: "Population distribution by building",
+                text: "Mật độ phân bố dân cư theo tòa nhà",
               },
             },
             zoom: {
