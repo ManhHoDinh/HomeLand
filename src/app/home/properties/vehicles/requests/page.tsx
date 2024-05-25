@@ -247,7 +247,7 @@ export default function Vehicles() {
                   ref={searchRef}
                 />
               </div>
-              <div className="w-100 mt-5">
+              <div style={{ overflowX: "auto" }} className="w-100 mt-5">
                 <Table
                   className={clsx(
                     vehicleStyles.tableResident,
