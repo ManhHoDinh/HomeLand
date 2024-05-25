@@ -74,7 +74,7 @@ export const InfoButton = ({
       onClick: () => {
         axios
           .get("/api/logout")
-          .then((res) => router.push("/home"))
+          .then((res) => router.push("/"))
           .catch((err) => {
             console.log(err);
             alert("Something went wrong");

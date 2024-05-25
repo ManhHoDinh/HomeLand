@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { futuna } from "../../../public/fonts/futura";
-import { icons } from "react-icons";
 
 export interface IFurnitureProps {
   title: string;
