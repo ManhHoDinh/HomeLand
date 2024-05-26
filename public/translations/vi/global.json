@@ -1,4 +1,5 @@
 {
+  "population_distribution_by_building": "Phân bổ dân số theo tòa nhà",
   "building":"Toà nhà",
   "floor":"Tầng",
   "apartment": "Căn hộ",
@@ -31,7 +32,10 @@
   "search_vehicle": "Tìm kiếm phương tiện...",
   "license_plate": "Biển số xe",
   "vehicle_owner": "Chủ sở hữu",
+  "nothing_to_show": "Không có gì để hiển thị.",
   "registration_check": "Xác nhận đăng ký",
+  "show": "Thể hiện",
+  "entries":"Phần tử",
   "vehicle_list": "Danh sách phương tiện",
   "add_vehicle": "Thêm phương tiện",
   "changeFile":"Thay đổi file tại đây",
@@ -125,6 +129,8 @@
   "Manage Employee": "Quản lý nhân viên",
   "employeelist": "Danh sách nhân viên",
   "add_employeetitle": "Thêm nhân viên",
+  "add_device": "Thêm thiết bị",
+  "list_device": "Danh sách thiết bị",
   "task": "Công việc:",
   "identyfy_number": "Số căn cước công dân:",
   "identyfy_front": "Mặt trước căn cước công dân:",
@@ -143,5 +149,19 @@
   "width": "Chiều rộng",
   "accept": "Đồng ý",
   "create_floor": "Tạo phòng",
-  "service_use":"Dịch vụ đang sử dụng"
+  "service_use":"Dịch vụ đang sử dụng",
+  "available": "Có sẵn",
+  "servicename": "Tên thiết bị",
+  "date_create": "Ngày khởi tạo",
+  "device_code": "Mã thiết bị",
+  "script": "Mô tả",
+  "pool": "Hồ bơi",
+  "library": "Thư viện",
+  "park": "Bãi giữ xe",
+  "inactive": "Không hoạt động",
+  "Building Management": "Quản lí tòa nhà",
+  "List OF Building": "Danh sách tòa nhà",
+  "Address": "Địa chỉ",
+  "Max Floor": "Tầng cao nhất"
+
 }

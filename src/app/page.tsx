@@ -44,23 +44,23 @@ export default function Home() {
             <figure className="bubble w-96 lg:w-[430px] h-96 bg-sky-600 bottom-16 md:bottom-44  -right-20 md:right-20" />
             <div className="flex flex-col text-center space-y-12">
               <div className="flex flex-col items-center space-y-6">
-                <p className="capitalize border border-slate-700 py-1 px-3 text-xs rounded-3xl cursor-pointer hover:border-sky-500 hover:bg-slate-800 shadow-md transition-all">
-                  new features is now available.
-                  <ArrowRightCircle className="inline ml-1 w-4 h-4" />
-                </p>
-                <Heading title="A CRM dashboard for engineering teams" />
+                <Heading title="Giải pháp công nghệ cho việc quản lý chung cư" />
                 <p className="max-w-[46rem] leading-normal sm:text-lg sm:leading-8">
-                  Boost engineering team&rsquo;s productivity with Ocean CRM
-                  dashboard that streamlines project management, collaboration,
-                  and data-driven decision-making.
+                  Tái định nghĩa trải nghiệm quản lý chung cư với Bảng Điều
+                  Khiển Toàn Diện - Nền tảng chuyên nghiệp hàng đầu, nâng tầm
+                  chất lượng cuộc sống và mang lại tiện ích vượt trội cho cư
+                  dân, qua việc kiểm soát và tối ưu hóa mọi khía cạnh của việc
+                  quản lý.
                 </p>
                 <div className="flex items-center gap-4">
-                  <Button>
-                    get started
-                    <MoveRight className="w-4 h-4" />
-                  </Button>
-                  <Link href="#pricing">
-                    <Button variant="outline">view pricing</Button>
+                  <Link href="https://www.facebook.com/ManhHoDinh.03/">
+                    <Button>
+                      Trải nghiệm ngay
+                      <MoveRight className="w-4 h-4" />
+                    </Button>
+                  </Link>
+                  <Link href="#testimonials">
+                    <Button variant="outline">Các nhận xét</Button>
                   </Link>
                 </div>
               </div>
@@ -99,7 +99,10 @@ export default function Home() {
             className="flex flex-col gap-y-12 md:gap-y-20 lg:gap-y-28"
           >
             {/* Part 1 */}
-            <div className="relative grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
+            <div
+              className="relative grid grid-cols-1 lg:grid-cols-2 items-center gap-12"
+              style={{ justifyContent: "center" }}
+            >
               <Image
                 src="/bg2.png"
                 width={1920}
@@ -108,15 +111,25 @@ export default function Home() {
                 className="absolute -z-50 w-[1400px] h-[670px] top-0 left-0 opacity-5"
               />
               <div className="flex flex-col gap-4 items-center text-center lg:items-start lg:text-start">
-                <Heading title="Powerful features to help you manage all your leads." />
-                <p className="lg:max-w-[34rem] leading-normal sm:text-lg sm:leading-8">
-                  Apsum dolor sit amet consectetur. Aliquam elementum elementum
-                  in ultrices. Dui maecenas ut eros turpis ultrices metus morbi
-                  aliquet vel.
+                <Heading title="Các tính năng mạnh mẽ hỗ trợ tối ưu quản lý chung cư" />
+                <p
+                  style={{ justifyContent: "center", textAlign: "justify" }}
+                  className="lg:max-w-[34rem] leading-normal sm:text-lg sm:leading-8"
+                >
+                  Giúp cho việc quản lý các hoạt động trong khu chung cư trở nên
+                  dễ dàng và hiệu quả hơn. Các tính năng này bao gồm quản lý
+                  thông tin cư dân, quản lý phí dịch vụ, quản lý thông tin tài
+                  sản cộng đồng, và hỗ trợ trong việc giải quyết các vấn đề phát
+                  sinh. Bằng cách tận dụng công nghệ, người quản lý chung cư có
+                  thể tiết kiệm thời gian, công sức và tăng cường sự minh bạch
+                  trong quá trình quản lý.
                 </p>
-                <Button >get started</Button>
+                <Button>Liên hệ</Button>
               </div>
-              <div className="grid md:grid-cols-2 lg:grid-cols-1 gap-4">
+              <div
+                className="grid md:grid-cols-2 lg:grid-cols-1 gap-4"
+                style={{ justifyContent: "center", textAlign: "justify" }}
+              >
                 {features.map((feature, index) => (
                   <FeatureCard key={index} {...feature} />
                 ))}
@@ -133,7 +146,8 @@ export default function Home() {
           {/* Features section */}
 
           {/* Pricing section */}
-          <PricingSection />
+          {/* <PricingSection />
+           */}
           {/* Pricing section */}
 
           {/* Testimonials section */}
@@ -151,17 +165,19 @@ export default function Home() {
           <section id="contact">
             <div className="bg-slate-800 rounded-lg px-8 lg:px-24 py-8 lg:py-12 flex flex-col lg:flex-row justify-between items-center gap-6">
               <div className="flex flex-col gap-4 text-center lg:text-start">
-                <Heading title="Let’s try our service now!" />
-                <p className="max-w-[35rem] leading-normal text-lg">
-                  Experience the power of Ocean CRM dashboard for engineering
-                  teams. Boost productivity and streamline collaboration. Get
-                  started today!
+                <Heading title="Trải nghiệm dịch vụ của chúng tôi ngay!" />
+                <p className="max-w-[38rem] leading-normal text-lg">
+                  Trải nghiệm bộ công cụ mạnh mẽ tối ưu quá trình quản lý chung
+                  cư. Liên hệ để biết thêm chi tiết và có nhiều thông tin khuyến
+                  mãi!
                 </p>
               </div>
-              <Button>
-                get started
-                <MoveRight className="w-4 h-4" />
-              </Button>
+              <Link href="https://www.facebook.com/ManhHoDinh.03/">
+                <Button>
+                  Liên Hệ
+                  <MoveRight className="w-4 h-4" />
+                </Button>
+              </Link>
             </div>
           </section>
           {/* Contact section */}
