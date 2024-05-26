@@ -13,7 +13,7 @@ const Button: FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className={`btn ${
+      className={`btn intro ${
         variant === "primary"
           ? "btn-primary"
           : variant === "secondary"

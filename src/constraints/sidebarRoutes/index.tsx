@@ -140,7 +140,7 @@ export const sidebarInfo = [
     roles: ["admin","resident"],
   },
   {
-    title: "Complain & repair requests",
+    title: "Complain",
     path: "complain",
     svg: <GiAutoRepair />,
     menu: [],
