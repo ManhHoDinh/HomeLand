@@ -114,7 +114,7 @@ export default function Home() {
                   in ultrices. Dui maecenas ut eros turpis ultrices metus morbi
                   aliquet vel.
                 </p>
-                <Button>get started</Button>
+                <Button >get started</Button>
               </div>
               <div className="grid md:grid-cols-2 lg:grid-cols-1 gap-4">
                 {features.map((feature, index) => (
