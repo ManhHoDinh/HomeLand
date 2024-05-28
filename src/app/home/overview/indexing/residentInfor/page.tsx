@@ -41,11 +41,11 @@ const ResidentInfor = () => {
             General Information
           </h4>
           <div className="row">
-            <div className="col-3 d-flex flex-column">
+            <div className="col-lg-3 col-12 d-flex flex-column">
               <span className={styles.label}>Name</span>
               <span className={styles.content}>{data?.profile.name}</span>
             </div>
-            <div className="col-3 d-flex flex-column">
+            <div className="col-lg-3 col-12 d-flex flex-column">
               <span className={styles.label}>Date of Birth</span>
               {data?.profile.date_of_birth && (
                 <span className={styles.content}>
@@ -56,11 +56,11 @@ const ResidentInfor = () => {
                 </span>
               )}
             </div>
-            <div className="col-3 d-flex flex-column">
+            <div className="col-lg-3 col-12 d-flex flex-column">
               <span className={styles.label}>Gender</span>
               <span className={styles.content}>{data?.profile.gender}</span>
             </div>
-            <div className="col-3 d-flex flex-column">
+            <div className="col-lg-3 col-12 d-flex flex-column">
               <span className={styles.label}>Identification Number</span>
               <span className={styles.content}>
                 {data?.profile.identify_number}
@@ -79,19 +79,19 @@ const ResidentInfor = () => {
             Contact Information
           </h4>
           <div className="row">
-            <div className="col-4 d-flex flex-column">
+            <div className="col-lg-4 col-12 d-flex flex-column">
               <span className={styles.label}>Phone Number</span>
               <span className={styles.content}>
                 {data?.profile.phone_number}
               </span>
             </div>
-            <div className="col-4 d-flex flex-column">
+            <div className="col-lg-4 col-12 d-flex flex-column">
               <span className={styles.label}>Email</span>
               <span className={styles.content}>
                 {data?.account?.email || ""}
               </span>
             </div>
-            <div className="col-4 d-flex flex-column">
+            <div className="col-lg-4 col-12 d-flex flex-column">
               <span className={styles.label}>Payment Information</span>
               <span className={styles.content}>{data?.payment_info || ""}</span>
             </div>

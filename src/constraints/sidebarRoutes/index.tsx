@@ -31,7 +31,7 @@ export const sidebarInfo = [
       </svg>
     ),
     menu: [],
-    roles: ["admin", "technician","resident","manager"],
+    roles: ["admin", "technician"],
   },
   {
     title: "Properties",
@@ -68,7 +68,7 @@ export const sidebarInfo = [
       {
         title: "Apartment",
         href: "/home/properties/apartments",
-        roles: ["admin", "manager","resident"],
+        roles: ["admin", "manager"],
       },
       {
         title: "Vehicle",
@@ -107,44 +107,44 @@ export const sidebarInfo = [
     title: "Employee",
     path: "employee",
     svg: <GrUserWorker />,
-    roles: ["admin", "manager","resident"],
+    roles: ["admin", "manager"],
   },
   {
     title: "Contracts",
     path: "contracts",
     svg: <FaFileContract />,
-    roles: ["admin", "manager","resident"],
+    roles: ["admin", "manager"],
   },
   {
     title: "Residents",
     path: "residents",
     svg: <FaUserGroup />,
-    roles: ["admin", "manager","resident"],
+    roles: ["admin", "manager"],
   },
   {
     title: "Managers",
     path: "managers",
     svg: <GrUserManager />,
-    roles: ["admin","resident"],
+    roles: ["admin"],
   },
   {
     title: "Technicians",
     path: "technicians",
     svg: <TechnicianIcon width={30} height={30} />,
-    roles: ["admin","resident"],
+    roles: ["admin"],
   },
   {
     title: "Buildings",
     path: "buildings",
     svg: <FaBuilding />,
-    roles: ["admin","resident"],
+    roles: ["admin"],
   },
   {
     title: "Complain",
     path: "complain",
     svg: <GiAutoRepair />,
     menu: [],
-    roles: ["admin", "manager","resident"],
+    roles: ["admin", "manager"],
   },
   {
     title: "Send Complain & repair requests",
