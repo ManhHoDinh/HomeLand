@@ -74,6 +74,7 @@ export default function RootLayout({
             >
               <div className={styles.sidebarBody}>
                 {sidebarInfo.map((value, index) => {
+                  console.log(value.roles);
                   if (
                     value.roles.length == 0 ||
                     value.roles.includes(UserProfile.getRole())
