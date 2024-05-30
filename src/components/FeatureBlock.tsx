@@ -13,6 +13,7 @@ const FeatureBlock: FC<FeatureBlockProps> = ({
 }) => {
   return (
     <article
+    style={{justifyContent:"center", textAlign:"justify"}}
       className={`flex flex-col lg:flex-row items-center justify-between gap-8 ${
         isReversed && "lg:flex-row-reverse"
       }`}
@@ -26,7 +27,7 @@ const FeatureBlock: FC<FeatureBlockProps> = ({
       />
       <div className="basis-6/12 flex flex-col md:text-center lg:text-start gap-4 md:gap-6">
         <Heading title={title} />
-        <p className="lg:max-w-[40rem]">{content}</p>
+        <p style={{justifyContent:"center", textAlign:"justify"}} className="lg:max-w-[40rem]">{content}</p>
       </div>
     </article>
   );

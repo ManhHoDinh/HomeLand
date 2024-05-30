@@ -26,7 +26,7 @@ const ResidentContract = () => {
         data?.map((contract, index) => (
           <div key={index} className={styles.contractItems}>
             <div className="row">
-              <div className="col-4 d-flex flex-column">
+              <div className="col-sm-4 col-12 d-flex flex-column">
                 <span className={styles.label}>Role</span>
                 <span
                   className={clsx(styles.content, {
@@ -37,7 +37,7 @@ const ResidentContract = () => {
                   {contract.role}
                 </span>
               </div>
-              <div className="col-4 d-flex flex-column">
+              <div className="col-sm-4 col-12 d-flex flex-column">
                 <span className={styles.label}>Status</span>
                 <span
                   className={clsx(styles.status, styles.content, {
@@ -48,7 +48,7 @@ const ResidentContract = () => {
                   {contract.status}
                 </span>
               </div>
-              <div className="col-4 d-flex flex-column">
+              <div className="col-sm-4 col-12 d-flex flex-column">
                 <span className={styles.label}>Apartment</span>
                 <span className={clsx(styles.content)}>
                   {contract.apartment.name}
@@ -56,13 +56,13 @@ const ResidentContract = () => {
               </div>
             </div>
             <div className="row">
-              <div className="col-4 d-flex flex-column">
+              <div className="col-sm-4 col-12 d-flex flex-column">
                 <span className={styles.label}>Created At</span>
                 <span className={styles.content}>
                   {format(new Date(contract.created_at), "dd/MM/yyyy")}
                 </span>
               </div>
-              <div className="col-4 d-flex flex-column">
+              <div className="col-sm-4 col-12 d-flex flex-column">
                 <span className={styles.label}>Expire At</span>
                 <span className={styles.content}>
                   {format(new Date(contract.expire_at as Date), "dd/MM/yyyy")}

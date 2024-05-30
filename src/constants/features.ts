@@ -3,36 +3,36 @@ import { Feature, featureBlock } from "@/types/interfaces";
 export const features: Feature[] = [
   {
     imageUrl: "/features/bar-chart.png",
-    title: "Reporting dashboard",
+    title: "Thống kê",
     content:
-      "Generate insightful reports and analytics with our reporting dashboard feature, empowering data-driven decision-making for engineering teams.",
+      "Trực quan hóa số liệu của tòa nhà, căn hộ, nhân viên, cư dân, và các thông tin khác. Hỗ trợ quản lý tài chính, dịch vụ, tiện ích, và các thông tin khác.",
   },
   {
     imageUrl: "/features/calendar.png",
-    title: "Meeting scheduling",
+    title: "Quản lý các dịch vụ, các tòa nhà, căn hộ",
     content:
-      "Effortlessly schedule meetings, coordinate availability, and send automated reminders with the meeting scheduling feature, ensuring seamless collaboration.",
+      "Hỗ trợ hiệu quả các dịch vụ, tiện ích gắn liền với quản lý tòa nhà, căn hộ, nhân viên, cư dân, và các thông tin khác.",
   },
   {
     imageUrl: "/features/protect.png",
-    title: "100% secured",
+    title: "Hỗ trợ tiếp nhận và phản hồi khiếu nại",
     content:
-      "Enhance data protection with robust security features, ensuring confidentiality, integrity, and compliance for your engineering team's CRM dashboard.",
+      "Hỗ trợ ban quản lý tiếp nhận và xử lý khiếu nại của cư dân, hỗ trợ điều phối cho các bộ phận liên quan giải quyết khiếu nại một cách nhanh chóng và hiệu quả.",
   },
 ];
 
 export const featuresBlock: featureBlock[] = [
   {
     imageUrl: "/features/messaing.svg",
-    title: "Integrated Messaging System",
+    title: "Hỗ trợ chatbot",
     content:
-      "The integrated messaging system within the CRM dashboard for engineering teams allows for instant and seamless communication among team members. It eliminates the need for external messaging platforms, keeping all project-related conversations organized and easily accessible within the dashboard's interface.",
+      "Tùy chỉnh chatbot để hỗ trợ khách hàng 24/7, giúp giải đáp thắc mắc và cung cấp thông tin chi tiết về sản phẩm và dịch vụ của bạn.",
   },
   {
     imageUrl: "/features/task-management.svg",
-    title: "Resource Allocation and Task Management",
+    title: "Quản lý các trang thiết bị của chung cư",
     content:
-      "The task management system within the CRM dashboard for engineering teams enables efficient tracking and assignment of tasks. It provides a centralized platform to create, prioritize, and monitor tasks, ensuring streamlined project execution and improved collaboration among team members.",
+      "Cung cấp bộ công cụ mạnh mẽ để quản lý các trang thiết bị của chung cư, đem lại sự tiện nghi, kịp thời quản lý các thiết bị khi gặp các vấn đề kỹ thuật.",
     isReversed: true,
   },
 ];

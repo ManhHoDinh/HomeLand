@@ -33,7 +33,7 @@ export const InfoButton = ({
       });
   }, []);
 if (isLoading) {
-  return <div>Loading...</div>; // Replace this with your actual loading spinner or placeholder content
+  return <div>Loading...</div>; 
 }
   const handleMouseEnter = () => {
     if (dropdownTimeoutRef.current) {
@@ -45,7 +45,7 @@ if (isLoading) {
   const handleMouseLeave = () => {
     dropdownTimeoutRef.current = setTimeout(() => {
       setDropdownOpen(false);
-    }, 3000); 
+    }, 5000); 
   };
 
   const dropdownButton = React.forwardRef(() => (
@@ -115,12 +115,11 @@ if (isLoading) {
       <DropdownToggle as={dropdownButton} />
       <DropdownMenu
         show={dropdownOpen}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
         style={{
           position: "absolute",
           inset: "0px 0px auto auto",
           transform: "translate3d(-10px, 55px, 0px)",
+          marginTop: "10px",
         }}
         className={styles.hoverContent}
       >

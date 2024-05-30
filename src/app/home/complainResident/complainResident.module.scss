@@ -20,6 +20,7 @@
   border: 1px solid #ccc;
   border-bottom: none;
   padding: 8px 10px 0px 10px;
+  overflow: scroll;
 }
 @media screen and (max-width: 700px) {
  .tabHeader {

@@ -33,7 +33,7 @@
 }
 
 .hoverContent {
-    transition: max-height 1.3s, visibility 0s 0s;
+    transition: max-height 1.3s, visibility 0s 1.3s;
     max-height: 0;
     height: fit-content;
     overflow: hidden;
@@ -51,4 +51,5 @@
 .hoverContainer:hover .hoverContent {
     max-height: 100px;
     visibility: visible;
+    transition: max-height 0.0s, visibility 0s 0s; 
 }
