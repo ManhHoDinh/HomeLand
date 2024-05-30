@@ -125,7 +125,16 @@
   "Technicians": "Technicians",
   "Complain & repair requests": "Complain & repair requests",
   "Facility": "Facility",
-  "Floor": "Floor"
+  "Floor": "Floor",
+  "Gender": "Giới tính",
+  "Male": "Male",
+  "Female":"Female",
+  "Phone Number":"Phone Number",
+  "Payment Information": "Payment Information",
+  "Identification Number": "Identification Number",
+  "Date Of Birth": "Date Of Birth",
+  "Front Photo Of Identification Number": "Front Photo Of Identification Number ",
+  "Back Photo Of Identification Number": "Back Photo Of Identification Number"
 
 
 }

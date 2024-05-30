@@ -178,11 +178,9 @@
   "Female":"Nữ",
   "Phone Number":"Số điện thoại",
   "Payment Information": "Thông tin thanh toán",
-  "Identification Number": "CCCD",
+  "Identification Number": "Số nhận dạng",
   "Date Of Birth": "Ngày sinh",
-  "Front Photo Of Identification Number": "Ảnh chụp trước CCCD",
-  "Back Photo Of Identification Number": "Ảnh chụp sau CCCD",
+  "Front Photo Of Identification Number": "Ảnh chụp trước số nhận dạng",
+  "Back Photo Of Identification Number": "Ảnh chụp sau số nhận dạng"
   
-
-
 }
