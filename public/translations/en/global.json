@@ -113,7 +113,19 @@
   "building_Management": "Building Management",
   "list_of_building": "List Of Building",
   "address": "Address",
-  "max_floor": "Max Floor"
+  "max_floor": "Max Floor",
+  "Dashboard": "Dashboar",
+  "Properties": "Properties",
+  "Vehicle": "Vehicle",
+  "Equipment": "Equipment",
+  "Services": "Services",
+  "Employee": "Employee",
+  "Contracts": "Contracts",
+  "Managers": "Managers",
+  "Technicians": "Technicians",
+  "Complain & repair requests": "Complain & repair requests",
+  "Facility": "Facility",
+  "Floor": "Floor"
 
 
 }

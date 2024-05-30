@@ -162,6 +162,18 @@
   "Building Management": "Quản lí tòa nhà",
   "List OF Building": "Danh sách tòa nhà",
   "Address": "Địa chỉ",
-  "Max Floor": "Tầng cao nhất"
+  "Max Floor": "Tầng cao nhất",
+  "Dashboard": "Bảng điều khiển",
+  "Properties": "Tài sản",
+  "Vehicle": "Phương tiện",
+  "Equipment": "Thiết bị",
+  "Services": "Dịch vụ",
+  "Employee": "Nhân viên",
+  "Contracts": "Hợp đồng",
+  "Managers": "Quản lí",
+  "Technicians": "Kỹ thuật",
+  "Complain & repair requests": "Khiếu nại & yêu cầu sửa chữa",
+  "Facility": "Cơ sở vật chất",
+  "Floor": "Tầng"
 
 }
