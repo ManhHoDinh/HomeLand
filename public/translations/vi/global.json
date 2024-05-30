@@ -5,7 +5,7 @@
   "apartment": "Căn hộ",
   "see_all_contract":"Danh sách hợp đồng",
   "phone_number": "Số Điện Thoại",
-  "name": "Tên",
+  "Name": "Tên",
   "create":"Tạo",
   "create_at": "Ngày tạo",
   "expire_at": "Ngày hết hạn",
@@ -91,10 +91,8 @@
   "total":"Tổng tiền",
   "payTo":"Thanh toán cho chung cư",
   "invoiceTo":"Khách hàng",
-  "Name": "Tên",
   "Account": "Tài khoản",
   "Apartment": "Căn hộ",
-  "Phone Number": "Số điện thoại",
   "Create At": "Ngày tạo",
   "Resident Management":"Quản lý cư dân",
   "List Of Residents": "Danh sách cư dân",
@@ -174,6 +172,17 @@
   "Technicians": "Kỹ thuật",
   "Complain & repair requests": "Khiếu nại & yêu cầu sửa chữa",
   "Facility": "Cơ sở vật chất",
-  "Floor": "Tầng"
+  "Floor": "Tầng",
+  "Gender": "Giới tính",
+  "Male": "Nam",
+  "Female":"Nữ",
+  "Phone Number":"Số điện thoại",
+  "Payment Information": "Thông tin thanh toán",
+  "Identification Number": "CCCD",
+  "Date Of Birth": "Ngày sinh",
+  "Front Photo Of Identification Number": "Ảnh chụp trước CCCD",
+  "Back Photo Of Identification Number": "Ảnh chụp sau CCCD",
+  
+
 
 }
