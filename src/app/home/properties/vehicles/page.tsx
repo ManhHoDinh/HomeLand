@@ -143,22 +143,27 @@ export default function Vehicles() {
         </h1>
         <div className={clsx(vehicleStyles.header)}>
           <h1 className={clsx(utilStyles.headingLg)}>{t("vehicle_list")}</h1>
-          <div style={{ display: "flex" }}>
-            <ButtonComponent
-              href={`${path}/add`}
-              preIcon={<AddResidentIcon width={24} height={24} />}
-              className={clsx(vehicleStyles.addBtn, futuna.className)}
-            >
-              {t("add_vehicle")}
-            </ButtonComponent>
-            {user.role == "admin" ? (
+          <div style={{ display: "flex", flexWrap: "wrap" }}>
+            <div style={{ marginBottom: "10px" }}>
               <ButtonComponent
-              href={`${path}/requests`}
+                href={`${path}/add`}
                 preIcon={<AddResidentIcon width={24} height={24} />}
-                className={clsx(vehicleStyles.pendingBtn, futuna.className)}
+                className={clsx(vehicleStyles.addBtn, futuna.className)}
               >
-                {t("registration_check")}
+                {t("add_vehicle")}
               </ButtonComponent>
+            </div>
+            {user.role == "admin" ? (
+              <div style={{ marginBottom: "10px" }}>
+                <ButtonComponent
+                  href={`${path}/requests`}
+                  preIcon={<AddResidentIcon width={24} height={24} />}
+                  className={clsx(vehicleStyles.pendingBtn, futuna.className)}
+
+                >
+                  {t("registration_check")}
+                </ButtonComponent>
+              </div>
             ) : (
               <></>
             )}
@@ -189,7 +194,7 @@ export default function Vehicles() {
             ref={searchRef}
           />
         </div>
-        <div className="w-100 mt-5">
+        <div style={{ overflowX: "auto" }} className="w-100 mt-5">
           <Table
             className={clsx(vehicleStyles.tableResident, futuna.className)}
             striped

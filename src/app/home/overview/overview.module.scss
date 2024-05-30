@@ -1,9 +1,11 @@
 .wrapper {
   padding: 40px;
 }
+
 .label {
   color: var(--text-color);
 }
+
 .content {
   font-size: 18px;
   font-weight: 600;
@@ -11,27 +13,63 @@
   color: var(--primary);
 }
 
+@media (max-width: 768px) {
+  .contractColumn {
+    flex-direction: column;
+  }
+}
+/* File: overview.module.scss */
+
+@media (max-width: 576px) {
+  .img{
+    width: 200%;
+  }
+  .label{
+    font-size: 10px;
+  }
+  .content{
+    font-size: 10px;
+  }
+  .row > .col-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .row > .col-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .row > .col-9 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
 .img {
   margin: auto;
 }
+
 .rent {
   font-size: 16px;
   text-transform: uppercase;
   color: var(--green) !important;
 }
+
 .buy {
   text-transform: uppercase;
   color: var(--yellow) !important;
 }
+
 .contractItems {
   border: 1px solid #ccc;
   background-color: var(--white);
   padding: 20px;
   border-radius: 12px;
 }
-.contractItems + .contractItems {
-    margin-top: 10px;
+
+.contractItems+.contractItems {
+  margin-top: 10px;
 }
+
 .status {
   font-weight: 600;
   padding: 8px;
@@ -44,6 +82,7 @@
   color: var(--red);
   background-color: #fbd1d1;
 }
+
 .active {
   color: var(--green);
   background-color: #edf9f0;

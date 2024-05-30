@@ -11,10 +11,9 @@ import { ArrowRightCircle, MoveRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
-import "./globals.css";
 import { Inter } from "next/font/google";
 import Footer from "@/components/Footer";
-
+import "./tailwind.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {

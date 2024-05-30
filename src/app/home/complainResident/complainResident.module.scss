@@ -22,12 +22,34 @@
   padding: 8px 10px 0px 10px;
   overflow: scroll;
 }
+@media screen and (max-width: 700px) {
+ .tabHeader {
+    flex-direction: column;
+    margin: 10px;
+ }
+ .tabLayout{
+  margin: 10px;
+ }
+ .tabItem {
+   padding: 10px 10px;
+   margin: 10px;
+ }
+ .selectedOption {
+  background-color: #eef1f7;
+  color: var(--text-color);
+  border-left: 1px solid var(--primary);
+  border-right: 1px solid var(--primary);
+  border-top: 2px solid var(--primary);
+  border-bottom: 2px solid var(--primary);
+
+}
+}
 .tabItem {
   padding: 10px 20px;
   background-color: var(--primary);
   color: var(--white);
   cursor: pointer;
-  border-bottom: none;
+
   
 }
 .tabItem:not(.selectedOption) {
