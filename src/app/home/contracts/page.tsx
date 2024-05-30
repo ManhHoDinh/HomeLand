@@ -85,7 +85,7 @@ export default function Contracts() {
       refetchOnWindowFocus: false,
     }
   );
-  
+
   const ContractSortOption = [
     {
       title: t("building"),
@@ -224,14 +224,17 @@ export default function Contracts() {
             borderStyle: "none",
             padding: "10px 0",
             margin: 0,
+
           }}
         >
+
           <SearchBar
             className={styles.searchBar}
             placeholder={t("search_contract")}
             onChange={handleSearch}
           ></SearchBar>
         </div>
+
         {ContractSortOption.map((value, index) => (
           <div
             key={index}
@@ -246,8 +249,9 @@ export default function Contracts() {
             ></FilterButton>
           </div>
         ))}
+
         <div
-          className={styles.itemContainer}
+          className={styles.buttonContainer}
           style={{
             height: "100%",
             width: "15%",
@@ -255,6 +259,8 @@ export default function Contracts() {
             alignItems: "center",
             alignContent: "center",
             margin: "auto",
+            // marginTop: "80px",
+            // marginLeft: "29px",
             display: "flex",
           }}
         >
@@ -268,67 +274,69 @@ export default function Contracts() {
           </Button>
         </div>
       </div>
-      <Table responsive="sm">
-        <thead>
-          <tr style={{ width: "100%" }} className=" text-center">
-            <th>{t("ID")}</th>
-            <th>{t("name")}</th>
-            <th>{t("phone_number")}</th>
-            <th>{t("apartment")}</th>
-            <th>{t("status")}</th>
-            <th>{t("create_at")}</th>
-            <th>{t("expire_at")}</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          {ContractList.map((value, index): ReactNode => {
-            return (
-              <tr
-                key={index}
-                className="align-middle text-center"
-                style={{ cursor: "pointer" }}
-              >
-                <td>{value.contract_id}</td>
-                <td>{value.resident.profile.name}</td>
-                <td>{value.resident.profile.phone_number}</td>
-                <td>{value.apartment.name}</td>
-                <td>{value.status}</td>
-                <td>{format(new Date(value.created_at), "dd-MM-yyyy")}</td>
-                <td>
-                  {value.expire_at
-                    ? format(new Date(value.expire_at), "dd-MM-yyyy")
-                    : null}
-                </td>{" "}
-                <td style={{ width: 20 }}>
-                  <div className="d-flex">
-                    <Button
-                      onClick={() => {
-                        router.push(
-                          "/home/contracts/update/" +
+      <div style={{ overflowX: "auto" }} className="w-100 mt-5">
+        <Table responsive="sm">
+          <thead>
+            <tr style={{ width: "100%" }} className=" text-center">
+              <th>{t("ID")}</th>
+              <th>{t("name")}</th>
+              <th>{t("phone_number")}</th>
+              <th>{t("apartment")}</th>
+              <th>{t("status")}</th>
+              <th>{t("create_at")}</th>
+              <th>{t("expire_at")}</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {ContractList.map((value, index): ReactNode => {
+              return (
+                <tr
+                  key={index}
+                  className="align-middle text-center"
+                  style={{ cursor: "pointer" }}
+                >
+                  <td>{value.contract_id}</td>
+                  <td>{value.resident.profile.name}</td>
+                  <td>{value.resident.profile.phone_number}</td>
+                  <td>{value.apartment.name}</td>
+                  <td>{value.status}</td>
+                  <td>{format(new Date(value.created_at), "dd-MM-yyyy")}</td>
+                  <td>
+                    {value.expire_at
+                      ? format(new Date(value.expire_at), "dd-MM-yyyy")
+                      : null}
+                  </td>{" "}
+                  <td style={{ width: 20 }}>
+                    <div className="d-flex">
+                      <Button
+                        onClick={() => {
+                          router.push(
+                            "/home/contracts/update/" +
                             value.contract_id +
                             "?auth=true"
-                        );
-                      }}
-                      variant="warning"
-                    >
-                      {t("edit")}
-                    </Button>
+                          );
+                        }}
+                        variant="warning"
+                      >
+                        {t("edit")}
+                      </Button>
 
-                    <Button
-                      onClick={() => deleteHandle(value.contract_id)}
-                      variant="danger"
-                      style={{ marginLeft: "20px" }}
-                    >
-                      {t("delete")}
-                    </Button>
-                  </div>
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </Table>
+                      <Button
+                        onClick={() => deleteHandle(value.contract_id)}
+                        variant="danger"
+                        style={{ marginLeft: "20px" }}
+                      >
+                        {t("delete")}
+                      </Button>
+                    </div>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </Table>
+      </div>
       {loadingMore ? (
         <div
           style={{

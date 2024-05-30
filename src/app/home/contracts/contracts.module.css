@@ -21,6 +21,12 @@
   margin-left: 1rem;
 }
 
+@media (max-width: 600px) {
+  .itemContainer {
+    flex-direction: column;
+  }
+}
+
 .searchBar {
   width: 100%;
   height: 100%;
@@ -75,6 +81,7 @@
     0 8px 20px -2px rgba(0, 0, 0, 0.12), 0 6px 10px -6px rgba(0, 0, 0, 0.25);
   opacity: 1;
 }
+
 /* mixin for multiline */
 .blockWithText {
   overflow: hidden;
@@ -85,12 +92,14 @@
   /* margin-right: 1em; */
   padding-right: 1em;
 }
+
 .blockWithText:before {
   content: "...";
   position: absolute;
   right: 0;
   bottom: 0;
 }
+
 .blockWithText:after {
   content: "";
   position: absolute;
@@ -99,4 +108,51 @@
   height: 1em;
   margin-top: 0.2em;
   background: white;
+}
+
+.filterContainer {
+  display: flex;
+  width: 200%;
+
+}
+
+@media (max-width: 600px) {
+  .filterContainer {
+    flex-direction: column;
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+
+  .main>.container .filter {
+    display: none;
+  }
+
+
+  .main>.container div:first-of-type {
+    display: block;
+    visibility: visible;
+    height: 100%;
+    width: 180%
+  }
+
+  .main>.container>.buttonContainer {
+    display: block;
+    visibility: visible;
+    height: 100%;
+    width: 50%;
+    margin-top: 60px;
+    margin-right: 10px;
+    margin-left: 20px;
+
+  }
+  .main>.container>div {
+    display: none;
+    visibility: hidden;
+    height: 100%;
+    width: 100%
+  }
+
 }

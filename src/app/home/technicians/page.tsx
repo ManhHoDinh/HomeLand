@@ -210,6 +210,7 @@ export default function Residents() {
             <span>{t("Entries")}</span>
           </div>
           <SearchLayout
+          className={residentStyles.search}
             onKeydown={handleSearch}
             iconClick={searchIconClick}
             placeHolder={t("Search Technician") + "..."}

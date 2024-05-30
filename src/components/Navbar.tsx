@@ -14,10 +14,10 @@ const Navbar = () => {
           {navLinks.map((link, index) => (
             <Link
               key={index}
-              href={`#${link}`}
+              href={`#${link.path}`}
               className="text-sm font-semibold tracking-wide text-slate-200"
             >
-              {link}
+              {link.title}
             </Link>
           ))}
           <Link
@@ -25,7 +25,7 @@ const Navbar = () => {
             href={`login`}
             className="text-sm font-semibold tracking-wide text-slate-200"
           >
-            {"login"}
+            {"Đăng nhập"}
           </Link>
         </nav>
         {/* mobile navigation */}

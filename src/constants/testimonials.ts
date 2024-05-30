@@ -3,23 +3,23 @@ import { Testimonial } from "@/types/interfaces";
 export const testimonials: Testimonial[] = [
   {
     imageUrl: "/testimonials/user-1.jpg",
-    name: "ahmed taha",
-    role: "team leader",
+    name: "Mr. Hồ Đình Mạnh",
+    role: "Giám đốc VinHome",
     review:
-      "CRM dashboard boosted our engineering team's productivity and efficiency. Highly recommended!",
+      "Ứng dụng hỗ trợ tối ưu hóa quá trình vận hành chung cư, cực kì khuyên dùng!",
   },
   {
     imageUrl: "/testimonials/user-2.jpg",
-    name: "Abdellah massoudi",
-    role: "startup founder",
+    name: "Mr. Võ Công Bình",
+    role: "Giám đốc Công ty TNHH Bất Động Sản Bình Minh",
     review:
-      "Game-changer for our engineering team, revolutionizing project management and collaboration.",
+      "Đây là giải pháp công nghệ tuyệt vời cho việc quản lý và tạo tiện ích tương tác với cư dân.",
   },
   {
     imageUrl: "/testimonials/user-3.jpg",
-    name: "omar fahed",
-    role: "team member",
+    name: "Mr. Đinh Đại Dương",
+    role: "Chủ tịch Công ty CP Đầu Tư Bất Động Sản Đại Dương",
     review:
-      "Simplified project management, improved communication, and empowered decision-making. Highly endorsed!",
+      "Sự đơn giản và bố cục giao diện đẹp mắt thể hiện sản phẩm Việt mang tính cạnh tranh cao!",
   },
 ];

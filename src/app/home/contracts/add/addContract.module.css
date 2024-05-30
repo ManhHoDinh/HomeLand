@@ -44,3 +44,27 @@
   color: red;
   font-size: 1rem;
 }
+.tableContainer {
+  overflow-x: auto;
+}
+
+.table1 {
+  width: 100%;
+  margin-top: 50px;
+}
+
+@media (max-width: 600px) {
+  .table1 th {
+      width: 10%;
+      display: block;
+  }
+}
+@media screen and (max-width: 700px) {
+  .rowStyle {
+    left: 20;
+  }
+
+  .colStyle {
+    margin-right: 70px;
+  }
+}

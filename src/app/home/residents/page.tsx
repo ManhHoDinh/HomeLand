@@ -279,6 +279,7 @@ export default function Residents() {
               onKeydown={handleSearch}
               iconClick={searchIconClick}
               placeHolder={t("Search resident") + "..."}
+              className={residentStyles.search}
               ref={searchRef}
             />
           </div>

@@ -50,14 +50,14 @@ export default function AddVehicle(): React.ReactNode {
         <Modal.Body>
           <div
             className={styles.itemContainer}
-            style={{
-              position: "absolute",
-              height: "40px",
-              width: "40%",
-              borderStyle: "none",
-              margin: 0,
-              right: "5%",
-            }}
+          // style={{
+          //   position: "absolute",
+          //   height: "40px",
+          //   width: "40%",
+          //   borderStyle: "none",
+          //   margin: 0,
+          //   right: "5%",
+          // }}
           >
             <SearchLayout
               onChange={(e) => {
@@ -66,8 +66,8 @@ export default function AddVehicle(): React.ReactNode {
               placeHolder={t("search_resident")}
             />
           </div>
-
-          <Table style={{ width: "100%", marginTop: "50px" }} striped hover>
+          <div style={{ overflowX: "auto" }} className="w-100 mt-5">
+          <Table className="table1" style={{ width: "100%", marginTop: "50px" }} striped hover>
             <thead>
               <tr>
                 <th style={{ width: "20%" }}>{t("ID")}</th>
@@ -102,6 +102,7 @@ export default function AddVehicle(): React.ReactNode {
               })}
             </tbody>
           </Table>
+          </div>
         </Modal.Body>
       </Modal>
     );
@@ -318,7 +319,7 @@ export default function AddVehicle(): React.ReactNode {
               </div>
               {selectedRes == undefined ? (
                 <div>
-                  <div>Please select resident first</div>
+                  <div>Select resident</div>
                   <Button
                     style={{
                       width: "fit-content",
