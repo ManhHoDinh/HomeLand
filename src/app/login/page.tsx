@@ -34,7 +34,11 @@ export default function Login() {
       .then((res) => {
         UserProfile.setProfile(res.data);
         UserProfile.setRole(res.data.role);
-        router.replace("/home/dashboard?auth=true");
+        if (res.data.role === 'resident') {
+          router.replace("/home/overview?auth=true");``
+        } else {
+          router.replace("/home/dashboard?auth=true");
+        }
       })
       .catch((err) => {
         removeLoadingFilter(document.getElementsByTagName("main")[0]);
@@ -93,7 +97,7 @@ export default function Login() {
             className={futuna.className}
             style={{ fontWeight: "bold", fontSize: "24px" }}
           >
-            {`Modern Apartment Living: "Discover the essence of modern apartment living`}
+            {`Cuộc sống căn hộ hiện đại: "Khám phá bản chất của cuộc sống căn hộ hiện đại`}
           </div>
           <div style={{ width: " 100%", height: " 30px" }} />
           <div>Welcome Back, Please login to your account</div>
