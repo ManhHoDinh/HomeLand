@@ -86,7 +86,7 @@ export const sidebarInfo = [
       {
         title: t("Vehicle"),
         href: "/home/properties/vehicles",
-        roles: ["admin", "manager", "resident"],
+        roles: ["admin", "manager",],
       },
       {
         title: t("Equipment"),
