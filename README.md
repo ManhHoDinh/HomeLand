@@ -48,15 +48,13 @@ This area is designed for agency or company who want to sell their properties. M
 ## 🕵️ Admin
 Designed for admin, real estate broker and office manager too. Admin reviews every post and account information, after pass his review, the post will immediately post into the market.
 
-
-## 💕 Thanks
-This project almost completed like a real estate brokerage market. However developed by developer team who is still university students and have not enough experiences, this project maybe has some problem. You can visit our deploy website for more experience. Thank you for visiting our project.
-
-I deeply appreciate every member of this team for showing relentless effort for this project.
-
 ## Illustrative Images:
 ![alt text](image-1.png)
 ![alt text](anh1.png)
 
 ![git git](image.png)
 
+## 💕 Thanks
+This project almost completed like a real estate brokerage market. However developed by developer team who is still university students and have not enough experiences, this project maybe has some problem. You can visit our deploy website for more experience. Thank you for visiting our project.
+
+I deeply appreciate every member of this team for showing relentless effort for this project.
