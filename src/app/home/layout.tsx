@@ -20,6 +20,8 @@ import ChatBox from "@/components/chatBox/ChatBox";
 import clsx from "clsx";
 import ButtonComponent from "@/components/buttonComponent/buttonComponent";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
+import { useTranslation } from "react-i18next";
+
 export default function RootLayout({
   children,
 }: {
@@ -30,6 +32,8 @@ export default function RootLayout({
   const pathName = usePathname();
   const searchParam = useSearchParams();
   const router = useRouter();
+  const [t, i18n] = useTranslation();
+  
   function handleRouting(route: string): void {
 
     router.push(route);
@@ -79,7 +83,7 @@ export default function RootLayout({
                     value.roles.length == 0 ||
                     value.roles.includes(UserProfile.getRole())
                   ) {
-                    if (value.title === 'Properties' || value.title ==='Tài sản') {
+                    if (value.title === 'Properties') {
                       
                       return (
                         <div key={index} style={{ marginBottom: "2rem" }}>
@@ -98,7 +102,7 @@ export default function RootLayout({
                           >
                             {value.svg}
                             <span style={{ margin: "auto 0" }}>
-                              {value.title}
+                              {t(value.title)}
                             </span>
                           </ButtonComponent>
 
@@ -121,7 +125,7 @@ export default function RootLayout({
                                 setCurrent(index);
                                 handleRouting(value.href)}}
                               >
-                                {value.title}
+                                {t(value.title)}
                               </button> : <></>
                             ))}
                           </div>
@@ -144,7 +148,7 @@ export default function RootLayout({
                         >
                           {value.svg}
                           <span style={{ margin: "auto 0" }}>
-                            {value.title}
+                            {t(value.title)}
                           </span>
                         </Button>
                       </div>
