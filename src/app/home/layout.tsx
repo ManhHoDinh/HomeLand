@@ -79,7 +79,7 @@ export default function RootLayout({
                     value.roles.length == 0 ||
                     value.roles.includes(UserProfile.getRole())
                   ) {
-                    if (value.title === 'Properties') {
+                    if (value.title === 'Properties' || value.title ==='Tài sản') {
                       
                       return (
                         <div key={index} style={{ marginBottom: "2rem" }}>
