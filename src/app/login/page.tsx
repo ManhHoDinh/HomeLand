@@ -100,7 +100,7 @@ export default function Login() {
             {`Cuộc sống căn hộ hiện đại: "Khám phá bản chất của cuộc sống căn hộ hiện đại`}
           </div>
           <div style={{ width: " 100%", height: " 30px" }} />
-          <div>Welcome Back, Please login to your account</div>
+          <div>Chào mừng quay lại, vui lòng đăng nhập để tiếp tục.</div>
           <label form="email" style={{ marginTop: "10px" }}>
             Email
           </label>
@@ -167,11 +167,11 @@ export default function Login() {
                 id="rememberMe"
                 aria-label="rememberMe"
               ></input>
-              <label form="rememberMe">{"Remember me"}</label>
+              <label form="rememberMe">{"Lưu mật khẩu"}</label>
             </div>
             <div>
               <a onClick={() => router.push("/forgotPassword")}>
-                <u style={{ cursor: "pointer" }}>Forgot password?</u>
+                <u style={{ cursor: "pointer" }}>Quên mật khẩu?</u>
               </a>
             </div>
           </div>

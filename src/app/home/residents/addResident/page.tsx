@@ -25,7 +25,7 @@ import axios from "axios";
 import { RedirectType, redirect } from "next/navigation";
 import toastMessage from "@/utils/toast";
 import { loadingFiler, removeLoadingFilter } from "@/libs/utils";
-
+import { useTranslation } from "react-i18next";
 type FormValue = {
   name: string;
   dateOfBirth: string;
@@ -48,6 +48,7 @@ const AddResident = () => {
     email: "",
     identifyNumber:""
   });
+  const [t, i18n] = useTranslation();
   const [errors, setErrors] = useState<any>();
   const [frontImg, setFrontImg] = useState<any>();
   const [backImg, setBackImg] = useState<any>();
@@ -220,7 +221,7 @@ const AddResident = () => {
   return (
     <main className={mainStyles.main}>
       <div className={clsx(styles.wapper, futuna.className)}>
-        <p className={clsx(utilStyles.headingXl, styles.header)}>Create Resident</p>
+        <p className={clsx(utilStyles.headingXl, styles.header)}>{t("Create Resident")}</p>
         <div className={styles.bodyLayout}>
           <div className={styles.avatarLayout}>
             {AvatarImage}
@@ -235,7 +236,7 @@ const AddResident = () => {
           <Form className={clsx(styles.form, futuna.className)}>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label className={clsx(styles.label, styles.required)}>
-                Name
+                {t("Name")}
               </Form.Label>
               <Form.Control
                 size="lg"
@@ -252,12 +253,12 @@ const AddResident = () => {
 
             <Form.Group>
               <Form.Label className={clsx(styles.label, styles.required)}>
-                Gender
+              {t("Gender")}
               </Form.Label>
               <div key={`inline-radio`} className="mb-3">
                 <Form.Check
                   inline
-                  label="Male"
+                  label={t("Male")}
                   style={{ fontSize: "1rem" }}
                   name="gender"
                   type="radio"
@@ -268,7 +269,7 @@ const AddResident = () => {
                 <Form.Check
                   inline
                   style={{ fontSize: "1rem" }}
-                  label="Female"
+                  label={t("Female")}
                   name="gender"
                   type="radio"
                   onChange={handleChange}
@@ -281,7 +282,7 @@ const AddResident = () => {
               )}
             </Form.Group>
             <Form.Group className="mb-3">
-              <Form.Label className={styles.label}>Email</Form.Label>
+              <Form.Label className={styles.label}>{t("Email")}</Form.Label>
               <Form.Control
                 size="lg"
                 type="email"

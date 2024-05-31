@@ -20,7 +20,7 @@ import {
 } from "react-bootstrap/";
 import { loadingFiler, removeLoadingFilter } from "@/libs/utils";
 import axios from "axios";
-import { Employee } from "@/models/employee";
+import type { Employee } from "@/models/employee";
 import { useQuery } from "react-query";
 import { profile } from "console";
 import SearchLayout from "@/components/searchLayout1/searchLayout";

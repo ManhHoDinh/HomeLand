@@ -419,7 +419,7 @@ export default function Vehicles() {
                         alt="LicensePlate"
                         fluid
                         className={vehicleStyles.reponsiveImage}
-                        style={{ maxHeight: "100%" }}
+                        style={{ maxHeight: "150%" }}
                       />
                       <button
                         type="button"
@@ -437,7 +437,7 @@ export default function Vehicles() {
                         src={selectecVehicle!.backRegistrationPhotoURL}
                         alt="LicensePlate"
                         fluid
-                        style={{ maxHeight: "100%" }}
+                        style={{ maxHeight: "150%" }}
                       />
                       <button
                         type="button"

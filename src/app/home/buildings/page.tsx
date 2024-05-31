@@ -28,7 +28,7 @@ export default function Building() {
   const [buildings, setBuildings] = useState<Array<Building>>([]);
   const [selectedId, setSelectedId] = useState("");
   const searchRef = createRef<HTMLInputElement>();
-  const titleTable = ["ID", "Name", "Address", "Max Floor", "Action"];
+  const titleTable = ["Mã số", "Tên", "Địa chỉ", "Số tầng", "Hành động"];
   //pagination
   const [totalPages, setTotalPages] = useState(0);
   const [maxPageDisplay, setMaxPageDisplay] = useState(10);
@@ -148,16 +148,16 @@ export default function Building() {
     <main className={clsx(styles.main)}>
       <div className={clsx(buildingStyles.wrapper, futuna.className)}>
         <h1 className={clsx(utilStyles.headingXl, buildingStyles.title)}>
-          Building Management
+          Quản lý tòa nhà
         </h1>
         <div className={clsx(buildingStyles.header)}>
-          <h1 className={clsx(utilStyles.headingLg)}>List Of Building</h1>
+          <h1 className={clsx(utilStyles.headingLg)}>Danh sách tòa nhà</h1>
           <ButtonComponent
             href="/home/buildings/addBuilding?auth=true"
             //   preIcon={<AddResidentIcon width={24} height={24}  />}
             className={clsx(buildingStyles.addBtn, futuna.className)}
           >
-            Create Building
+            Tạo tòa nhà
           </ButtonComponent>
         </div>
         <div className={clsx(buildingStyles.searchPageLayout)}>
@@ -247,7 +247,7 @@ export default function Building() {
                           )}
                           href={`/home/buildings/updateBuilding/${building.building_id}/?auth=true`}
                         >
-                          Edit
+                          Sửa
                         </ButtonComponent>
                         <ButtonComponent
                           href={`/home/buildings/detailBuilding/${building.building_id}/?auth=true`}
@@ -257,7 +257,7 @@ export default function Building() {
                             buildingStyles.detailBtn
                           )}
                         >
-                          Detail
+                          Chi tiết
                         </ButtonComponent>
                         <ButtonComponent
                           onClick={() => deleleHandle(building.building_id)}
@@ -267,7 +267,7 @@ export default function Building() {
                             buildingStyles.deleteBtn
                           )}
                         >
-                          Delete
+                          Xóa
                         </ButtonComponent>
                       </div>
                     </td>
