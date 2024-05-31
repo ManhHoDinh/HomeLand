@@ -32,7 +32,10 @@ import { Task } from "@/models/task";
 import Nav from "react-bootstrap/Nav";
 import SubmitComplain from "./options/submitComplain/page";
 import History from "./options/history/page";
-
+export const metadata = {
+  title: "Khiếu nại",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 const ComplainResident = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedId, setSelectedId] = useState("");

@@ -31,6 +31,12 @@ type FormValue = {
         backImg: any;
         taskInfo: string;
 };
+
+export const metadata = {
+        title: "Thêm nhân viên",
+        description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
+
 const AddEmployee = () => {
 
         const router = useRouter();

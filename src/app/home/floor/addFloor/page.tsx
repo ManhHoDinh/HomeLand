@@ -25,6 +25,11 @@ type FormValue = {
   building_id: string;
   maxApartment: string;
 };
+
+export const metadata = {
+  title: "Thêm tầng",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 export default function AddFloor() {
   const [formValue, setFormValue] = useState({
     name: "",

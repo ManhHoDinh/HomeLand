@@ -30,6 +30,10 @@ import toastMessage from "@/utils/toast";
 import { Technician } from "@/models/technician";
 import { FaTableTennis } from "react-icons/fa";
 
+export const metadata = {
+  title: "Danh sách các kỹ thuật viên",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 export default function Residents() {
   const [t, i18n] = useTranslation();
   const [showModal, setShowModal] = useState(false);

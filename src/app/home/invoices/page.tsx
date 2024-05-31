@@ -9,6 +9,11 @@ import { useQuery } from "react-query";
 import SearchBar from "@/components/searchBar/searchBar";
 import { useEffect, useMemo, useState } from "react";
 import { Service } from "../../../models/service";
+
+export const metadata = {
+  title: "Hóa đơn",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 export default function Services() {
   const [ServiceList, setServiceList] = useState<Service[]>([]);
   var loadingMore = useMemo<boolean | undefined>(() => undefined, []);

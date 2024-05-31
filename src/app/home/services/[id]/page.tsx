@@ -39,6 +39,12 @@ import { serialize } from "v8";
 import ModalComponent from "@/components/Modal/Modal";
 import { CloseIcon } from "@/components/icons";
 import { format, set } from "date-fns";
+
+export const metadata = {
+  title: "Chi tiết dịch vụ",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
+
 export default function Page({ params }: { params: { id: string } }) {
   // let service:service= JSON.parse("{'id':'123', 'name':'M}");
   //console.log(service);

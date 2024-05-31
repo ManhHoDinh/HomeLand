@@ -22,6 +22,11 @@ import axios from "axios";
 import { loadingFiler, removeLoadingFilter } from "@/libs/utils";
 import toastMessage from "@/utils/toast";
 import { ToastContainer } from "react-toastify";
+
+export const metadata = {
+  title: "Toà nhà",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 export default function Building() {
   const [t, i18n] = useTranslation();
   const [showModal, setShowModal] = useState(false);

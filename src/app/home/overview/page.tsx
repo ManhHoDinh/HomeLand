@@ -9,6 +9,13 @@ import ResidentInfor from './indexing/residentInfor/page';
 import ResidentContract from './indexing/residentContract/page';
 import ResidentService from './indexing/residentService/page';
 import { futuna } from '../../../../public/fonts/futura';
+
+
+export const metadata = {
+  title: "Tổng quan",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
+
 const Overview = () => {
     const [selectedOption, setSelectedOption] = useState(0);
     const options = [

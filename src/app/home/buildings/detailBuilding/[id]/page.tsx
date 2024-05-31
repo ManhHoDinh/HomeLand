@@ -28,7 +28,10 @@ import {
 import ModalComponent from "@/components/Modal/Modal";
 import { format } from "date-fns";
 import { Manager } from "@/models/manager";
-
+export const metadata = {
+  title: "Chi tiết tòa nhà",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 const DetailBuilding = ({ params }: { params: { id: string } }) => {
   // init modal add manager
   const [showModalManager, setShowModalManager] = useState(false);

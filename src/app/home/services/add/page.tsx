@@ -31,6 +31,12 @@ import { loadingFiler, removeLoadingFilter, search } from "@/libs/utils";
 import { useRouter } from "next/navigation";
 import { useTranslation } from "react-i18next";
 
+
+export const metadata = {
+  title: "Thêm dịch vụ",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
+
 export default function AddService() {
   const [selectedFiles, setSelectedFiles] = useState<(File | URL)[]>([]);
   function handleFileChange(files: (File | URL)[]): void {

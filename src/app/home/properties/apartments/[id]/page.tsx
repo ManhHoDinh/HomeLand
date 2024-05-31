@@ -25,6 +25,12 @@ import clsx from "clsx";
 import ButtonComponent from "@/components/buttonComponent/buttonComponent";
 import { format } from "date-fns";
 import { Resident as ResidentType } from "@/models/resident";
+
+export const metadata = {
+  title: "Chi tiết căn hộ",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
+
 export default function Page({ params }: { params: { id: string } }) {
   // let apartment:Apartment= JSON.parse("{'id':'123', 'name':'M}");
   //console.log(apartment);

@@ -38,6 +38,11 @@ type FormValue = {
   avatarImg?: any;
   identifyNumber: string;
 };
+
+export const metadata = {
+  title: "Thêm người quản lý",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 const AddManager = () => {
   const [formValue, setFormValue] = useState({
     name: "",

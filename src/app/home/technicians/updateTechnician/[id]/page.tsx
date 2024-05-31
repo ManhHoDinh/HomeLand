@@ -22,6 +22,11 @@ import toastMessage from "@/utils/toast";
 import { ToastContainer } from "react-toastify";
 import { loadingFiler, removeLoadingFilter } from "@/libs/utils";
 import { Technician } from "@/models/technician";
+
+export const metadata = {
+  title: "Cập nhật kỹ thuật viên",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 type FormValue = {
   gender: string;
   phoneNumber: string;

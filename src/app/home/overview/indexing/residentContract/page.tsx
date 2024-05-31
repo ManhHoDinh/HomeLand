@@ -7,6 +7,11 @@ import { useQuery } from "react-query";
 import styles from "../../overview.module.scss";
 import { format } from "date-fns";
 import clsx from "clsx";
+
+export const metadata = {
+  title: "Hợp đồng cư dân",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 const ResidentContract = () => {
   const { data } = useQuery({
     queryKey: "resident_contracts",

@@ -26,6 +26,10 @@ import { RedirectType, redirect } from "next/navigation";
 import toastMessage from "@/utils/toast";
 import { loadingFiler, removeLoadingFilter } from "@/libs/utils";
 
+export const metadata = {
+  title: "Thêm kỹ thuật viên",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 type FormValue = {
   name: string;
   dateOfBirth: string;

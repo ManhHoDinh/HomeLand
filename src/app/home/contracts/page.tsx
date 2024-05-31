@@ -20,6 +20,10 @@ import { Apartment } from "../../../models/apartment";
 import { Floor } from "../../../models/floor";
 import { Building } from "../../../models/building";
 import FilterButton from "./filter";
+export const metadata = {
+  title: "Hợp đồng",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 export default function Contracts() {
   const [ContractList, setContractList] = useState<Contract[]>([]);
   const [Apartments, setApartments] = useState<Apartment[]>([]);

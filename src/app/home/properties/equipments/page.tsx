@@ -49,6 +49,12 @@ const listOptions = [
     value: 100,
   },
 ];
+
+export const metadata = {
+  title: "Quản lý trang thiết bị",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
+
 export default function Vehicles() {
   const user = JSON.parse(localStorage.getItem("user") ?? "{}");
   const router = useRouter();

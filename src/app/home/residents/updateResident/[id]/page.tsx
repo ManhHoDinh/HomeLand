@@ -31,6 +31,11 @@ type FormValue = {
   email: string | undefined;
   avatarURL?: any;
 };
+
+export const metadata = {
+  title: "Danh sách cư dân",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 const UpdateResident = ({ params }: { params: { id: string } }) => {
   const [formValue, setFormValue] = useState({
     gender: "",

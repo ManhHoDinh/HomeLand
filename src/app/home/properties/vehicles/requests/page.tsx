@@ -64,6 +64,7 @@ const listOptions = [
     value: 100,
   },
 ];
+
 export default function Vehicles() {
   const user = JSON.parse(localStorage.getItem("user") ?? "{}");
   const router = useRouter();

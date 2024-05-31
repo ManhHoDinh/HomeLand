@@ -71,6 +71,11 @@ async function addImage(data: FormData, fileList: (File | URL)[]) {
     else data.append("images", iterator);
   }
 }
+
+export const metadata = {
+  title: "Thêm căn hộ",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 export default function AddApartment() {
   const [show, setShow] = useState(false);
   function handleClose() {

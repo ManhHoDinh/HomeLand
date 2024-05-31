@@ -28,6 +28,11 @@ import ModalComponent from "@/components/Modal/Modal";
 import { format } from "date-fns";
 import { Manager } from "@/models/manager";
 import { Apartment } from "@/models/apartment";
+
+export const metadata = {
+  title: "Chi tiết tầng",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 const DetailFloor = ({ params }: { params: { id: string } }) => {
   // init modal add manager
   const [showModalApartment, setShowModalApartment] = useState(false);

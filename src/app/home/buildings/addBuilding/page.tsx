@@ -19,6 +19,10 @@ type FormValue = {
   maxFloor: string;
   managerId: string;
 };
+export const metadata = {
+  title: "Thêm tòa nhà",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 const AddBuilding = () => {
   const [formValue, setFormValue] = useState({
     name: "",

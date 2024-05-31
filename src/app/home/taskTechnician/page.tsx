@@ -46,6 +46,10 @@ type InvoiceItem = {
   price: number;
 };
 
+export const metadata = {
+  title: "Danh sách công việc",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 const TaskTechnician = () => {
   const [t, i18n] = useTranslation();
   const { push } = useRouter();

@@ -24,6 +24,11 @@ import { Invoice } from "../../../../models/invoice";
 import { useRouter } from "next/router";
 import { format } from "date-fns";
 import { useTranslation } from "react-i18next";
+
+export const metadata = {
+  title: "Chi tiết hóa đơn",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 export default function Page({ params }: { params: { id: string } }) {
   const [showModal, setShowModal] = useState(false);
   const [t, i18n] = useTranslation();

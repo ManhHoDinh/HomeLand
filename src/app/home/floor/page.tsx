@@ -25,6 +25,12 @@ import { loadingFiler, removeLoadingFilter } from "@/libs/utils";
 import toastMessage from "@/utils/toast";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ToastContainer } from "react-toastify";
+
+export const metadata = {
+  title: "Quản lý tầng",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
+
 export default function Dashboard() {
   const [t, i18n] = useTranslation();
   const [showModal, setShowModal] = useState(false);

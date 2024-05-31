@@ -28,6 +28,11 @@ import { ToastContainer } from "react-toastify";
 import toastMessage from "@/utils/toast";
 import { t } from "i18next";
 import SearchLayout from "@/components/searchLayout/searchLayout";
+
+export const metadata = {
+  title: "Thêm phương tiện",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 export default function AddVehicle(): React.ReactNode {
   const [selectedRes, setSelectedRes] = useState<Resident | undefined>(
     undefined

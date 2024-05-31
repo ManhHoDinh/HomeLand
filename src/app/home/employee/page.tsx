@@ -27,6 +27,11 @@ import SearchLayout from "@/components/searchLayout1/searchLayout";
 import { useRouter } from "next/router";
 import { AddResidentIcon } from "@/components/icons";
 import { useTranslation } from "react-i18next";
+
+export const metadata = {
+  title: "Quản lý nhân viên",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 export default function Employee() {
   const [isSearchResult, setIsSearchResult] = useState(false);
   const [t, i18n] = useTranslation();

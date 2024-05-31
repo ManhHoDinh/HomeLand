@@ -35,6 +35,11 @@ import { UserProfile } from "@/libs/UserProfile";
 import { Manager } from "@/models/manager";
 import { Building } from "@/models/building";
 import { useTranslation } from "react-i18next";
+
+export const metadata = {
+  title: "Danh sách cư dân",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 export default function Residents() {
   const [t, i18n] = useTranslation();
   const [showModal, setShowModal] = useState(false);

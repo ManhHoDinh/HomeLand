@@ -34,6 +34,11 @@ function missingField(element: HTMLElement) {
   };
   console.log(element);
 }
+
+export const metadata = {
+  title: "Thêm thiết bị",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 const CustomInfoModel = ({
   show,
   onHide,

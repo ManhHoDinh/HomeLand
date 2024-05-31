@@ -32,6 +32,10 @@ import { ToastContainer } from "react-toastify";
 import toastMessage from "@/utils/toast";
 import { Manager } from "@/models/manager";
 
+export const metadata = {
+  title: "Ban quản lý",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 export default function Residents() {
   const [t, i18n] = useTranslation();
   const [showModal, setShowModal] = useState(false);

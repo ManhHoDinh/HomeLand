@@ -76,6 +76,12 @@ function validateData() {
   });
   return flag;
 }
+
+export const metadata = {
+  title: "Chỉnh sửa căn hộ",
+
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 async function addImage(data: FormData, fileList: (File | URL)[]) {
   for await (const iterator of fileList) {
     if (iterator instanceof URL) data.append("images", iterator.href);

@@ -8,6 +8,11 @@ import { UserProfile } from "@/libs/UserProfile";
 import AdminDashboard from "./indexing/AdminDashboard/page";
 import TechnicianDashboard from "./indexing/technicianDashboard/page";
 import { Col, Container, Row } from "react-bootstrap";
+
+export const metadata = {
+  title: "Bảng điều khiển",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 export default function Dashboard() {
   const [t, i18n] = useTranslation();
   const type = UserProfile.getRole();

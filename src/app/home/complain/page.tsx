@@ -29,6 +29,10 @@ import { Task } from "@/models/task";
 import Spinner from 'react-bootstrap/Spinner';
 import { Manager } from "@/models/manager";
 import { useTranslation } from "react-i18next";
+export const metadata = {
+  title: "Khiếu nại",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 const ComplainPage = () => {
   const [t, i18n] = useTranslation();
   const titleTable = [

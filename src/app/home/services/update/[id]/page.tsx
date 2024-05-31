@@ -32,6 +32,10 @@ import { useRouter } from "next/navigation";
 import { Service } from "../../../../../models/service";
 import { useTranslation } from "react-i18next";
 
+export const metadata = {
+  title: "Cập nhật dịch vụ",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 export default function UpdateService({ params }: { params: { id: string } }) {
   const [selectedFiles, setSelectedFiles] = useState<(File | URL)[]>([]);
   function handleFileChange(files: (File | URL)[]): void {

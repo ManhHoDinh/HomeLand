@@ -38,6 +38,11 @@ type FormValue = {
   avatarImg?: any;
   identifyNumber:string;
 };
+
+export const metadata = {
+  title: "Danh sách cư dân",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 const AddResident = () => {
   const [formValue, setFormValue] = useState({
     name: "",

@@ -7,6 +7,12 @@ import axios from "axios";
 import { UserProfile } from "@/libs/UserProfile";
 import { Col, Container, Form, Row } from "react-bootstrap";
 import { futuna } from "../../../../../../public/fonts/futura";
+
+export const metadata = {
+  title: "Bảng điều khiển",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
+
 const AdminDashboard = () => {
   const [t, i18n] = useTranslation();
   type FilterParams = {

@@ -81,6 +81,11 @@ export default function Vehicles() {
       console.log(error);
     }
   };
+  
+export const metadata = {
+  title: "Danh sách phương tiện",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
   const { isLoading, isError, data, refetch } = useQuery(
     "vehicles",
     retrieveResidents,

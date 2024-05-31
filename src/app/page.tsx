@@ -19,7 +19,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "HomeLand",
-  description: "best modern crm dashboard for engineering teams",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
 };
 
 export default function Home() {

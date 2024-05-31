@@ -20,6 +20,7 @@ import ChatBox from "@/components/chatBox/ChatBox";
 import clsx from "clsx";
 import ButtonComponent from "@/components/buttonComponent/buttonComponent";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
+
 export default function RootLayout({
   children,
 }: {

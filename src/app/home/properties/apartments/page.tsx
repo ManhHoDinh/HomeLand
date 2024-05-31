@@ -15,6 +15,11 @@ import { loadingFiler, search } from "@/libs/utils";
 import { motion } from "framer-motion";
 import { Floor } from "@/models/floor";
 import { useTranslation } from "react-i18next";
+
+export const metadata = {
+  title: "Danh sách căn hộ",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 interface Option {
   title: string;
   selections: string[];

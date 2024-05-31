@@ -8,6 +8,11 @@ import styles from "../../overview.module.scss";
 import Image from "next/image";
 import { format } from "date-fns";
 
+export const metadata = {
+  title: "Quản lý tầng",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
+
 const ResidentInfor = () => {
   const { data } = useQuery({
     queryKey: "resident_information",

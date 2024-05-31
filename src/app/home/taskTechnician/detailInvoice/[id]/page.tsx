@@ -11,6 +11,11 @@ import { format } from "date-fns";
 import { RepairInvoice } from "@/models/repairInvoice";
 import { futuna } from "../../../../../../public/fonts/futura";
 import ReactToPrint from "react-to-print";
+
+export const metadata = {
+  title: "Chi tiết hóa đơn sửa chữa",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 const DetailRepairInvoice = ({ params }: { params: { id: string } }) => {
   const { data: task } = useQuery({
     queryKey: "detail_repair_invoice",

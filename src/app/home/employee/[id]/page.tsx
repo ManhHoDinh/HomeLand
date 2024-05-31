@@ -30,6 +30,10 @@ type FormValue = {
         taskInfo: string;
 };
 
+export const metadata = {
+        title: "Chi tiết nhân viên",
+        description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 const DetailEmployee = ({ params }: { params: { id: string } }) => {
         const [showModal, setShowModal] = useState(false);
         // const deleleHandle = () => {

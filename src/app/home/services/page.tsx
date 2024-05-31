@@ -17,6 +17,11 @@ import { set } from "date-fns";
 import { useTranslation } from "react-i18next";
 import { UserProfile } from "../../../libs/UserProfile";
 import clsx from "clsx";
+
+export const metadata = {
+  title: "Danh sách dịch vụ",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 export default function Services() {
   const [ServiceList, setServiceList] = useState<Service[]>([]);
   const loadingMore = useRef({ isLoading: false, page: 1 });

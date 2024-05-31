@@ -43,6 +43,10 @@ type CreateContractParams = {
   created_at?: string;
   expire_at: string;
 };
+export const metadata = {
+  title: "Tạo hợp đồng",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 export default function Page() {
   const [t, i18n] = useTranslation();
   const [selectedResident, setSelectedResident] = useState<Resident>();

@@ -31,6 +31,11 @@ import {
 const Moment = require("moment");
 import { extendMoment } from "moment-range";
 import { ContractStatusRole } from "@/models/contract";
+
+export const metadata = {
+  title: "Bảng điều khiển",
+  description: "HomeLand - Giải pháp công nghệ cho việc quản lý chung cư",
+};
 const TechnicianDashboard = () => {
   const [data, setData] = useState<Technician>();
   const { data: technicianData } = useQuery("techDashboard", async () => {
