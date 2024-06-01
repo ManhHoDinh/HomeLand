@@ -5,7 +5,7 @@ Instructor: Trần Tuấn Dũng
 ## Student Contributors:
 | Leader  | Member | Member | Member | Member |
 | ------------- | ------------- | --------------------------|------------------------|------------------------|
-| [![](https://avatars.githubusercontent.com/u/116157535?size=160)](https://github.com/ManhHoDinh) | [![](https://avatars.githubusercontent.com/u/101078033?size=160)](https://github.com/phuochungus) | [![](https://avatars.githubusercontent.com/u/30335268?size=160)](https://github.com/vocongbinh) | [![](https://avatars.githubusercontent.com/u/116333012?size=160)](https://github.com/Daiduong1593572468) | [![](https://avatars.githubusercontent.com/u/125556785?size=160)](https://github.com/Ngan1808) |
+| [![](https://avatars.githubusercontent.com/u/97241076?v=4)](https://github.com/ManhHoDinh) | [![](https://avatars.githubusercontent.com/u/111514441?v=4)](https://github.com/phuochungus) | [![](https://avatars.githubusercontent.com/u/105732042?v=4)](https://github.com/vocongbinh) | [![](https://avatars.githubusercontent.com/u/100852896?v=4)](https://github.com/Daiduong1593572468) | [![](https://avatars.githubusercontent.com/u/107528091?s=96&v=4)](https://github.com/Ngan1808) |
 | [Hồ Đình Mạnh - 21522327](https://github.com/ManhHoDinh) | [Nguyễn Phước Hưng - 21520252](https://github.com/phuochungus) | [Võ Công Bình - 21521880](https://github.com/vocongbinh) | [Đinh Đại Dương - 21521986](https://github.com/Daiduong1593572468) | [Nguyễn Thị Kim Ngân - 20520915](https://github.com/Ngan1808) |
 
 
@@ -13,7 +13,7 @@ Instructor: Trần Tuấn Dũng
 * FrontEnd: 
 ![alt text](https://img.shields.io/badge/next%20js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 * BackEnd: NestJS
-![alt text](https://img.shields.io/badge/next%20js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![alt text](https://img.shields.io/badge/nest%20js-000000?style=for-the-badge&logo=nestdotjs&logoColor=white)
 * Other Technologies: Docker, Bootstrap, PostgreSQL, Supabase, Momo Payway, ChatGPT API,...
 ![alt text](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
 ![alt text](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
@@ -26,6 +26,8 @@ Instructor: Trần Tuấn Dũng
 ![alt text](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 ## 📚 Introduction
 HomeLand is an apartment management website, it provides a centralized interface to view booking and appointment information, Manage communication with prospects, customers and tenants, Track maintenance work and clean up, create dashboards and visualizations for daily reporting.
+## Roadmap
+![git git](image.png)
 
 ## Functionalities
 * Information Management: Building information, residents, resident vehicles,...
@@ -50,10 +52,10 @@ Designed for admin, real estate broker and office manager too. Admin reviews eve
 
 ## Illustrative Images:
 ![alt text](image-1.png)
-![alt text](anh1.png)
-
-![git git](image.png)
-
+![alt text](1.png)
+![alt text](2.png)
+![alt text](3.png)
+![alt text](4.png)
 ## 💕 Thanks
 This project almost completed like a real estate brokerage market. However developed by developer team who is still university students and have not enough experiences, this project maybe has some problem. You can visit our deploy website for more experience. Thank you for visiting our project.
 
