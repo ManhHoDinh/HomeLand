@@ -1,8 +1,8 @@
 ## PROJECT: HOMELAND WEB
+Backend Repository: [HomelandBE](https://github.com/ManhHoDinh/HomeLandBE)
 
 ### BUILDING A CONDOMINIUM MANAGEMENT WEBSITE
 Instructor: Trần Tuấn Dũng
-Backend Repository: [HomelandBE](https://github.com/ManhHoDinh/HomeLandBE)
 ## Student Contributors:
 | Leader  | Member | Member | Member | Member |
 | ------------- | ------------- | --------------------------|------------------------|------------------------|
