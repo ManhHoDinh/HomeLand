@@ -27,7 +27,7 @@ Instructor: Trần Tuấn Dũng
 ## 📚 Introduction
 HomeLand is an apartment management website, it provides a centralized interface to view booking and appointment information, Manage communication with prospects, customers and tenants, Track maintenance work and clean up, create dashboards and visualizations for daily reporting.
 ## Roadmap
-![git git](image.png)
+![git git](5.png)
 
 ## Functionalities
 * Information Management: Building information, residents, resident vehicles,...
@@ -52,10 +52,14 @@ Designed for admin, real estate broker and office manager too. Admin reviews eve
 
 ## Illustrative Images:
 ![alt text](image-1.png)
-![alt text](1.png)
+![alt text](6.png)
 ![alt text](2.png)
-![alt text](3.png)
 ![alt text](4.png)
+![alt text](3.png)
+![alt text](7.png)
+![alt text](9.png)
+![alt text](8.png)
+
 ## Install
 [Next.js](https://nextjs.org/) project bootstrapped with [create-next-app](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
