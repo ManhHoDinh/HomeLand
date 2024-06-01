@@ -13,7 +13,7 @@ Instructor: Trần Tuấn Dũng
 * FrontEnd: 
 ![alt text](https://img.shields.io/badge/next%20js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 * BackEnd: NestJS
-![alt text](https://img.shields.io/badge/nest%20js-000000?style=for-the-badge&logo=nestdotjs&logoColor=white)
+![alt text](https://img.shields.io/badge/nestJs-0000FF?style=for-the-badge&logo=nestjs&logoColor=red)
 * Other Technologies: Docker, Bootstrap, PostgreSQL, Supabase, Momo Payway, ChatGPT API,...
 ![alt text](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
 ![alt text](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
