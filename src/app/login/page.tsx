@@ -9,8 +9,10 @@ import axios from "axios";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { loadingFiler, removeLoadingFilter } from "@/libs/utils";
 import { UserProfile } from "@/libs/UserProfile";
+import { useTranslation } from "react-i18next";
 export default function Login() {
   const router = useRouter();
+  const [t, i18n] = useTranslation();
   const handleSignIn = async () => {
     const email = (document.getElementById("email")! as HTMLInputElement).value;
     const password = (document.getElementById("password")! as HTMLInputElement)
@@ -187,7 +189,7 @@ export default function Login() {
               className={`${styles.button} ${styles.current}`}
             >
               {" "}
-              Login
+              {t("Login")}
             </Button>
           </div>
         </form>
