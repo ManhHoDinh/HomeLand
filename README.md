@@ -2,6 +2,7 @@
 
 ### BUILDING A CONDOMINIUM MANAGEMENT WEBSITE
 Instructor: Trần Tuấn Dũng
+Backend Repository: [HomelandBE](https://github.com/ManhHoDinh/HomeLandBE)
 ## Student Contributors:
 | Leader  | Member | Member | Member | Member |
 | ------------- | ------------- | --------------------------|------------------------|------------------------|
@@ -43,12 +44,14 @@ HomeLand is an apartment management website, it provides a centralized interface
 
 * Complain & repair request: Enter a complaint comment and display a list of complaints.
 
-## 📋 Agency 
-This area is designed for agency or company who want to sell their properties. Make a transaction to take turns and post some news.
-
-
 ## 🕵️ Admin
-Designed for admin, real estate broker and office manager too. Admin reviews every post and account information, after pass his review, the post will immediately post into the market.
+Designed for admin, admin is the owner of an apartment. Admin manage account information, equipment, contract, vehicle resident, building, floor, and apartment. And Admin will asign task to technicain.
+
+## 📋 Resident 
+This area is designed for resident. Resident can buy a service, complant some issues.
+
+## 📋 Technicain
+Designed for technicain who will fix some issues, see report of tasks, and create a invoice to resident or admin.
 
 ## Illustrative Images:
 ![alt text](image-1.png)
@@ -124,7 +127,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
 ## 💕 Thanks
-This project almost completed like a real estate brokerage market. However developed by developer team who is still university students and have not enough experiences, this project maybe has some problem. You can visit our deploy website for more experience. Thank you for visiting our project.
+This project is almost completed like apartment management. However developed by the developer team who is still university students and have not enough experiences, this project maybe has some problem. You can visit our deploy website for more experience. Thank you for visiting our project.
 
 I deeply appreciate every member of this team for showing relentless effort for this project.
 
@@ -145,5 +148,3 @@ Develop by:
 
  [Nguyễn Thị Kim Ngân - 20520915](https://github.com/Ngan1808)
  Email: 20520915@gm.uit.edu.vn
-
-Link reference to BE: [HomelandBE](https://github.com/ManhHoDinh/HomeLandBE)
