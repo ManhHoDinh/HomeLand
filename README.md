@@ -56,7 +56,87 @@ Designed for admin, real estate broker and office manager too. Admin reviews eve
 ![alt text](2.png)
 ![alt text](3.png)
 ![alt text](4.png)
+## Install
+[Next.js](https://nextjs.org/) project bootstrapped with [create-next-app](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+To install the app, you will need to have the following installed:
+```
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+Open http://localhost:3000 with your browser to see the result.
+
+You can start editing the page by modifying ```app/page.tsx```. The page auto-updates as you edit the file.
+
+This project uses [```next/font```](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load Inter, a custom Google Font.
+
+## HOW TO BUILD
+```bash
+# clone repository
+$ git clone https://github.com/ManhHoDinh/HomeLandBE.git
+$ cd HomeLandBE
+
+# install dependencies
+$ npm install
+
+# pull necessary images
+$ docker compose pull
+
+# rename .env.example to .env
+# you might change some variable if you need to connect to real redis, postgresql or supabase project
+$ cp .env.example .env
+```
+
+## HOW TO RUN
+```bash
+# docker compose include redis and postgresql
+# if your local machine have redis or postgresql, please turn off all in order to run properly
+$ docker compose up -d
+
+# start supabase local
+$ npx supabase start
+
+# start nestjs
+$ npm run start:dev
+
+# you might need to send HTTP GET to this endpoint to create empty database and S3 storage:
+http://localhost:3000/seed/init
+```
+
+# HOW TO CLOSE (GRACEFULLY)
+
+On terminal where Nestjs running press ```Ctrl + C```
+```bash
+# stop docker containers
+$ docker compose stop
+
+# stop supabase
+$ npx supabase stop
+```
+
+## Learn More
+To learn more about Next.js, take a look at the following resources:
+
+ * [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+ * [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/docs/vercel-platform) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
 ## 💕 Thanks
 This project almost completed like a real estate brokerage market. However developed by developer team who is still university students and have not enough experiences, this project maybe has some problem. You can visit our deploy website for more experience. Thank you for visiting our project.
 
 I deeply appreciate every member of this team for showing relentless effort for this project.
+
+## Additional information
+
+Develop by: [Manh Ho Dinh](https://github.com/ManhHoDinh) 
+
+Email: 21522327@gm.uit.edu.vn
