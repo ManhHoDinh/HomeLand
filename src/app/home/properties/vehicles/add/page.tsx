@@ -27,11 +27,14 @@ import React from "react";
 import { ToastContainer } from "react-toastify";
 import toastMessage from "@/utils/toast";
 import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 import SearchLayout from "@/components/searchLayout/searchLayout";
 export default function AddVehicle(): React.ReactNode {
   const [selectedRes, setSelectedRes] = useState<Resident | undefined>(
     undefined
   );
+
+  const [t, i18n] = useTranslation();
   const [show, setShow] = useState(false);
   const [residents, setResidents] = useState<Array<Resident>>([]);
   const [imageList, setImageList] = useState<(File | URL)[]>(Array(3));
@@ -228,7 +231,7 @@ export default function AddVehicle(): React.ReactNode {
           <Form.Group className={styles.form}>
             <Form.Group style={{ marginRight: "2vw" }}>
               <Form.Label className={`${styles.label} ${styles.required}`}>
-                Biển số xe
+                {t("Biển số xe")}
               </Form.Label>
               <DragDropFileInput
                 imageid={"vehicleLicense"}
@@ -253,7 +256,7 @@ export default function AddVehicle(): React.ReactNode {
                 </div>
               </DragDropFileInput>
               <Form.Label className={`${styles.label} ${styles.required}`}>
-                Mặt trước giấy tờ xe
+              {t("Mặt trước giấy tờ xe")}
               </Form.Label>
               <DragDropFileInput
                 imageid={"frontRegistrationPhotoURL"}
@@ -279,7 +282,7 @@ export default function AddVehicle(): React.ReactNode {
                 </div>
               </DragDropFileInput>
               <Form.Label className={`${styles.label} ${styles.required}`}>
-                Mặt sau giấy tờ xe
+              {t("Mặt sau giấy tờ xe")}
               </Form.Label>
               <DragDropFileInput
                 imageid={"backRegistrationPhotoURL"}
@@ -319,7 +322,7 @@ export default function AddVehicle(): React.ReactNode {
               </div>
               {selectedRes == undefined ? (
                 <div>
-                  <div>Select resident</div>
+                  <div>{t("Select resident")}</div>
                   <Button
                     style={{
                       width: "fit-content",
@@ -327,7 +330,7 @@ export default function AddVehicle(): React.ReactNode {
                     }}
                     onClick={() => setShow(true)}
                   >
-                    Select resident
+                   {t("Select resident")}
                   </Button>
                 </div>
               ) : (
@@ -336,7 +339,7 @@ export default function AddVehicle(): React.ReactNode {
                     <Form.Label
                       className={`${styles.label} ${styles.required}`}
                     >
-                      Mã cư dân
+                        {t("Mã cư dân")}
                     </Form.Label>
 
                     <InputGroup style={{ width: "80%" }}>
@@ -361,7 +364,7 @@ export default function AddVehicle(): React.ReactNode {
                           setShow(true);
                         }}
                       >
-                        Change resident
+                          {t("Change resident")}
                       </Button>
                     </InputGroup>
                   </Form.Group>
@@ -372,7 +375,7 @@ export default function AddVehicle(): React.ReactNode {
                     <Form.Label
                       className={`${styles.label} ${styles.required}`}
                     >
-                      Họ và tên
+                        {t("Họ và tên")}
                     </Form.Label>
                     <Form.Control
                       id={"inputName"}
@@ -391,7 +394,7 @@ export default function AddVehicle(): React.ReactNode {
                     <Form.Label
                       className={`${styles.label} ${styles.required}`}
                     >
-                      CCCD
+                        {t("CCCD")}
                     </Form.Label>
                     <Form.Control
                       id={"inputCCCD"}
@@ -410,7 +413,7 @@ export default function AddVehicle(): React.ReactNode {
                     <Form.Label
                       className={`${styles.label} ${styles.required}`}
                     >
-                      Số điện thoại
+                        {t("Số điện thoại")}
                     </Form.Label>
                     <Form.Control
                       id={"inputSDT"}
@@ -435,7 +438,7 @@ export default function AddVehicle(): React.ReactNode {
             }}
           >
             <Button onClick={handleSubmit} className={styles.creatBtn}>
-              Tạo
+            {t("Tạo")}
             </Button>
           </Form.Group>
         </Form>

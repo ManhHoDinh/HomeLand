@@ -25,7 +25,7 @@ import axios from "axios";
 import { RedirectType, redirect } from "next/navigation";
 import toastMessage from "@/utils/toast";
 import { loadingFiler, removeLoadingFilter } from "@/libs/utils";
-
+import { useTranslation } from "react-i18next";
 type FormValue = {
   name: string;
   dateOfBirth: string;
@@ -47,6 +47,7 @@ const AddTechnician = () => {
     email: "",
     identifyNumber: "",
   });
+  const [t, i18n] = useTranslation();
   const [errors, setErrors] = useState<any>();
   const [frontImg, setFrontImg] = useState<any>();
   const [backImg, setBackImg] = useState<any>();
@@ -228,7 +229,7 @@ const AddTechnician = () => {
     <main className={mainStyles.main}>
       <div className={clsx(styles.wapper, futuna.className)}>
         <p className={clsx(utilStyles.headingXl, styles.header)}>
-          Create Technician
+          {t("Create Technician")}
         </p>
         <div className={styles.bodyLayout}>
           <div className={styles.avatarLayout}>
@@ -244,7 +245,7 @@ const AddTechnician = () => {
           <Form className={clsx(styles.form, futuna.className)}>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label className={clsx(styles.label, styles.required)}>
-                Name
+              {t("Name")}
               </Form.Label>
               <Form.Control
                 size="lg"
@@ -261,12 +262,12 @@ const AddTechnician = () => {
 
             <Form.Group>
               <Form.Label className={clsx(styles.label, styles.required)}>
-                Gender
+              {t("Gender")}
               </Form.Label>
               <div key={`inline-radio`} className="mb-3">
                 <Form.Check
                   inline
-                  label="Male"
+                  label= {t("Male")}
                   style={{ fontSize: "1rem" }}
                   name="gender"
                   type="radio"
@@ -277,7 +278,7 @@ const AddTechnician = () => {
                 <Form.Check
                   inline
                   style={{ fontSize: "1rem" }}
-                  label="Female"
+                  label= {t("Female")}
                   name="gender"
                   type="radio"
                   onChange={handleChange}
@@ -307,7 +308,7 @@ const AddTechnician = () => {
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label className={clsx(styles.label, styles.required)}>
-                Phone Number
+              {t("Phone Number")}
               </Form.Label>
               <Form.Control
                 size="lg"
@@ -323,7 +324,7 @@ const AddTechnician = () => {
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label className={clsx(styles.label, styles.required)}>
-                Identification Number
+              {t("Identification Number")}
               </Form.Label>
               <Form.Control
                 size="lg"
@@ -339,7 +340,7 @@ const AddTechnician = () => {
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label className={clsx(styles.label, styles.required)}>
-                Date Of Birth
+              {t("Date Of Birth")}
               </Form.Label>
               <Form.Control
                 size="lg"
@@ -356,7 +357,7 @@ const AddTechnician = () => {
             <div  className = {styles.imageLayout}>
               <Form.Group className="mb-3">
                 <Form.Label className={clsx(styles.label, styles.required)}>
-                  Front Photo Of Identification Number
+                {t("Front Photo Of Identification Number")}
                 </Form.Label>
                 <Form.Control
                   accept="image/*"
@@ -374,7 +375,7 @@ const AddTechnician = () => {
               </Form.Group>
               <Form.Group className="mb-3">
                 <Form.Label className={clsx(styles.label, styles.required)}>
-                  Back Photo Of Identification Number
+                {t("Back Photo Of Identification Number")}
                 </Form.Label>
                 <Form.Control
                   accept="image/*"

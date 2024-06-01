@@ -94,7 +94,7 @@ export const sidebarInfo = [
         roles: ["admin", "manager"],
       },
     ],
-    roles: ["admin", "manager", "resident"],
+    roles: ["admin", "manager"],
   },
   {
     title: t("Services"),

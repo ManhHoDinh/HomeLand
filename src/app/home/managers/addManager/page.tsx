@@ -25,7 +25,7 @@ import axios from "axios";
 import { RedirectType, redirect } from "next/navigation";
 import toastMessage from "@/utils/toast";
 import { loadingFiler, removeLoadingFilter } from "@/libs/utils";
-
+import { useTranslation } from "react-i18next";
 type FormValue = {
   name: string;
   dateOfBirth: string;
@@ -47,6 +47,7 @@ const AddManager = () => {
     email: "",
     identifyNumber:""
   });
+  const [t, i18n] = useTranslation();
   const [errors, setErrors] = useState<any>();
   const [frontImg, setFrontImg] = useState<any>();
   const [backImg, setBackImg] = useState<any>();
@@ -217,7 +218,7 @@ const AddManager = () => {
   return (
     <main className={mainStyles.main}>
       <div className={clsx(styles.wapper, futuna.className)}>
-        <p className={clsx(utilStyles.headingXl, styles.header)}>Create Manager</p>
+        <p className={clsx(utilStyles.headingXl, styles.header)}>{t("Create Manager")}</p>
         <div  className={styles.bodyLayout}>
           <div className={styles.avatarLayout}>
             {AvatarImage}
@@ -232,7 +233,7 @@ const AddManager = () => {
           <Form className={clsx(styles.form, futuna.className)}>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label className={clsx(styles.label, styles.required)}>
-                Name
+              {t("Name")}
               </Form.Label>
               <Form.Control
                 size="lg"
@@ -249,12 +250,12 @@ const AddManager = () => {
 
             <Form.Group>
               <Form.Label className={clsx(styles.label, styles.required)}>
-                Gender
+              {t("Gender")}
               </Form.Label>
               <div key={`inline-radio`} className="mb-3">
                 <Form.Check
                   inline
-                  label="Male"
+                  label={t("Male")}
                   style={{ fontSize: "1rem" }}
                   name="gender"
                   type="radio"
@@ -265,7 +266,7 @@ const AddManager = () => {
                 <Form.Check
                   inline
                   style={{ fontSize: "1rem" }}
-                  label="Female"
+                  label={t("Female")}
                   name="gender"
                   type="radio"
                   onChange={handleChange}
@@ -278,7 +279,7 @@ const AddManager = () => {
               )}
             </Form.Group>
             <Form.Group className="mb-3">
-              <Form.Label className={clsx(styles.label, styles.required)}>Email</Form.Label>
+              <Form.Label className={clsx(styles.label, styles.required)}>{t("Email")}</Form.Label>
               <Form.Control
                 size="lg"
                 type="email"
@@ -293,7 +294,7 @@ const AddManager = () => {
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label className={clsx(styles.label, styles.required)}>
-                Phone Number
+              {t("Phone Number")}
               </Form.Label>
               <Form.Control
                 size="lg"
@@ -309,7 +310,7 @@ const AddManager = () => {
             </Form.Group>
              <Form.Group className="mb-3">
               <Form.Label className={clsx(styles.label,styles.required)}>
-                Identification Number
+              {t("Identification Number")}
               </Form.Label>
               <Form.Control
                 size="lg"
@@ -325,7 +326,7 @@ const AddManager = () => {
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label className={clsx(styles.label, styles.required)}>
-                Date Of Birth
+              {t("Date Of Birth")}
               </Form.Label>
               <Form.Control
                 size="lg"
@@ -342,7 +343,7 @@ const AddManager = () => {
             <div className = {styles.imageLayout}>
               <Form.Group className="mb-3">
                 <Form.Label className={clsx(styles.label, styles.required)}>
-                  Front Photo of Identification Number
+                {t("Front Photo Of Identification Number")}
                 </Form.Label>
                 <Form.Control
                   accept="image/*"
@@ -360,7 +361,7 @@ const AddManager = () => {
               </Form.Group>
               <Form.Group className="mb-3">
                 <Form.Label className={clsx(styles.label, styles.required)}>
-                Back Photo of Identification Number
+                {t("Back Photo Of Identification Number")}
                 </Form.Label>
                 <Form.Control
                   accept="image/*"
@@ -379,7 +380,7 @@ const AddManager = () => {
             </div>
 
             <ButtonComponent onClick={createHandle} className={styles.creatBtn}>
-              Create
+            {t("Create")}
             </ButtonComponent>
           </Form>
         </div>

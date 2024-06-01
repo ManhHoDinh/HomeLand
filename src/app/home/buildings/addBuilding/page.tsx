@@ -13,6 +13,7 @@ import axios from "axios";
 import toastMessage from "@/utils/toast";
 import { loadingFiler, removeLoadingFilter } from "@/libs/utils";
 import { ToastContainer } from "react-toastify";
+import { useTranslation } from "react-i18next";
 type FormValue = {
   name: string;
   address: string;
@@ -25,6 +26,7 @@ const AddBuilding = () => {
     address: "",
     maxFloor: "",
   });
+  const [t, i18n] = useTranslation();
   const [errors, setErrors] = useState<any>();
   const validation = () => {
     let err = {} as FormValue;
@@ -70,11 +72,11 @@ const AddBuilding = () => {
   return (
     <main className={mainStyles.main}>
       <div className={clsx(styles.wapper, futuna.className)}>
-        <p className={clsx(utilStyles.headingXl, styles.title)}>Create Building</p>
+        <p className={clsx(utilStyles.headingXl, styles.title)}>{t("Create Building")}</p>
 
         <Form className={clsx(styles.form, futuna.className)}>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label className={styles.label}>Name</Form.Label>
+            <Form.Label className={styles.label}>{t("Name")}</Form.Label>
             <Form.Control
               size="lg"
               name="name"
@@ -88,7 +90,7 @@ const AddBuilding = () => {
             )}
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form.Label className={styles.label}>Address</Form.Label>
+            <Form.Label className={styles.label}>{t("Address")}</Form.Label>
             <Form.Control
               size="lg"
               type="text"
@@ -101,7 +103,7 @@ const AddBuilding = () => {
             )}
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form.Label className={styles.label}>Max Floor</Form.Label>
+            <Form.Label className={styles.label}>{t("Max Floor")}</Form.Label>
             <Form.Control
               size="lg"
               type="text"
@@ -115,7 +117,7 @@ const AddBuilding = () => {
             )}
           </Form.Group>
           <ButtonComponent onClick={createHandle} className={styles.creatBtn}>
-            Create
+          {t("Create")}
           </ButtonComponent>
         </Form>
       </div>

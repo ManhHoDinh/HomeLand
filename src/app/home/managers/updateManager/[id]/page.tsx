@@ -25,6 +25,7 @@ import toastMessage from "@/utils/toast";
 import { ToastContainer } from "react-toastify";
 import { loadingFiler, removeLoadingFilter } from "@/libs/utils";
 import { Manager } from "@/models/manager";
+import { useTranslation } from "react-i18next";
 type FormValue = {
   gender: string;
   phoneNumber: string;
@@ -37,6 +38,7 @@ const UpdateManager = ({ params }: { params: { id: string } }) => {
     phoneNumber: "",
     email: "",
   });
+  const [t, i18n] = useTranslation();
   const [errors, setErrors] = useState<any>();
   const [manager, setManager] = useState<Manager>();
   const [avatar, setAvatar] = useState<any>();
@@ -153,7 +155,7 @@ const UpdateManager = ({ params }: { params: { id: string } }) => {
     <main className={mainStyles.main}>
       <div className={clsx(styles.wapper, futuna.className)}>
         <p className={clsx(utilStyles.headingXl, styles.title)}>
-          Edit Manager Information
+          {t("Edit Manager Information")}
         </p>
         <div className={styles.bodyLayout}>
           <div className={styles.avatarLayout}>
@@ -168,7 +170,7 @@ const UpdateManager = ({ params }: { params: { id: string } }) => {
           <Form method="post" className={clsx(styles.form, futuna.className)}>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label className={clsx(styles.label, styles.required)}>
-                Name
+              {t("Name")}
               </Form.Label>
               <Form.Control
                 value={manager && manager.profile.name}
@@ -180,14 +182,14 @@ const UpdateManager = ({ params }: { params: { id: string } }) => {
             </Form.Group>
             <Form.Group>
               <Form.Label className={clsx(styles.label, styles.required)}>
-                Gender
+              {t("Gender")}
               </Form.Label>
 
               <div key={`inline-radio`} className="mb-3">
                 <Form.Check
                   checked={manager && manager.profile.gender === "male"}
                   inline
-                  label="Male"
+                  label={t("Male")}
                   style={{ fontSize: "1rem" }}
                   name="group1"
                   type="radio"
@@ -196,7 +198,7 @@ const UpdateManager = ({ params }: { params: { id: string } }) => {
                 />
                 <Form.Check
                   inline
-                  label="Female"
+                  label={t("Female")}
                   style={{ fontSize: "1rem" }}
                   checked={manager && manager.profile.gender === "female"}
                   name="group1"
@@ -208,7 +210,7 @@ const UpdateManager = ({ params }: { params: { id: string } }) => {
             </Form.Group>
             {formValue.email && (
               <Form.Group className="mb-3">
-                <Form.Label className={styles.label}>Email</Form.Label>
+                <Form.Label className={styles.label}>{t("Email")}</Form.Label>
                 <Form.Control
                   value={formValue.email}
                   onChange={handleChange}
@@ -225,7 +227,7 @@ const UpdateManager = ({ params }: { params: { id: string } }) => {
 
             <Form.Group className="mb-3">
               <Form.Label className={clsx(styles.label, styles.required)}>
-                Phone Number
+              {t("Phone Number")}
               </Form.Label>
               <Form.Control
                 value={formValue.phoneNumber}
@@ -241,7 +243,7 @@ const UpdateManager = ({ params }: { params: { id: string } }) => {
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label className={clsx(styles.label, styles.required)}>
-                Identification Number
+              {t("Identification Number")}
               </Form.Label>
               <Form.Control
                 disabled
@@ -257,7 +259,7 @@ const UpdateManager = ({ params }: { params: { id: string } }) => {
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label className={clsx(styles.label, styles.required)}>
-                Date Of Birth
+              {t("Date Of Birth")}
               </Form.Label>
               <Form.Control
                 value={
@@ -273,7 +275,7 @@ const UpdateManager = ({ params }: { params: { id: string } }) => {
             <div className={styles.imageLayout}>
               <Form.Group className="mb-3">
                 <Form.Label className={clsx(styles.label, styles.required)}>
-                  Front photo Of Identification Number
+                {t("Front photo Of Identification Number")}
                 </Form.Label>
                 <Form.Control
                   accept="image/*"
@@ -297,7 +299,7 @@ const UpdateManager = ({ params }: { params: { id: string } }) => {
               </Form.Group>
               <Form.Group className="mb-3">
                 <Form.Label className={clsx(styles.label, styles.required)}>
-                  Back Photo of Identification Number
+                {t("Back Photo of Identification Number")}
                 </Form.Label>
                 <Form.Control
                   accept="image/*"
@@ -333,7 +335,7 @@ const UpdateManager = ({ params }: { params: { id: string } }) => {
               theme="light"
             />
             <ButtonComponent onClick={updateHandle} className={styles.creatBtn}>
-              Update
+              {t("Update")}
             </ButtonComponent>
           </Form>
         </div>
