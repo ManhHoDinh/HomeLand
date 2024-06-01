@@ -9,22 +9,24 @@ import ResidentInfor from './indexing/residentInfor/page';
 import ResidentContract from './indexing/residentContract/page';
 import ResidentService from './indexing/residentService/page';
 import { futuna } from '../../../../public/fonts/futura';
+import { useTranslation } from "react-i18next";
 const Overview = () => {
+    const [t, i18n] = useTranslation();
     const [selectedOption, setSelectedOption] = useState(0);
     const options = [
       {
         index: 0,
-        title: "Profile Information",
+        title: t("Profile Information"),
         component: <ResidentInfor />,
       },
       {
         index: 1,
-        title: "Contract information",
+        title: t("Contract information"),
         component: <ResidentContract />,
       },
       {
         index: 2,
-        title: "Service information",
+        title: t("Service information"),
         component: <ResidentService />,
       },
     ];
@@ -35,7 +37,7 @@ const Overview = () => {
     <main className={clsx(mainStyles.main)}>
               <div className={clsx(layoutStyles.wrapper, futuna.className)}>
         <h1 className={clsx(utilStyles.headingXl, layoutStyles.title)}>
-          Resident Overview
+        {t("Resident Overview")}
         </h1>
         <div className={layoutStyles.tabLayout}>
           <div className={layoutStyles.tabHeader}>

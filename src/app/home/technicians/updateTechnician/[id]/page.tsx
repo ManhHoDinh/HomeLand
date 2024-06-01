@@ -22,6 +22,7 @@ import toastMessage from "@/utils/toast";
 import { ToastContainer } from "react-toastify";
 import { loadingFiler, removeLoadingFilter } from "@/libs/utils";
 import { Technician } from "@/models/technician";
+import { useTranslation } from "react-i18next";
 type FormValue = {
   gender: string;
   phoneNumber: string;
@@ -34,6 +35,7 @@ const [formValue, setFormValue] = useState({
   phoneNumber: "",
   email: "",
 });
+const [t, i18n] = useTranslation();
 const [errors, setErrors] = useState<any>();
 const [technician, setTechnician] = useState<Technician>();
 const [avatar, setAvatar] = useState<any>();
@@ -150,7 +152,7 @@ const validation = () => {
     <main className={mainStyles.main}>
       <div className={clsx(styles.wapper, futuna.className)}>
         <p className={clsx(utilStyles.headingXl, styles.title)}>
-          Edit Technician Information
+          {t("Edit Technician Information")}
         </p>
         <div className={styles.bodyLayout}>
           <div className={styles.avatarLayout}>
@@ -165,7 +167,7 @@ const validation = () => {
           <Form method="post" className={clsx(styles.form, futuna.className)}>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label className={clsx(styles.label, styles.required)}>
-                Name
+              {t("Name")}
               </Form.Label>
               <Form.Control
                 value={technician && technician.profile.name}
@@ -177,7 +179,7 @@ const validation = () => {
             </Form.Group>
             <Form.Group>
               <Form.Label className={clsx(styles.label, styles.required)}>
-                Gender
+              {t("Gender")}
               </Form.Label>
 
               <div key={`inline-radio`} className="mb-3">
@@ -185,7 +187,7 @@ const validation = () => {
                   checked={formValue.gender === "male"}
                   inline
                   onChange={handleChange}
-                  label="Male"
+                  label={t("Male")}
                   style={{ fontSize: "1rem" }}
                   name="gender"
                   type="radio"
@@ -194,7 +196,7 @@ const validation = () => {
                 />
                 <Form.Check
                   inline
-                  label="Female"
+                  label={t("Female")}
                   style={{ fontSize: "1rem" }}
                   checked={formValue.gender === "female"}
                   onChange={handleChange}
@@ -207,7 +209,7 @@ const validation = () => {
             </Form.Group>
             {formValue.email && (
               <Form.Group className="mb-3">
-                <Form.Label className={styles.label}>Email</Form.Label>
+                <Form.Label className={styles.label}>{t("Email")}</Form.Label>
                 <Form.Control
                   value={formValue.email}
                   onChange={handleChange}
@@ -224,7 +226,7 @@ const validation = () => {
 
             <Form.Group className="mb-3">
               <Form.Label className={clsx(styles.label, styles.required)}>
-                Phone Number
+              {t("Phone Number")}
               </Form.Label>
               <Form.Control
                 value={formValue.phoneNumber}
@@ -240,7 +242,7 @@ const validation = () => {
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label className={styles.label}>
-                Identification Number
+              {t("Identification Number")}
               </Form.Label>
               <Form.Control
                 disabled
@@ -252,7 +254,7 @@ const validation = () => {
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label className={clsx(styles.label, styles.required)}>
-                Date Of Birth
+              {t("Date Of Birth")}
               </Form.Label>
               <Form.Control
                 value={
@@ -271,7 +273,7 @@ const validation = () => {
             <div className={styles.imageLayout}>
               <Form.Group className="mb-3">
                 <Form.Label className={clsx(styles.label, styles.required)}>
-                  Front Photo Of Identification Number
+                {t("Front Photo Of Identification Number")}
                 </Form.Label>
                 <Form.Control
                   accept="image/*"
@@ -297,7 +299,7 @@ const validation = () => {
               </Form.Group>
               <Form.Group className="mb-3">
                 <Form.Label className={clsx(styles.label, styles.required)}>
-                  Back Photo Of Identification Number
+                {t("Back Photo Of Identification Number")}
                 </Form.Label>
                 <Form.Control
                   accept="image/*"

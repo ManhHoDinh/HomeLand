@@ -174,7 +174,7 @@ export default function Residents() {
          {t("Technical staff management")} 
         </h1>
         <div className={clsx(residentStyles.header)}>
-          <h1 className={clsx(utilStyles.headingLg)}>List Of Technicians</h1>
+          <h1 className={clsx(utilStyles.headingLg)}>{t("List Of Technicians")}</h1>
           <ButtonComponent
             href="/home/technicians/addTechnician?auth=true"
             preIcon={<AddResidentIcon width={24} height={24} />}

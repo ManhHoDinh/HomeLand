@@ -14,6 +14,10 @@ import ButtonComponent from "@/components/buttonComponent/buttonComponent";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { FaTasks } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
+
+
+
 import {
   MdOutlineFileDownloadDone,
   MdOutlineLowPriority,
@@ -37,6 +41,7 @@ const TechnicianDashboard = () => {
     const res = await axios.get(`/api/technician/${UserProfile.getId()}`);
     setData(res.data);
   });
+  const [t, i18n] = useTranslation();
   const { data: tasks } = useQuery({
     queryKey: ["taskStatistic"],
     queryFn: () =>
@@ -94,7 +99,7 @@ const TechnicianDashboard = () => {
       <div className={clsx(styles.header)}>
         <div style={{ textAlign: "center" }} className="col-lg-3">
           <div className={clsx(styles.inforLayout)}>
-            <p className={clsx(styles.inforHeader)}>Information</p>
+            <p className={clsx(styles.inforHeader)}>{t("Information")}</p>
             <Image
               style={{ borderRadius: "50%", margin: "16px 0px" }}
               src={avatar}
@@ -104,21 +109,21 @@ const TechnicianDashboard = () => {
             />
             <div className="d-flex flex-column">
               <span className={clsx(styles.inforItem)}>
-                Full name: {data && data.profile.name}
+              {t("Name")}: {data && data.profile.name}
               </span>
               <span className={clsx(styles.inforItem)}>
-                Date of birth:{" "}
+              {t("Date Of Birth")}:{" "}
                 {dateOfBirth && format(new Date(dateOfBirth), "dd/MM/yyyy")}{" "}
               </span>
               <span className={clsx(styles.inforItem)}>
-                Phone number: {data?.profile.phone_number}
+              {t("phone_number")}: {data?.profile.phone_number}
               </span>
             </div>
           </div>
         </div>
         <div className="col-lg-9">
           <div className={clsx(styles.taskInfo)}>
-            <p>Statistics of tasks</p>
+            <p>{t("Statistics of tasks")}</p>
             <div className={clsx(styles.taskStatistic)}>
               <div className={clsx(styles.taskItem)}>
                 <div className={clsx(styles.iconTask, styles.all)}>
@@ -128,7 +133,7 @@ const TechnicianDashboard = () => {
                   <span className={clsx(styles.valueItem)}>
                     {tasks?.length}
                   </span>
-                  <span className={clsx(styles.taskItemTitle)}>All Tasks</span>
+                  <span className={clsx(styles.taskItemTitle)}>{t("All Tasks")}</span>
                 </div>
               </div>
               <div className={clsx(styles.taskItem)}>
@@ -139,7 +144,7 @@ const TechnicianDashboard = () => {
                   <span className={clsx(styles.valueItem)}>
                     {tasks?.filter((task) => task.status === "DONE").length}
                   </span>
-                  <span className={clsx(styles.taskItemTitle)}>Finished</span>
+                  <span className={clsx(styles.taskItemTitle)}>{t("Finished")}</span>
                 </div>
               </div>
               <div className={clsx(styles.taskItem)}>
@@ -150,7 +155,7 @@ const TechnicianDashboard = () => {
                   <span className={clsx(styles.valueItem)}>
                     {tasks?.filter((task) => task.status !== "DONE").length}
                   </span>
-                  <span className={clsx(styles.taskItemTitle)}>Remain</span>
+                  <span className={clsx(styles.taskItemTitle)}>{t("Remain")}</span>
                 </div>
               </div>
             </div>
@@ -160,7 +165,7 @@ const TechnicianDashboard = () => {
       <div className={clsx(styles.body)}>
         <div className={clsx(styles.chartLayout)}>
           <p style={{ textAlign: "center", fontSize: 20 }}>
-            Statistics on the number of created tasks by day
+          {t("Statistics on the number of created tasks by day")}
           </p>
           <div className={clsx(styles.headerChartLayout)}>
             <DatePicker

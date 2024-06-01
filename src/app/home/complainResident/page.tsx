@@ -32,20 +32,21 @@ import { Task } from "@/models/task";
 import Nav from "react-bootstrap/Nav";
 import SubmitComplain from "./options/submitComplain/page";
 import History from "./options/history/page";
-
+import { useTranslation } from "react-i18next";
 const ComplainResident = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedId, setSelectedId] = useState("");
   const [selectedOption, setSelectedOption] = useState(0);
+  const [t, i18n] = useTranslation();
   const options = [
     {
       index: 0,
-      title: "Submit a complaint",
+      title: t("Submit a complaint"),
       component: <SubmitComplain />,
     },
     {
       index: 1,
-      title: "Complaint handling information",
+      title: t("Complaint handling information"),
       component: <History />,
     },
   ];
@@ -71,7 +72,7 @@ const ComplainResident = () => {
     <main className={clsx(mainStyles.main)}>
       <div className={clsx(styles.wrapper, futuna.className)}>
         <h1 className={clsx(utilStyles.headingXl, styles.title)}>
-          Repair request history
+        {t("Repair request history")}
         </h1>
         <div className={styles.tabLayout}>
           <div className={styles.tabHeader}>

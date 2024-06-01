@@ -9,7 +9,10 @@ import axios from "axios";
 import { loadingFiler, removeLoadingFilter } from "@/libs/utils";
 import toastMessage from "@/utils/toast";
 import { ToastContainer } from "react-toastify";
+import { useTranslation } from "react-i18next";
+
 const SubmitComplain = () => {
+  const [t, i18n] = useTranslation();
   const [content, setContent] = useState("");
   const [error, setError] = useState(false);
   const handleSubmit = async () => {
@@ -36,10 +39,10 @@ const SubmitComplain = () => {
   };
   return (
     <div className={styles.wrapper}>
-      <h3 className={styles.header}>Submit Complain</h3>
+      <h3 className={styles.header}>{t("Submit Complain")}</h3>
       <div className={styles.container}>
         <div className={styles.content}>
-          <label>Complaint content</label>
+          <label>{t("Complaint content")}</label>
           <div className="d-flex flex-column" style={{ flex: 1, height: 120 }}>
             <textarea
               value={content}
@@ -54,7 +57,7 @@ const SubmitComplain = () => {
                 [styles.hidden]: !error,
               })}
             >
-              Content is not empty!
+              {t("Content is not empty!")}
             </span>
           </div>
         </div>
@@ -64,7 +67,7 @@ const SubmitComplain = () => {
           preIcon={<SendIcon width={16} height={16} />}
           className={styles.submitBtn}
         >
-          submit
+          {t("Submit")}
         </ButtonComponent>
       </div>
       <ToastContainer
