@@ -25,7 +25,7 @@ Instructor: Trần Tuấn Dũng
 ![alt text](https://img.shields.io/badge/MoMo-FF9900?style=for-the-badge&logo=MOMO&logoColor=white)
 ![alt text](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 ## 📚 Introduction
-HomeLand is an apartment management website, it provides a centralized interface to view booking and appointment information, Manage communication with prospects, customers and tenants, Track maintenance work and clean up, create dashboards and visualizations for daily reporting.
+HomeLand is an apartment management website, it provides a centralized interface to view booking and appointment information, Manage communication with prospects, customers and tenants, track maintenance work and clean up, create dashboards and visualizations for daily reporting.
 ## Roadmap
 ![git git](5.png)
 
