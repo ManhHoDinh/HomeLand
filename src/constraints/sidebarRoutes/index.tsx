@@ -14,13 +14,10 @@ import { PiElevatorBold } from "react-icons/pi";
 import { PiUserFocusFill } from "react-icons/pi";
 import { useTranslation } from "react-i18next";
 import React from 'react';
-import { t } from "i18next";
 
 export const sidebarInfo = [
-
-  {
-    
-    title: t("Dashboard"),
+  { 
+    title: "Dashboard",
     path: "dashboard",
     svg: (
       <svg
@@ -40,14 +37,14 @@ export const sidebarInfo = [
     roles: ["admin", "technician"],
   },
   {
-    title: t("Overview"),
+    title: "Overview",
     path: "overview",
     svg: <PiUserFocusFill />,
     menu: [],
     roles: ["resident"],
   },
   {
-    title: t("Properties"),
+    title: "Properties",
     svg: (
       <svg
         width="44"
@@ -79,17 +76,17 @@ export const sidebarInfo = [
     ),
     menu: [
       {
-        title: t("Apartment"),
+        title: "Apartment",
         href: "/home/properties/apartments",
         roles: ["admin", "manager"],
       },
       {
-        title: t("Vehicle"),
+        title: "Vehicle",
         href: "/home/properties/vehicles",
         roles: ["admin", "manager",],
       },
       {
-        title: t("Equipment"),
+        title: "Equipment",
         href: "/home/properties/equipments",
         roles: ["admin", "manager"],
       },
@@ -97,7 +94,7 @@ export const sidebarInfo = [
     roles: ["admin", "manager"],
   },
   {
-    title: t("Services"),
+    title: "Services",
     path: "services",
     svg: (
       <svg
@@ -117,50 +114,50 @@ export const sidebarInfo = [
     roles: ["admin", "manager", "resident"],
   },
   {
-    title: t("Employee"),
+    title: "Employee",
     path: "employee",
     svg: <GrUserWorker />,
     roles: ["admin", "manager"],
   },
   {
-    title: t("Contracts"),
+    title: "Contracts",
     path: "contracts",
     svg: <FaFileContract />,
     roles: ["admin", "manager"],
   },
   {
-    title: t("Residents"),
+    title: "Residents",
     path: "residents",
     svg: <FaUserGroup />,
     roles: ["admin", "manager"],
   },
   {
-    title: t("Managers"),
+    title: "Managers",
     path: "managers",
     svg: <GrUserManager />,
     roles: ["admin"],
   },
   {
-    title: t("Technicians"),
+    title: "Technicians",
     path: "technicians",
     svg: <TechnicianIcon width={30} height={30} />,
     roles: ["admin"],
   },
   {
-    title: t("Buildings"),
+    title: "Buildings",
     path: "buildings",
     svg: <FaBuilding />,
     roles: ["admin"],
   },
   {
-    title: t("Complain"),
+    title: "Complain",
     path: "complain",
     svg: <GiAutoRepair />,
     menu: [],
     roles: ["admin", "manager"],
   },
   {
-    title: t("Send Complain & repair requests"),
+    title: "Send Complain & repair requests",
     path: "complainResident",
     svg: (
       <svg
@@ -180,7 +177,7 @@ export const sidebarInfo = [
     roles: ["resident"],
   },
   {
-    title: t("Tasks"),
+    title: "Tasks",
     path: "taskTechnician",
     svg: (
       <svg
@@ -200,7 +197,7 @@ export const sidebarInfo = [
     roles: ["technician"],
   },
   {
-    title: t("Facility"),
+    title: "Facility",
     path: "setting",
     svg: (
       <svg
@@ -220,7 +217,7 @@ export const sidebarInfo = [
     roles: ["admin", "manager", "technician"],
   },
   {
-    title: t("Floor"),
+    title: "Floor",
     path: "floor",
     svg: <PiElevatorBold />,
     menu: [],
