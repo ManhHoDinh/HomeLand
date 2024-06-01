@@ -82,8 +82,8 @@ This project uses [```next/font```](https://nextjs.org/docs/pages/building-your-
 ## HOW TO BUILD
 ```bash
 # clone repository
-$ git clone https://github.com/ManhHoDinh/HomeLandBE.git
-$ cd HomeLandBE
+$ git clone https://github.com/ManhHoDinh/HomeLand.git
+$ cd HomeLand
 
 # install dependencies
 $ npm install
@@ -112,17 +112,6 @@ $ npm run start:dev
 http://localhost:3000/seed/init
 ```
 
-# HOW TO CLOSE (GRACEFULLY)
-
-On terminal where Nestjs running press ```Ctrl + C```
-```bash
-# stop docker containers
-$ docker compose stop
-
-# stop supabase
-$ npx supabase stop
-```
-
 ## Learn More
 To learn more about Next.js, take a look at the following resources:
 
@@ -141,6 +130,20 @@ I deeply appreciate every member of this team for showing relentless effort for 
 
 ## Additional information
 
-Develop by: [Manh Ho Dinh](https://github.com/ManhHoDinh) 
+Develop by:
+ [Hồ Đình Mạnh - 21522327](https://github.com/ManhHoDinh) 
+ Email: 21522327@gm.uit.edu.vn
 
-Email: 21522327@gm.uit.edu.vn
+ [Nguyễn Phước Hưng - 21520252](https://github.com/phuochungus) 
+ Email: 21520252@gm.uit.edu.vn
+
+ [Võ Công Bình - 21521880](https://github.com/vocongbinh) 
+ Email: 21521880@gm.uit.edu.vn
+
+ [Đinh Đại Dương - 21521986](https://github.com/Daiduong1593572468) 
+ Email: 21521986@gm.uit.edu.vn
+
+ [Nguyễn Thị Kim Ngân - 20520915](https://github.com/Ngan1808)
+ Email: 20520915@gm.uit.edu.vn
+
+Link reference to BE: [HomelandBE](https://github.com/ManhHoDinh/HomeLandBE)
