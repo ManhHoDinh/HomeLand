@@ -1,6 +1,7 @@
 ## PROJECT: HOMELAND WEB
+Website Demo: [Homeland](https://uithomeland.vercel.app/)
 Backend Repository: [HomelandBE](https://github.com/ManhHoDinh/HomeLandBE)
-
+Video demo: [Youtube](https://www.youtube.com/watch?v=YjaR-8Sp0UU&t=6s)
 ### BUILDING A CONDOMINIUM MANAGEMENT WEBSITE
 Instructor: Trần Tuấn Dũng
 ## Student Contributors:
@@ -85,7 +86,6 @@ I deeply appreciate every member of this team for showing relentless effort for 
 
 ## Additional information
 
-Develop by:
  [Hồ Đình Mạnh - 21522327](https://github.com/ManhHoDinh) 
  Email: 21522327@gm.uit.edu.vn
 
