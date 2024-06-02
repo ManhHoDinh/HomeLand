@@ -100,6 +100,21 @@ export default function Employee() {
     }
   };
 
+
+  const searchIconClicone = async () => {
+    console.log("hah");
+    try {
+      const res = await axios.get("/api/employee/search", {
+        params: {
+          query: searchRef.current?.value,
+        },
+      });
+      console.log(res.data);
+      setEmployee(res.data);
+    } catch (e) {
+      console.log(e);
+    }
+  };
   const renderGender = (gender: string) => {
     return gender === 'male' ? t("male") : t("female");
   };
