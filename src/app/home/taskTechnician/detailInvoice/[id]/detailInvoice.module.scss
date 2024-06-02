@@ -1,0 +1,73 @@
+.wrapper {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+.action {
+  align-self: flex-end;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.invoiceBody {
+  padding: 20px;
+}
+.invoice {
+  margin-top: 30px;
+  table {
+    width: 100%;
+    background-color: #e6e4e6;
+    color: #5a545c;
+    tr {
+      border: 1px solid var(--white);
+    }
+    th,
+    td {
+      padding: 20px;
+    }
+    tbody {
+      tr {
+        td {
+          &:first-child {
+            color: var(--white);
+            background-color: var(--primary);
+          }
+        }
+      }
+    }
+  }
+}
+.total {
+  float: right;
+  display: flex;
+  color: #2e69d3;
+  margin-top: 20px;
+  padding: 20px 0px;
+  font-size: 20px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 4px;
+    background-color: var(--primary);
+    top: -4px;
+    right: 0px;
+  }
+}
+.printBtn {
+  padding: 10px 30px;
+  background-color: var(--primary);
+  color: var(--white);
+  margin-right: 20px;
+  border-radius: 10px;
+  &:hover {
+    background-color: #0744e1;
+    transition: 0.3s linear background-color;
+  }
+  &:active {
+    background-color: #062983;
+    transition: 0.3s linear background-color;
+  }
+}

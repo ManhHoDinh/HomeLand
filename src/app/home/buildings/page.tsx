@@ -116,17 +116,6 @@ export default function Building() {
       console.log(err);
     }
   };
-  const handleConfirmDeletel = async (id: string) => {
-    setShowModal(false);
-    try {
-      await axios.delete(`/api/building/${id}`);
-      toastMessage({ type: "success", title: "Delete successfully!" });
-      refetch();
-    } catch (err) {
-      toastMessage({ type: "error", title: "Delete faily!" });
-      console.log(err);
-    }
-  };
   const searchIconClick = async () => {
     const res = await axios.get("/api/building/search", {
       params: {

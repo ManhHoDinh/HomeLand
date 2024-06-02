@@ -1,0 +1,33 @@
+.container{
+    width:100%;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+}
+.form{
+    width: 50%
+}
+.missing {
+    border-style: solid;
+    border-color: #FF4747 !important;
+}
+
+.missing+svg {
+    border-color: #FF4747 !important;
+}
+.expandableFormGroup{
+    transition-property: max-height;
+    transition-duration: 3s;
+    transition-delay: 0s;
+    overflow: hidden;
+}
+.expandableFormGroup.close{
+    transition-property: max-height;
+    transition-duration: 1.1s;
+    transition-delay: 0s;
+    max-height: 0; 
+}
+.expandableFormGroup.open{
+
+    max-height: 500px;
+}

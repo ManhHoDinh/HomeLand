@@ -1,0 +1,24 @@
+.headingXl {
+    font-size: 2.25rem;
+    text-align: center;
+    margin: 40px 0px;
+    color: var(--primary);
+
+
+}
+.headingLg {
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--primary);
+
+    
+}
+.headingMd {
+    background-color: var(--primary);
+}
+.spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    color: #3edeb2;
+  }
