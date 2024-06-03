@@ -7,8 +7,9 @@ import { useQuery } from "react-query";
 import styles from "../../overview.module.scss";
 import Image from "next/image";
 import { format } from "date-fns";
-
+import { useTranslation } from "react-i18next";
 const ResidentInfor = () => {
+  const [t, i18n] = useTranslation();
   const { data } = useQuery({
     queryKey: "resident_information",
     queryFn: () => {
@@ -38,15 +39,15 @@ const ResidentInfor = () => {
               fontWeight: "600",
             }}
           >
-            General Information
+            {t("General Information")}
           </h4>
           <div className="row">
             <div className="col-lg-3 col-12 d-flex flex-column">
-              <span className={styles.label}>Name</span>
+              <span className={styles.label}>{t("Name")}</span>
               <span className={styles.content}>{data?.profile.name}</span>
             </div>
             <div className="col-lg-3 col-12 d-flex flex-column">
-              <span className={styles.label}>Date of Birth</span>
+              <span className={styles.label}>{t("Date Of Birth")}</span>
               {data?.profile.date_of_birth && (
                 <span className={styles.content}>
                   {format(
@@ -57,11 +58,11 @@ const ResidentInfor = () => {
               )}
             </div>
             <div className="col-lg-3 col-12 d-flex flex-column">
-              <span className={styles.label}>Gender</span>
+              <span className={styles.label}>{t("Gender")}</span>
               <span className={styles.content}>{data?.profile.gender}</span>
             </div>
             <div className="col-lg-3 col-12 d-flex flex-column">
-              <span className={styles.label}>Identification Number</span>
+              <span className={styles.label}>{t("Identification Number")}</span>
               <span className={styles.content}>
                 {data?.profile.identify_number}
               </span>
@@ -76,23 +77,23 @@ const ResidentInfor = () => {
               fontWeight: "600",
             }}
           >
-            Contact Information
+            {t("Contact Information")}
           </h4>
           <div className="row">
             <div className="col-lg-4 col-12 d-flex flex-column">
-              <span className={styles.label}>Phone Number</span>
+              <span className={styles.label}>{t("Phone Number")}</span>
               <span className={styles.content}>
                 {data?.profile.phone_number}
               </span>
             </div>
             <div className="col-lg-4 col-12 d-flex flex-column">
-              <span className={styles.label}>Email</span>
+              <span className={styles.label}>{t("Email")}</span>
               <span className={styles.content}>
                 {data?.account?.email || ""}
               </span>
             </div>
             <div className="col-lg-4 col-12 d-flex flex-column">
-              <span className={styles.label}>Payment Information</span>
+              <span className={styles.label}>{t("Payment Information")}</span>
               <span className={styles.content}>{data?.payment_info || ""}</span>
             </div>
           </div>

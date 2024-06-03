@@ -28,8 +28,10 @@ import {
 import ModalComponent from "@/components/Modal/Modal";
 import { format } from "date-fns";
 import { Manager } from "@/models/manager";
+import { useTranslation } from "react-i18next";
 
 const DetailBuilding = ({ params }: { params: { id: string } }) => {
+  const [t, i18n] = useTranslation();
   // init modal add manager
   const [showModalManager, setShowModalManager] = useState(false);
   const [checkAll, setCheckAll] = useState(false);
@@ -195,10 +197,10 @@ const DetailBuilding = ({ params }: { params: { id: string } }) => {
     <main className={mainStyles.main}>
       <div className={clsx(styles.wapper, futuna.className)}>
         <p className={clsx(utilStyles.headingXl, styles.title)}>
-          Detail Information Of Building
+        {t("Detail Information Of Building")}
         </p>
         <div className={styles.container}>
-          <p>Detail Information</p>
+          <p>{t("Detail Information")}</p>
           <table className={styles.tableInfo}>
             <tr>
               <td className="col-6">
@@ -224,13 +226,13 @@ const DetailBuilding = ({ params }: { params: { id: string } }) => {
         </div>
         <div className={styles.managerList}>
           <div className="d-flex flex-column flex-lg-row justify-content-between">
-            <span>List Of Manager</span>
+            <span>{t("List Of Manager")}</span>
             <ButtonComponent
               onClick={handleShowManagerModal}
               preIcon={<AddResidentIcon width={24} height={24} />}
               className={clsx(styles.addBtn, futuna.className)}
             >
-              Add Manager
+              {t("Add Manager")}
             </ButtonComponent>
           </div>
           <div style={{ overflowX: "auto" }} className="w-100 mt-5">   {building?.managers && building.managers?.length > 0 ? (
@@ -267,7 +269,7 @@ const DetailBuilding = ({ params }: { params: { id: string } }) => {
                               buildingStyles.deleteBtn
                             )}
                           >
-                            Delete
+                            {t("Delete")}
                           </ButtonComponent>
                         
                       </td>
@@ -278,7 +280,7 @@ const DetailBuilding = ({ params }: { params: { id: string } }) => {
             </table>
           ) : (
             <p style={{ textAlign: "center", marginTop: "100px" }}>
-              There is currently no manager in the building!
+              {t("There is currently no manager in the building!")}
             </p>
           )}</div>
        

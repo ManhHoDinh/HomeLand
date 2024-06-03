@@ -25,7 +25,9 @@ import clsx from "clsx";
 import ButtonComponent from "@/components/buttonComponent/buttonComponent";
 import { format } from "date-fns";
 import { Resident as ResidentType } from "@/models/resident";
+import { useTranslation } from "react-i18next";
 export default function Page({ params }: { params: { id: string } }) {
+  const [t, i18n] = useTranslation();
   // let apartment:Apartment= JSON.parse("{'id':'123', 'name':'M}");
   //console.log(apartment);
   const [showModalResident, setShowModalResident] = useState(false);
@@ -42,7 +44,7 @@ export default function Page({ params }: { params: { id: string } }) {
   const titleTable = ["ID", "Tên", "Số điện thoại", "Ngày tạo"];
   const furnitureInfo = [
     {
-      title: "Bedrooms",
+      title: t("Bedrooms"),
       svg: (
         <svg
           width="27"
@@ -60,7 +62,7 @@ export default function Page({ params }: { params: { id: string } }) {
       value: (data?.bedroom ?? "0").toString(),
     },
     {
-      title: "Bathrooms",
+      title: t("Bathrooms"),
       svg: (
         <svg
           width="24"
@@ -82,7 +84,7 @@ export default function Page({ params }: { params: { id: string } }) {
       value: (data?.bathroom ?? "0").toString(),
     },
     {
-      title: "Square Area",
+      title: t("Square Area"),
       svg: (
         <svg
           width="23"
@@ -104,7 +106,7 @@ export default function Page({ params }: { params: { id: string } }) {
         " (m2)",
     },
     {
-      title: "Status",
+      title: t("Status"),
       svg: (
         <svg
           width="27"
@@ -191,7 +193,7 @@ export default function Page({ params }: { params: { id: string } }) {
                 {/* <p className="">{data.}</p> */}
               </Col>
               <Col className="text-end">
-                <Button variant="warning">Edit</Button>{" "}
+                <Button variant="warning">{t("Edit")}</Button>{" "}
               </Col>
             </Row>
             <Row style={{ marginTop: "20px" }}>
@@ -222,21 +224,21 @@ export default function Page({ params }: { params: { id: string } }) {
             </Row>
             <Row>
               <h3 style={{ marginTop: "20px" }}>
-                <b>About this apartment</b>
+                <b>{t("About this apartment")}</b>
               </h3>
               <p style={{ marginTop: "20px" }}>{data.description}</p>
             </Row>
             <Row>
               <div className="d-flex justify-content-between">
                 <h3 style={{ marginTop: "20px" }}>
-                  <b>List by apartment resident</b>
+                  <b>{t("List by aparment resident")}</b>
                 </h3>
                 <ButtonComponent
                   onClick={handleShowResidentModal}
                   preIcon={<AddResidentIcon width={24} height={24} />}
                   className={clsx(styles.addBtn, futuna.className)}
                 >
-                  Add Resident
+                 {t("Add Resident")}
                 </ButtonComponent>
               </div>
             </Row>

@@ -31,6 +31,7 @@ import { Floor } from "@/models/floor";
 import { motion } from "framer-motion";
 import { ToastContainer } from "react-toastify";
 import toastMessage from "@/utils/toast";
+import { useTranslation } from "react-i18next";
 function constraintOnlyNumber(str: string): boolean {
   return !isNaN(Number(str));
 }
@@ -76,6 +77,7 @@ export default function AddApartment() {
   function handleClose() {
     setShow(false);
   }
+  const [t, i18n] = useTranslation();
   const [selectedResidentLists, setSelectedList] = useState<Resident[]>([]);
   const [residentLists, setResidentLists] = useState<Resident[]>([]);
   const [buildings, setBuildings] = useState<Building[]>([]);
@@ -247,7 +249,7 @@ export default function AddApartment() {
             <Form.Control
               id="name"
               type="text"
-              placeholder="Apartment name..."
+              placeholder={t("Apartment name...")}
               style={{ width: "30%", marginRight: "0.5vw" }}
             ></Form.Control>
             <Form.Select
@@ -307,7 +309,7 @@ export default function AddApartment() {
               }}
             >
               <div className={styles.selectItem} style={{ margin: "0" }}>
-                <Form.Label>Bedrooms:</Form.Label>
+                <Form.Label>{t("Bedrooms")}</Form.Label>
                 <InputGroup
                   style={{ display: "flex", flexDirection: "row-reverse" }}
                 >
@@ -346,7 +348,8 @@ export default function AddApartment() {
                 </InputGroup>
               </div>
               <div className={styles.selectItem}>
-                <Form.Label>Bathrooms:</Form.Label>
+                <Form.Label>{t("Bathrooms")}</Form.Label>
+               
                 <InputGroup
                   style={{ display: "flex", flexDirection: "row-reverse" }}
                 >
@@ -385,7 +388,7 @@ export default function AddApartment() {
                 </InputGroup>
               </div>
               <div className={styles.selectItem}>
-                <Form.Label>Square Area</Form.Label>
+                <Form.Label>{t("Square Area")}</Form.Label>
 
                 <InputGroup style={{ display: "flex", alignContent: "center" }}>
                   <FaSquare
@@ -447,7 +450,7 @@ export default function AddApartment() {
                 </InputGroup>
               </div>
               <div className={styles.selectItem}>
-                <Form.Label>Status</Form.Label>
+                <Form.Label>{t("Status")}</Form.Label>
                 <InputGroup style={{ display: "flex", alignContent: "center" }}>
                   <FaCheckCircle
                     style={{
@@ -488,7 +491,8 @@ export default function AddApartment() {
                 marginLeft: "20px",
               }}
             >
-              About this apartment
+             
+             {t("About this apartment")}
             </Form.Label>
             <Form.Control
               id={"description"}
@@ -516,7 +520,7 @@ export default function AddApartment() {
                   verticalAlign: "center",
                 }}
               >
-                List by aparment resident
+                {t("List by aparment resident")}
               </Form.Label>
               <Button
                 style={{
@@ -536,7 +540,7 @@ export default function AddApartment() {
             {selectedResidentLists.length == 0 ? (
               <p
                 style={{ textAlign: "center" }}
-              >{`This aparment haven't been lived by any resident`}</p>
+              >{t(`This aparment haven't been lived by any resident`)}</p>
             ) : (
               <div className={styles.residentListsContainer}>
                 {" "}
@@ -577,7 +581,7 @@ export default function AddApartment() {
                 borderRadius: "1rem",
               }}
             >
-              Save
+               {t("Save")}
             </Button>
           </FormGroup>
         </Form>
@@ -610,7 +614,7 @@ export default function AddApartment() {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-            Close
+            {t("Close")}
           </Button>
         </Modal.Footer>
       </Modal>

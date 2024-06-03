@@ -1,5 +1,7 @@
 ## PROJECT: HOMELAND WEB
-
+Website Demo: [Homeland](https://uithomeland.vercel.app/)
+Backend Repository: [HomelandBE](https://github.com/ManhHoDinh/HomeLandBE)
+Video demo: [Youtube](https://www.youtube.com/watch?v=YjaR-8Sp0UU&t=6s)
 ### BUILDING A CONDOMINIUM MANAGEMENT WEBSITE
 Instructor: Trần Tuấn Dũng
 ## Student Contributors:
@@ -33,22 +35,20 @@ HomeLand is an apartment management website, it provides a centralized interface
 * Information Management: Building information, residents, resident vehicles,...
 * Service Management: Expense management, service contracts, services (electricity, water,...)
 * Asset Management: Maintenance management and repair assignment
-* Financial Management: Fee calculation and issuance of fee notifications (linked to banking applications, e-wallets) through various forms such as email, SMS, printing, and within the application for residents. Financial reporting system and statistics on income and expenditure of fees in the condominium.
-
 * Rental Contract Management: a library of templates that comply with all the latest standards, allowing you to create new leases. The system creates a data warehouse of all your rental data and sends notifications about expiring and terminated contracts. You can also include specialized clauses in your contract and automatically track violations and late fees.
 
 * Report Generation: Overall population statistics, you can export reports in many chart formats by date,....
 
-* Financial reports: The software provides the ability to automate a large portion of accounting and maintenance operations, distribute to owners and suppliers, submit financial reports, and manage regulatory compliance.
-
 * Complain & repair request: Enter a complaint comment and display a list of complaints.
 
-## 📋 Agency 
-This area is designed for agency or company who want to sell their properties. Make a transaction to take turns and post some news.
-
-
 ## 🕵️ Admin
-Designed for admin, real estate broker and office manager too. Admin reviews every post and account information, after pass his review, the post will immediately post into the market.
+Designed for admin, admin is the owner of an apartment. Admin manage account information, equipment, contract, vehicle resident, building, floor, and apartment. And Admin will asign task to technicain.
+
+## 📋 Resident 
+This area is designed for resident. Resident can buy a service, complant some issues.
+
+## 📋 Technicain
+Designed for technicain who will fix some issues, see report of tasks, and create a invoice to resident or admin.
 
 ## Illustrative Images:
 ![alt text](image-1.png)
@@ -79,58 +79,13 @@ You can start editing the page by modifying ```app/page.tsx```. The page auto-up
 
 This project uses [```next/font```](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load Inter, a custom Google Font.
 
-## HOW TO BUILD
-```bash
-# clone repository
-$ git clone https://github.com/ManhHoDinh/HomeLand.git
-$ cd HomeLand
-
-# install dependencies
-$ npm install
-
-# pull necessary images
-$ docker compose pull
-
-# rename .env.example to .env
-# you might change some variable if you need to connect to real redis, postgresql or supabase project
-$ cp .env.example .env
-```
-
-## HOW TO RUN
-```bash
-# docker compose include redis and postgresql
-# if your local machine have redis or postgresql, please turn off all in order to run properly
-$ docker compose up -d
-
-# start supabase local
-$ npx supabase start
-
-# start nestjs
-$ npm run start:dev
-
-# you might need to send HTTP GET to this endpoint to create empty database and S3 storage:
-http://localhost:3000/seed/init
-```
-
-## Learn More
-To learn more about Next.js, take a look at the following resources:
-
- * [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
- * [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/docs/vercel-platform) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
 ## 💕 Thanks
-This project almost completed like a real estate brokerage market. However developed by developer team who is still university students and have not enough experiences, this project maybe has some problem. You can visit our deploy website for more experience. Thank you for visiting our project.
+This project is almost completed like apartment management. However developed by the developer team who is still university students and have not enough experiences, this project maybe has some problem. You can visit our deploy website for more experience. Thank you for visiting our project.
 
 I deeply appreciate every member of this team for showing relentless effort for this project.
 
 ## Additional information
 
-Develop by:
  [Hồ Đình Mạnh - 21522327](https://github.com/ManhHoDinh) 
  Email: 21522327@gm.uit.edu.vn
 
@@ -145,5 +100,3 @@ Develop by:
 
  [Nguyễn Thị Kim Ngân - 20520915](https://github.com/Ngan1808)
  Email: 20520915@gm.uit.edu.vn
-
-Link reference to BE: [HomelandBE](https://github.com/ManhHoDinh/HomeLandBE)

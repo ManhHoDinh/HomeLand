@@ -21,11 +21,14 @@ import { format } from "date-fns";
 import { UserProfile } from "@/libs/UserProfile";
 import { Modal } from "react-bootstrap";
 import { RepairInvoice } from "@/models/repairInvoice";
+import { useTranslation } from "react-i18next";
 
+ 
 const History = () => {
   const [complains, setComplains] = useState<Array<Complain>>([]);
   const [showModalInvoice, setShowModalInvoice] = useState(false);
   const [invoice, setInvoice] = useState<RepairInvoice>();
+  const [t, i18n] = useTranslation();
   const [selectedId, setSelectedId] = useState<string | undefined>("");
   const titleTable = ["Request date", "Complaint content", "Status", "Bill"];
   const titleInvoice = [
@@ -81,7 +84,7 @@ const History = () => {
   };
   return (
     <div className={styles.wrapper}>
-      <h3 className={styles.header}>Complaint handling information</h3>
+      <h3 className={styles.header}>{t("Complaint handling information")}</h3>
       <div className={styles.container}>
         <table className={clsx(tableStyles.table, futuna.className)}>
           <thead>
@@ -98,7 +101,7 @@ const History = () => {
               const createAt = format(time, "dd-MM-yyyy HH:mm:ss");
               return (
                 <tr key={index}>
-                  <td>{createAt}</td>
+                  <td>{t("createAt")}</td>
                   <td>{complain.content}</td>
                   <td>
                     <span
@@ -127,7 +130,7 @@ const History = () => {
                           handleShowInvoice(complain.task?.task_id);
                         }}
                       >
-                        Detail bill
+                        {t("Detail bill")}
                       </ButtonComponent>
                     ) : (
                       <span> Processing...</span>
@@ -151,7 +154,7 @@ const History = () => {
         onHide={() => setShowModalInvoice(false)}
       >
         <Modal.Header className={modalStyles.modalHeader} closeButton>
-          <Modal.Title className={modalStyles.titleModal}>Invoice</Modal.Title>
+          <Modal.Title className={modalStyles.titleModal}>{t("Invoice")}</Modal.Title>
         </Modal.Header>
         <Modal.Body className={modalStyles.bodyModal}>
           <div className={styles.invoice}>
@@ -183,7 +186,7 @@ const History = () => {
               })}
             </div>
             <div className={styles.total}>
-              <span>Total</span>
+              <span>{t("Total")}</span>
               <span>{invoice?.total} VND</span>
             </div>
           </div>
@@ -198,13 +201,13 @@ const History = () => {
               preIcon={<PayIcon width={16} height={16} />}
               className={clsx(styles.modalBtn, styles.rejectBtn)}
             >
-              Reject
+              {t("Reject")}
             </ButtonComponent>
             <ButtonComponent
               preIcon={<PayIcon width={16} height={16} />}
               className={clsx(styles.modalBtn, styles.billBtn)}
             >
-              Pay
+              {t("Pay")}
             </ButtonComponent>
           </div>
         </Modal.Footer>

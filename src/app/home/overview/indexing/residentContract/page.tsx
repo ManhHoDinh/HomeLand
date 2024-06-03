@@ -7,7 +7,9 @@ import { useQuery } from "react-query";
 import styles from "../../overview.module.scss";
 import { format } from "date-fns";
 import clsx from "clsx";
+import { useTranslation } from "react-i18next";
 const ResidentContract = () => {
+  const [t, i18n] = useTranslation();
   const { data } = useQuery({
     queryKey: "resident_contracts",
 
@@ -21,13 +23,13 @@ const ResidentContract = () => {
 
   return (
     <div className={styles.wrapper}>
-      <h4> Contract History</h4>
+      <h4> {t("Contract History")}</h4>
       {data &&
         data?.map((contract, index) => (
           <div key={index} className={styles.contractItems}>
             <div className="row">
               <div className="col-sm-4 col-12 d-flex flex-column">
-                <span className={styles.label}>Role</span>
+                <span className={styles.label}>{t("Role")}</span>
                 <span
                   className={clsx(styles.content, {
                     [styles.rent]: contract.role === "rent",
@@ -38,7 +40,7 @@ const ResidentContract = () => {
                 </span>
               </div>
               <div className="col-sm-4 col-12 d-flex flex-column">
-                <span className={styles.label}>Status</span>
+                <span className={styles.label}>{t("Status")}</span>
                 <span
                   className={clsx(styles.status, styles.content, {
                     [styles.active]: contract.status === "active",
@@ -49,7 +51,7 @@ const ResidentContract = () => {
                 </span>
               </div>
               <div className="col-sm-4 col-12 d-flex flex-column">
-                <span className={styles.label}>Apartment</span>
+                <span className={styles.label}>{t("Apartment")}</span>
                 <span className={clsx(styles.content)}>
                   {contract.apartment.name}
                 </span>
@@ -57,13 +59,13 @@ const ResidentContract = () => {
             </div>
             <div className="row">
               <div className="col-sm-4 col-12 d-flex flex-column">
-                <span className={styles.label}>Created At</span>
+                <span className={styles.label}>{t("Created At")}</span>
                 <span className={styles.content}>
                   {format(new Date(contract.created_at), "dd/MM/yyyy")}
                 </span>
               </div>
               <div className="col-sm-4 col-12 d-flex flex-column">
-                <span className={styles.label}>Expire At</span>
+                <span className={styles.label}>{t("Expire At")}</span>
                 <span className={styles.content}>
                   {format(new Date(contract.expire_at as Date), "dd/MM/yyyy")}
                 </span>
