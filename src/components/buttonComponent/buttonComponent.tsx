@@ -1,4 +1,4 @@
-import React, {  } from "react";
+import React, { Component, ReactElement } from "react";
 import Link from "next/link";
 import clsx from "clsx";
 import styles from "./ButtonComponent.module.scss";
