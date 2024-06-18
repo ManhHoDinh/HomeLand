@@ -139,3 +139,7 @@ Question 2: NestJS so với cái framework nổi tiếng khác hiện có điể
 | Sử dụng bộ nhớ      | Thấp, nhờ vào hiệu quả của Node.js        | Thấp, nhờ vào hiệu quả của Node.js        | Cao hơn do đặc điểm của Python và nhiều tính năng tích hợp | Thấp, do là microframework                | Trung bình đến cao, do JVM và tính năng phong phú | Cao, do Ruby và nhiều tính năng tích hợp |
 | Sử dụng CPU         | Hiệu quả, đặc biệt với các tác vụ I/O     | Hiệu quả, đặc biệt với các tác vụ I/O     | Sử dụng CPU trung bình, tốt hơn cho các tác vụ CPU-bound | Sử dụng CPU trung bình, tốt hơn cho các tác vụ CPU-bound | Tốt, đặc biệt với các tác vụ yêu cầu nhiều tính toán | Trung bình đến cao, phụ thuộc vào các tác vụ và cấu hình hệ thống |
 | Thời gian phản hồi  | Thấp, nhờ vào khả năng xử lý không đồng bộ và hiệu quả của Node.js | Thấp, nhờ vào khả năng xử lý không đồng bộ và hiệu quả của Node.js | Cao hơn do đặc điểm của Python và nhiều tính năng tích hợp | Cao hơn do đặc điểm của Python và nhiều tính năng tích hợp | Thấp, nhờ vào hiệu suất của Java và khả năng xử lý đồng thời | Cao hơn, nhưng đã được cải thiện        |
+
+
+
+Lương sinh viên mới ra trường phụ thuộc vào nhiều yếu tố, range lương NestJS (Gross) là 10-15 triệu
